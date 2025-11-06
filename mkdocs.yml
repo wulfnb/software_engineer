@@ -1,0 +1,171 @@
+site_name: A Software Engineer's Field Guide
+site_description: A quick guide for software engineer
+site_url: https://wulfnb.github.io/software_engineer/
+repo_url: https://github.com/wulfnb/software_engineer
+repo_name: wulfnb/software_engineer
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+  palette:
+    - scheme: default
+      primary: teal
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - toc:
+      permalink: true
+
+site_name: A Software Engineer's Field Guide
+site_description: A quick guide for software engineer
+site_url: https://wulfnb.github.io/software_engineer/
+repo_url: https://github.com/wulfnb/software_engineer
+repo_name: wulfnb/software_engineer
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+  palette:
+    - scheme: default
+      primary: teal
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+
+  - Core Programming:
+    - Python: programming/python.md
+    - Java: programming/java.md
+    - JavaScript: programming/javascript.md
+    - TypeScript: programming/typescript.md
+    - Design Patterns: programming/design-patterns.md
+    - Data Structures: programming/data-structures.md
+
+  - Frontend Frameworks:
+    - React: frontend/react.md
+    - Vue.js: frontend/vue.md
+    - Angular: frontend/angular.md
+    - Flutter: frontend/flutter.md
+
+  - Backend Frameworks:
+    - Spring Boot: backend/springboot.md
+    - Django: backend/django.md
+    - Flask: backend/flask.md
+    - Node.js / Express: backend/express.md
+
+  - DevOps & Cloud:
+    - Docker: devops/docker.md
+    - Kubernetes: devops/kubernetes.md
+    - Terraform: devops/terraform.md
+    - GitHub Actions: devops/github-actions.md
+    - AWS: devops/aws.md
+    - CI/CD Concepts: devops/cicd.md
+
+  - Architecture & Design:
+    - Software Architecture: architecture/software-architecture.md
+    - Clean Architecture: architecture/clean-architecture.md
+    - Microservices: architecture/microservices.md
+    - System Design: architecture/system-design.md
+
+  - Agile & Management:
+    - Agile Methodologies: agile/agile.md
+    - Scrum: agile/scrum.md
+    - Kanban: agile/kanban.md
+    - Planning New Features: agile/planning.md
+
+  - Testing & Quality:
+    - Unit Testing: testing/unit-testing.md
+    - Integration Testing: testing/integration-testing.md
+    - TDD: testing/tdd.md
+    - Static Analysis: testing/static-analysis.md
+
+  - Tools & Productivity:
+    - Git & GitHub: tools/git.md
+    - Build Tools: tools/build-tools.md
+    - IDE Tips: tools/ide.md
+    - MkDocs Setup: tools/mkdocs.md
+
+  - Resources:
+    - Books & Docs: resources/books.md
+    - Learning Platforms: resources/learning.md
+    - References: resources/references.md
+
+  - About: about.md
+
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/wulfnb
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/wulfnb
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/wulfnb
+  generator: false
+  copyright:
+    text: "© 2025 Noufal Babu A S — A Software Engineer's Field Guide"
