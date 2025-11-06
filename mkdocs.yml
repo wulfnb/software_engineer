@@ -7,6 +7,10 @@ repo_name: wulfnb/software_engineer
 theme:
   name: material
   features:
+    - content.code.copy
+    - content.code.annotate
+    - content.code.select
+    - content.code.annotate
     - navigation.tabs
     - navigation.sections
     - navigation.expand
@@ -15,6 +19,7 @@ theme:
     - search.highlight
     - content.tabs.link
     - content.code.annotation
+    - diagrams
   palette:
     - scheme: default
       primary: teal
@@ -35,7 +40,11 @@ plugins:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.highlight:
@@ -92,6 +101,7 @@ markdown_extensions:
   - toc:
       permalink: true
 
+
 nav:
   - Home: index.md
 
@@ -129,6 +139,7 @@ nav:
     - Microservices: architecture/microservices.md
     - System Design: architecture/system-design.md
     - API Design: architecture/api-design.md
+    - Design Patterns: architecture/design-patterns.md
 
   - Agile & Management:
     - Agile Methodologies: agile/agile.md

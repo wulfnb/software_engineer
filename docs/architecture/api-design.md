@@ -149,6 +149,21 @@ def handle_idempotent_request(request):
         cache.set(f"idempotency:{idempotency_key}", response, timeout=24*3600)
         return response
 ```
+
+```mermaid
+graph TD
+    A[Start: Handle Idempotent Request] --> B{Key present?};
+    B -- No Key --> C[Process Request Normally];
+    B -- Yes --> D{Key in Cache?};
+    D -- Hit --> E[Return Cached Response];
+    D -- Miss --> F[Process Request and Get Result];
+    F --> G[Cache Response for 24h];
+    G --> H[Return New Response];
+    C --> I[End];
+    E --> I;
+    H --> I;
+```
+
 ## 5. Filtering and Sorting
 
 Filtering Syntax:
