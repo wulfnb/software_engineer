@@ -7,6 +7,10 @@ pip install mkdocs mkdocs-material
 # Optional: Install useful plugins
 pip install mkdocs-git-revision-date-localized-plugin mkdocs-git-committers-plugin-2
 
+# install mermaid plugin
+pip install mkdocs-mermaid2-plugin
+
+
 # Serve locally for development
 mkdocs serve
 
