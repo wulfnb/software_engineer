@@ -1,0 +1,38 @@
+name: 📘 Documentation Request
+description: Suggest adding or improving documentation for a language, framework, or tool
+title: "[DOC] <short description>"
+labels: ["documentation", "enhancement"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: 📂 Category
+      description: What type of documentation would you like to request?
+      options:
+        - Programming Language
+        - Frontend Framework
+        - Backend Framework
+        - DevOps / Tooling
+        - Design Patterns
+        - Data Structures / Algorithms
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: 🧩 Name
+      description: Enter the name of the language, framework, or tool.
+      placeholder: e.g. Rust, Vue.js, Docker, Clean Architecture
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: 💬 Additional Details
+      description: Briefly explain what you’d like to see covered or improved.
+      placeholder: e.g. "Add beginner-friendly examples for React Hooks" or "Document common Docker commands for CI/CD."
+    validations:
+      required: false
