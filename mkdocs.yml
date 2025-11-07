@@ -108,7 +108,10 @@ nav:
     - Git & GitHub: tools/git.md
     - Build Tools: tools/build-tools.md
     - IDE Tips: tools/ide.md
-    - MkDocs Setup: tools/mkdocs.md
+    - Documentation:
+        - MkDocs Setup: tools/documentation/mkdocs.md
+        - Mermaid: tools/documentation/mermaid.md
+        - Mermaid Examples: tools/documentation/mermaid_examples.md
   - Resources:
     - Books & Docs: resources/books.md
     - Learning Platforms: resources/learning.md
