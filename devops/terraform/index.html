@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#terraform">
+<a class="md-skip" href="#terraform-command-cheatsheet">
           Skip to content
         </a>
 </div>
@@ -466,12 +466,337 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Terraform
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Terraform
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-workflow-commands">
+<span class="md-ellipsis">
+      Core Workflow Commands
+    </span>
+</a>
+<nav aria-label="Core Workflow Commands" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initialization-setup">
+<span class="md-ellipsis">
+      Initialization &amp; Setup
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#planning-applying">
+<span class="md-ellipsis">
+      Planning &amp; Applying
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#destruction-cleanup">
+<span class="md-ellipsis">
+      Destruction &amp; Cleanup
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#state-management-commands">
+<span class="md-ellipsis">
+      State Management Commands
+    </span>
+</a>
+<nav aria-label="State Management Commands" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-state-operations">
+<span class="md-ellipsis">
+      Basic State Operations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#state-locking-backup">
+<span class="md-ellipsis">
+      State Locking &amp; Backup
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#validation-formatting">
+<span class="md-ellipsis">
+      Validation &amp; Formatting
+    </span>
+</a>
+<nav aria-label="Validation &amp; Formatting" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-quality">
+<span class="md-ellipsis">
+      Code Quality
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workspace-management">
+<span class="md-ellipsis">
+      Workspace Management
+    </span>
+</a>
+<nav aria-label="Workspace Management" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multi-environment-setup">
+<span class="md-ellipsis">
+      Multi-environment Setup
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#output-debugging">
+<span class="md-ellipsis">
+      Output &amp; Debugging
+    </span>
+</a>
+<nav aria-label="Output &amp; Debugging" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inspection-commands">
+<span class="md-ellipsis">
+      Inspection Commands
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#debugging-logging">
+<span class="md-ellipsis">
+      Debugging &amp; Logging
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#module-management">
+<span class="md-ellipsis">
+      Module Management
+    </span>
+</a>
+<nav aria-label="Module Management" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#module-operations">
+<span class="md-ellipsis">
+      Module Operations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#provider-management">
+<span class="md-ellipsis">
+      Provider Management
+    </span>
+</a>
+<nav aria-label="Provider Management" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#provider-operations">
+<span class="md-ellipsis">
+      Provider Operations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#advanced-operations">
+<span class="md-ellipsis">
+      Advanced Operations
+    </span>
+</a>
+<nav aria-label="Advanced Operations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#import-tainting">
+<span class="md-ellipsis">
+      Import &amp; Tainting
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#console-testing">
+<span class="md-ellipsis">
+      Console &amp; Testing
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workflow-diagram">
+<span class="md-ellipsis">
+      Workflow Diagram
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#state-management-diagram">
+<span class="md-ellipsis">
+      State Management Diagram
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-command-sequences">
+<span class="md-ellipsis">
+      Common Command Sequences
+    </span>
+</a>
+<nav aria-label="Common Command Sequences" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-development-flow">
+<span class="md-ellipsis">
+      Basic Development Flow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cicd-pipeline-flow">
+<span class="md-ellipsis">
+      CI/CD Pipeline Flow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#emergency-rollback">
+<span class="md-ellipsis">
+      Emergency Rollback
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#module-development">
+<span class="md-ellipsis">
+      Module Development
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#useful-flags-options">
+<span class="md-ellipsis">
+      Useful Flags &amp; Options
+    </span>
+</a>
+<nav aria-label="Useful Flags &amp; Options" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-flags">
+<span class="md-ellipsis">
+      Common Flags
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#plan-specific-flags">
+<span class="md-ellipsis">
+      Plan-Specific Flags
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#best-practices-summary">
+<span class="md-ellipsis">
+      Best Practices Summary
+    </span>
+</a>
+<nav aria-label="Best Practices Summary" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#security-safety">
+<span class="md-ellipsis">
+      Security &amp; Safety
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#module-structure-example">
+<span class="md-ellipsis">
+      Module Structure Example
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-configuration-using-module">
+<span class="md-ellipsis">
+      Main Configuration Using Module
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-reference-table">
+<span class="md-ellipsis">
+      Quick Reference Table
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#environment-variables">
+<span class="md-ellipsis">
+      Environment Variables
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resource-lifecycle-diagram">
+<span class="md-ellipsis">
+      Resource Lifecycle Diagram
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../github-actions/">
@@ -815,7 +1140,455 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="terraform">Terraform<a class="headerlink" href="#terraform" title="Permanent link">¶</a></h1>
+<h1 id="terraform-command-cheatsheet">Terraform Command Cheatsheet<a class="headerlink" href="#terraform-command-cheatsheet" title="Permanent link">¶</a></h1>
+<h2 id="core-workflow-commands">Core Workflow Commands<a class="headerlink" href="#core-workflow-commands" title="Permanent link">¶</a></h2>
+<h3 id="initialization-setup">Initialization &amp; Setup<a class="headerlink" href="#initialization-setup" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># Initialize Terraform in a directory</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>terraform<span class="w"> </span>init
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># Initialize with upgraded modules/plugins</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>terraform<span class="w"> </span>init<span class="w"> </span>-upgrade
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1"># Initialize with backend configuration</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>terraform<span class="w"> </span>init<span class="w"> </span>-backend-config<span class="o">=</span><span class="s2">"key=value"</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="c1"># Initialize without backend</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>terraform<span class="w"> </span>init<span class="w"> </span>-backend<span class="o">=</span><span class="nb">false</span>
+</code></pre></div>
+<h3 id="planning-applying">Planning &amp; Applying<a class="headerlink" href="#planning-applying" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># Create execution plan</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>terraform<span class="w"> </span>plan
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1"># Save plan to file</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>terraform<span class="w"> </span>plan<span class="w"> </span>-out<span class="o">=</span>plan.tfplan
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="c1"># Apply with confirmation</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>terraform<span class="w"> </span>apply
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="c1"># Apply saved plan</span>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a>terraform<span class="w"> </span>apply<span class="w"> </span>plan.tfplan
+<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a>
+<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="c1"># Apply without confirmation</span>
+<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a>terraform<span class="w"> </span>apply<span class="w"> </span>-auto-approve
+<a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a>
+<a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="c1"># Apply specific targets</span>
+<a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a>terraform<span class="w"> </span>apply<span class="w"> </span>-target<span class="o">=</span>aws_instance.web
+<a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a>
+<a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="c1"># Plan with variable file</span>
+<a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a>terraform<span class="w"> </span>plan<span class="w"> </span>-var-file<span class="o">=</span><span class="s2">"production.tfvars"</span>
+</code></pre></div>
+<h3 id="destruction-cleanup">Destruction &amp; Cleanup<a class="headerlink" href="#destruction-cleanup" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># Destroy with confirmation</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>terraform<span class="w"> </span>destroy
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c1"># Destroy without confirmation</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>terraform<span class="w"> </span>destroy<span class="w"> </span>-auto-approve
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="c1"># Destroy specific resource</span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>terraform<span class="w"> </span>destroy<span class="w"> </span>-target<span class="o">=</span>aws_instance.web
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="c1"># Destroy with variable file</span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>terraform<span class="w"> </span>destroy<span class="w"> </span>-var-file<span class="o">=</span><span class="s2">"production.tfvars"</span>
+</code></pre></div>
+<h2 id="state-management-commands">State Management Commands<a class="headerlink" href="#state-management-commands" title="Permanent link">¶</a></h2>
+<h3 id="basic-state-operations">Basic State Operations<a class="headerlink" href="#basic-state-operations" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># List resources in state</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>terraform<span class="w"> </span>state<span class="w"> </span>list
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1"># Show resource details</span>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>terraform<span class="w"> </span>state<span class="w"> </span>show<span class="w"> </span>aws_instance.web
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="c1"># Move resource in state (refactoring)</span>
+<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>terraform<span class="w"> </span>state<span class="w"> </span>mv<span class="w"> </span>aws_instance.old<span class="w"> </span>aws_instance.new
+<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a>
+<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="c1"># Remove resource from state (does NOT destroy)</span>
+<a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a>terraform<span class="w"> </span>state<span class="w"> </span>rm<span class="w"> </span>aws_instance.web
+<a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a>
+<a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="c1"># Pull current state</span>
+<a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a>terraform<span class="w"> </span>state<span class="w"> </span>pull
+<a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a>
+<a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="c1"># Push state file</span>
+<a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a>terraform<span class="w"> </span>state<span class="w"> </span>push
+</code></pre></div>
+<h3 id="state-locking-backup">State Locking &amp; Backup<a class="headerlink" href="#state-locking-backup" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># Force unlock state (if locked)</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>terraform<span class="w"> </span>force-unlock<span class="w"> </span>LOCK_ID
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="c1"># List state versions (with proper backend)</span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>terraform<span class="w"> </span>state<span class="w"> </span>list
+</code></pre></div>
+<h2 id="validation-formatting">Validation &amp; Formatting<a class="headerlink" href="#validation-formatting" title="Permanent link">¶</a></h2>
+<h3 id="code-quality">Code Quality<a class="headerlink" href="#code-quality" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># Validate configuration syntax</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>terraform<span class="w"> </span>validate
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="c1"># Format code automatically</span>
+<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a>terraform<span class="w"> </span>fmt
+<a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a>
+<a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="c1"># Check formatting without changes</span>
+<a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a>terraform<span class="w"> </span>fmt<span class="w"> </span>-check
+<a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a>
+<a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="c1"># Format recursively</span>
+<a href="#__codelineno-5-11" id="__codelineno-5-11" name="__codelineno-5-11"></a>terraform<span class="w"> </span>fmt<span class="w"> </span>-recursive
+<a href="#__codelineno-5-12" id="__codelineno-5-12" name="__codelineno-5-12"></a>
+<a href="#__codelineno-5-13" id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="c1"># Format specific directory</span>
+<a href="#__codelineno-5-14" id="__codelineno-5-14" name="__codelineno-5-14"></a>terraform<span class="w"> </span>fmt<span class="w"> </span>./modules/
+<a href="#__codelineno-5-15" id="__codelineno-5-15" name="__codelineno-5-15"></a>
+<a href="#__codelineno-5-16" id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="c1"># Show differences</span>
+<a href="#__codelineno-5-17" id="__codelineno-5-17" name="__codelineno-5-17"></a>terraform<span class="w"> </span>fmt<span class="w"> </span>-diff
+</code></pre></div>
+<h2 id="workspace-management">Workspace Management<a class="headerlink" href="#workspace-management" title="Permanent link">¶</a></h2>
+<h3 id="multi-environment-setup">Multi-environment Setup<a class="headerlink" href="#multi-environment-setup" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1"># List workspaces</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>terraform<span class="w"> </span>workspace<span class="w"> </span>list
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a>
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="c1"># Create new workspace</span>
+<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a>terraform<span class="w"> </span>workspace<span class="w"> </span>new<span class="w"> </span>dev
+<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a>
+<a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="c1"># Select workspace</span>
+<a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a>terraform<span class="w"> </span>workspace<span class="w"> </span><span class="k">select</span><span class="w"> </span>dev
+<a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a>
+<a href="#__codelineno-6-10" id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="c1"># Show current workspace</span>
+<a href="#__codelineno-6-11" id="__codelineno-6-11" name="__codelineno-6-11"></a>terraform<span class="w"> </span>workspace<span class="w"> </span>show
+<a href="#__codelineno-6-12" id="__codelineno-6-12" name="__codelineno-6-12"></a>
+<a href="#__codelineno-6-13" id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="c1"># Delete workspace</span>
+<a href="#__codelineno-6-14" id="__codelineno-6-14" name="__codelineno-6-14"></a>terraform<span class="w"> </span>workspace<span class="w"> </span>delete<span class="w"> </span>dev
+</code></pre></div>
+<h2 id="output-debugging">Output &amp; Debugging<a class="headerlink" href="#output-debugging" title="Permanent link">¶</a></h2>
+<h3 id="inspection-commands">Inspection Commands<a class="headerlink" href="#inspection-commands" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1"># Show outputs</span>
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>terraform<span class="w"> </span>output
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a>
+<a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="c1"># Show specific output</span>
+<a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a>terraform<span class="w"> </span>output<span class="w"> </span>instance_ip
+<a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a>
+<a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="c1"># Show in JSON format</span>
+<a href="#__codelineno-7-8" id="__codelineno-7-8" name="__codelineno-7-8"></a>terraform<span class="w"> </span>output<span class="w"> </span>-json
+<a href="#__codelineno-7-9" id="__codelineno-7-9" name="__codelineno-7-9"></a>
+<a href="#__codelineno-7-10" id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="c1"># Show raw output</span>
+<a href="#__codelineno-7-11" id="__codelineno-7-11" name="__codelineno-7-11"></a>terraform<span class="w"> </span>output<span class="w"> </span>-raw
+<a href="#__codelineno-7-12" id="__codelineno-7-12" name="__codelineno-7-12"></a>
+<a href="#__codelineno-7-13" id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="c1"># Show current configuration</span>
+<a href="#__codelineno-7-14" id="__codelineno-7-14" name="__codelineno-7-14"></a>terraform<span class="w"> </span>show
+<a href="#__codelineno-7-15" id="__codelineno-7-15" name="__codelineno-7-15"></a>
+<a href="#__codelineno-7-16" id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="c1"># Show plan file</span>
+<a href="#__codelineno-7-17" id="__codelineno-7-17" name="__codelineno-7-17"></a>terraform<span class="w"> </span>show<span class="w"> </span>plan.tfplan
+<a href="#__codelineno-7-18" id="__codelineno-7-18" name="__codelineno-7-18"></a>
+<a href="#__codelineno-7-19" id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="c1"># Refresh state</span>
+<a href="#__codelineno-7-20" id="__codelineno-7-20" name="__codelineno-7-20"></a>terraform<span class="w"> </span>refresh
+</code></pre></div>
+<h3 id="debugging-logging">Debugging &amp; Logging<a class="headerlink" href="#debugging-logging" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># Enable debug logging</span>
+<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">TF_LOG</span><span class="o">=</span>DEBUG
+<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a>
+<a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="c1"># Enable trace logging (very verbose)</span>
+<a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="nb">export</span><span class="w"> </span><span class="nv">TF_LOG</span><span class="o">=</span>TRACE
+<a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a>
+<a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="c1"># Log to file</span>
+<a href="#__codelineno-8-8" id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="nb">export</span><span class="w"> </span><span class="nv">TF_LOG_PATH</span><span class="o">=</span>./terraform.log
+<a href="#__codelineno-8-9" id="__codelineno-8-9" name="__codelineno-8-9"></a>
+<a href="#__codelineno-8-10" id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="c1"># Graph visualization</span>
+<a href="#__codelineno-8-11" id="__codelineno-8-11" name="__codelineno-8-11"></a>terraform<span class="w"> </span>graph<span class="w"> </span><span class="p">|</span><span class="w"> </span>dot<span class="w"> </span>-Tsvg<span class="w"> </span>&gt;<span class="w"> </span>graph.svg
+<a href="#__codelineno-8-12" id="__codelineno-8-12" name="__codelineno-8-12"></a>
+<a href="#__codelineno-8-13" id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="c1"># Disable logging</span>
+<a href="#__codelineno-8-14" id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="nb">unset</span><span class="w"> </span>TF_LOG
+</code></pre></div>
+<h2 id="module-management">Module Management<a class="headerlink" href="#module-management" title="Permanent link">¶</a></h2>
+<h3 id="module-operations">Module Operations<a class="headerlink" href="#module-operations" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="c1"># Get modules</span>
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>terraform<span class="w"> </span>get
+<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a>
+<a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="c1"># Get modules and update</span>
+<a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a>terraform<span class="w"> </span>get<span class="w"> </span>-update
+<a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a>
+<a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="c1"># Validate modules</span>
+<a href="#__codelineno-9-8" id="__codelineno-9-8" name="__codelineno-9-8"></a>terraform<span class="w"> </span>validate
+</code></pre></div>
+<h2 id="provider-management">Provider Management<a class="headerlink" href="#provider-management" title="Permanent link">¶</a></h2>
+<h3 id="provider-operations">Provider Operations<a class="headerlink" href="#provider-operations" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1"># Show provider requirements</span>
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>terraform<span class="w"> </span>providers
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a>
+<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="c1"># Mirror providers locally</span>
+<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a>terraform<span class="w"> </span>providers<span class="w"> </span>mirror<span class="w"> </span>/path/to/mirror
+<a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a>
+<a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="c1"># Lock provider versions</span>
+<a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a>terraform<span class="w"> </span>providers<span class="w"> </span>lock
+<a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a>
+<a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="c1"># Show provider schema</span>
+<a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a>terraform<span class="w"> </span>providers<span class="w"> </span>schema<span class="w"> </span>-json
+</code></pre></div>
+<h2 id="advanced-operations">Advanced Operations<a class="headerlink" href="#advanced-operations" title="Permanent link">¶</a></h2>
+<h3 id="import-tainting">Import &amp; Tainting<a class="headerlink" href="#import-tainting" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="c1"># Import existing infrastructure</span>
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>terraform<span class="w"> </span>import<span class="w"> </span>aws_instance.web<span class="w"> </span>i-1234567890abcdef0
+<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a>
+<a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="c1"># Mark resource for recreation</span>
+<a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a>terraform<span class="w"> </span>taint<span class="w"> </span>aws_instance.web
+<a href="#__codelineno-11-6" id="__codelineno-11-6" name="__codelineno-11-6"></a>
+<a href="#__codelineno-11-7" id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="c1"># Unmark resource</span>
+<a href="#__codelineno-11-8" id="__codelineno-11-8" name="__codelineno-11-8"></a>terraform<span class="w"> </span>untaint<span class="w"> </span>aws_instance.web
+<a href="#__codelineno-11-9" id="__codelineno-11-9" name="__codelineno-11-9"></a>
+<a href="#__codelineno-11-10" id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="c1"># Import with complex addresses</span>
+<a href="#__codelineno-11-11" id="__codelineno-11-11" name="__codelineno-11-11"></a>terraform<span class="w"> </span>import<span class="w"> </span><span class="s1">'module.vpc.aws_vpc.main[0]'</span><span class="w"> </span>vpc-123456
+</code></pre></div>
+<h3 id="console-testing">Console &amp; Testing<a class="headerlink" href="#console-testing" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="c1"># Interactive console</span>
+<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>terraform<span class="w"> </span>console
+<a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a>
+<a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="c1"># Test expressions</span>
+<a href="#__codelineno-12-5" id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="c1"># In console: aws_instance.web.private_ip</span>
+<a href="#__codelineno-12-6" id="__codelineno-12-6" name="__codelineno-12-6"></a>
+<a href="#__codelineno-12-7" id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="c1"># Run specific tests</span>
+<a href="#__codelineno-12-8" id="__codelineno-12-8" name="__codelineno-12-8"></a>terraform<span class="w"> </span><span class="nb">test</span>
+<a href="#__codelineno-12-9" id="__codelineno-12-9" name="__codelineno-12-9"></a>
+<a href="#__codelineno-12-10" id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="c1"># Run tests with verbose output</span>
+<a href="#__codelineno-12-11" id="__codelineno-12-11" name="__codelineno-12-11"></a>terraform<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-verbose
+</code></pre></div>
+<h2 id="workflow-diagram">Workflow Diagram<a class="headerlink" href="#workflow-diagram" title="Permanent link">¶</a></h2>
+<pre class="mermaid"><code>graph TD
+    A[Write .tf files] --&gt; B[terraform init]
+    B --&gt; C[terraform validate]
+    C --&gt; D[terraform fmt]
+    D --&gt; E[terraform plan]
+    E --&gt; F{Plan OK?}
+    F --&gt;|Yes| G[terraform apply]
+    F --&gt;|No| A
+    G --&gt; H[Infrastructure Ready]
+    H --&gt; I[Make Changes]
+    I --&gt; E
+    H --&gt; J[terraform destroy]
+
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style G fill:#e8f5e8
+    style J fill:#ffebee</code></pre>
+<h2 id="state-management-diagram">State Management Diagram<a class="headerlink" href="#state-management-diagram" title="Permanent link">¶</a></h2>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; LocalState
+    LocalState --&gt; RemoteState: terraform init -reconfigure
+    RemoteState --&gt; LocalState: terraform state pull
+    LocalState --&gt; Locked: terraform apply
+    Locked --&gt; LocalState: Apply complete
+    RemoteState --&gt; Locked: terraform apply
+    Locked --&gt; RemoteState: Apply complete
+
+    note right of LocalState: Default backend
+    note right of RemoteState: S3, GCS, Azure, etc.</code></pre>
+<h2 id="common-command-sequences">Common Command Sequences<a class="headerlink" href="#common-command-sequences" title="Permanent link">¶</a></h2>
+<h3 id="basic-development-flow">Basic Development Flow<a class="headerlink" href="#basic-development-flow" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="c1"># Complete development workflow</span>
+<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>terraform<span class="w"> </span>init
+<a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a>terraform<span class="w"> </span>validate
+<a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a>terraform<span class="w"> </span>fmt
+<a href="#__codelineno-13-5" id="__codelineno-13-5" name="__codelineno-13-5"></a>terraform<span class="w"> </span>plan<span class="w"> </span>-out<span class="o">=</span>tfplan
+<a href="#__codelineno-13-6" id="__codelineno-13-6" name="__codelineno-13-6"></a>terraform<span class="w"> </span>apply<span class="w"> </span>tfplan
+</code></pre></div>
+<h3 id="cicd-pipeline-flow">CI/CD Pipeline Flow<a class="headerlink" href="#cicd-pipeline-flow" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="c1"># Automated pipeline workflow</span>
+<a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>terraform<span class="w"> </span>init<span class="w"> </span>-input<span class="o">=</span><span class="nb">false</span>
+<a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a>terraform<span class="w"> </span>validate
+<a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a>terraform<span class="w"> </span>fmt<span class="w"> </span>-check<span class="w"> </span>-diff
+<a href="#__codelineno-14-5" id="__codelineno-14-5" name="__codelineno-14-5"></a>terraform<span class="w"> </span>plan<span class="w"> </span>-out<span class="o">=</span>tfplan<span class="w"> </span>-input<span class="o">=</span><span class="nb">false</span><span class="w"> </span>-detailed-exitcode
+<a href="#__codelineno-14-6" id="__codelineno-14-6" name="__codelineno-14-6"></a>terraform<span class="w"> </span>apply<span class="w"> </span>tfplan<span class="w"> </span>-auto-approve<span class="w"> </span>-input<span class="o">=</span><span class="nb">false</span>
+</code></pre></div>
+<h3 id="emergency-rollback">Emergency Rollback<a class="headerlink" href="#emergency-rollback" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="c1"># Rollback to previous state</span>
+<a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a>terraform<span class="w"> </span>plan<span class="w"> </span>-out<span class="o">=</span>rollback_plan
+<a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a>terraform<span class="w"> </span>apply<span class="w"> </span>rollback_plan
+<a href="#__codelineno-15-4" id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="c1"># OR use versioned state backend</span>
+</code></pre></div>
+<h3 id="module-development">Module Development<a class="headerlink" href="#module-development" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="c1"># Test module locally</span>
+<a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a>terraform<span class="w"> </span>init
+<a href="#__codelineno-16-3" id="__codelineno-16-3" name="__codelineno-16-3"></a>terraform<span class="w"> </span>plan<span class="w"> </span>-var<span class="o">=</span><span class="s2">"input_var=value"</span>
+<a href="#__codelineno-16-4" id="__codelineno-16-4" name="__codelineno-16-4"></a>terraform<span class="w"> </span>apply<span class="w"> </span>-auto-approve
+<a href="#__codelineno-16-5" id="__codelineno-16-5" name="__codelineno-16-5"></a>terraform<span class="w"> </span>destroy<span class="w"> </span>-auto-approve
+</code></pre></div>
+<h2 id="useful-flags-options">Useful Flags &amp; Options<a class="headerlink" href="#useful-flags-options" title="Permanent link">¶</a></h2>
+<h3 id="common-flags">Common Flags<a class="headerlink" href="#common-flags" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="c1"># Common useful flags</span>
+<a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a>-var<span class="o">=</span><span class="s2">"name=value"</span><span class="w">          </span><span class="c1"># Set variable</span>
+<a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a>-var-file<span class="o">=</span><span class="s2">"prod.tfvars"</span><span class="w">    </span><span class="c1"># Use var file</span>
+<a href="#__codelineno-17-4" id="__codelineno-17-4" name="__codelineno-17-4"></a>-backend-config<span class="o">=</span><span class="s2">"key=value"</span><span class="w"> </span><span class="c1"># Backend config</span>
+<a href="#__codelineno-17-5" id="__codelineno-17-5" name="__codelineno-17-5"></a>-lock<span class="o">=</span>true/false<span class="w">           </span><span class="c1"># State locking</span>
+<a href="#__codelineno-17-6" id="__codelineno-17-6" name="__codelineno-17-6"></a>-lock-timeout<span class="o">=</span>30s<span class="w">          </span><span class="c1"># Lock timeout</span>
+<a href="#__codelineno-17-7" id="__codelineno-17-7" name="__codelineno-17-7"></a>-parallelism<span class="o">=</span><span class="m">10</span><span class="w">            </span><span class="c1"># Parallel operations</span>
+<a href="#__codelineno-17-8" id="__codelineno-17-8" name="__codelineno-17-8"></a>-refresh<span class="o">=</span>true/false<span class="w">        </span><span class="c1"># Refresh state</span>
+<a href="#__codelineno-17-9" id="__codelineno-17-9" name="__codelineno-17-9"></a>-input<span class="o">=</span>true/false<span class="w">          </span><span class="c1"># Interactive input</span>
+</code></pre></div>
+<h3 id="plan-specific-flags">Plan-Specific Flags<a class="headerlink" href="#plan-specific-flags" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="c1"># Plan-specific options</span>
+<a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a>-refresh-only<span class="w">             </span><span class="c1"># Only refresh state</span>
+<a href="#__codelineno-18-3" id="__codelineno-18-3" name="__codelineno-18-3"></a>-replace<span class="o">=</span><span class="s2">"aws_instance.web"</span><span class="w"> </span><span class="c1"># Force replacement</span>
+<a href="#__codelineno-18-4" id="__codelineno-18-4" name="__codelineno-18-4"></a>-detailed-exitcode<span class="w">        </span><span class="c1"># Detailed exit codes for automation</span>
+</code></pre></div>
+<h2 id="best-practices-summary">Best Practices Summary<a class="headerlink" href="#best-practices-summary" title="Permanent link">¶</a></h2>
+<h3 id="security-safety">Security &amp; Safety<a class="headerlink" href="#security-safety" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="c1"># Never commit state files</span>
+<a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"*.tfstate"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore
+<a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"*.tfstate.*"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore
+<a href="#__codelineno-19-4" id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">".terraform/"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore
+<a href="#__codelineno-19-5" id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"*.terraform.lock.hcl"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore
+<a href="#__codelineno-19-6" id="__codelineno-19-6" name="__codelineno-19-6"></a>
+<a href="#__codelineno-19-7" id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="c1"># Use remote state backends</span>
+<a href="#__codelineno-19-8" id="__codelineno-19-8" name="__codelineno-19-8"></a>terraform<span class="w"> </span><span class="o">{</span>
+<a href="#__codelineno-19-9" id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="w">  </span>backend<span class="w"> </span><span class="s2">"s3"</span><span class="w"> </span><span class="o">{</span>
+<a href="#__codelineno-19-10" id="__codelineno-19-10" name="__codelineno-19-10"></a><span class="w">    </span><span class="nv">bucket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"my-terraform-state"</span>
+<a href="#__codelineno-19-11" id="__codelineno-19-11" name="__codelineno-19-11"></a><span class="w">    </span><span class="nv">key</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">"prod/terraform.tfstate"</span>
+<a href="#__codelineno-19-12" id="__codelineno-19-12" name="__codelineno-19-12"></a><span class="w">    </span><span class="nv">region</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"us-east-1"</span>
+<a href="#__codelineno-19-13" id="__codelineno-19-13" name="__codelineno-19-13"></a><span class="w">    </span><span class="nv">dynamodb_table</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"terraform-locks"</span>
+<a href="#__codelineno-19-14" id="__codelineno-19-14" name="__codelineno-19-14"></a><span class="w">  </span><span class="o">}</span>
+<a href="#__codelineno-19-15" id="__codelineno-19-15" name="__codelineno-19-15"></a><span class="o">}</span>
+<a href="#__codelineno-19-16" id="__codelineno-19-16" name="__codelineno-19-16"></a>
+<a href="#__codelineno-19-17" id="__codelineno-19-17" name="__codelineno-19-17"></a><span class="c1"># Use variable files for secrets</span>
+<a href="#__codelineno-19-18" id="__codelineno-19-18" name="__codelineno-19-18"></a>terraform<span class="w"> </span>apply<span class="w"> </span>-var-file<span class="o">=</span><span class="s2">"secrets.tfvars"</span>
+</code></pre></div>
+<h3 id="module-structure-example">Module Structure Example<a class="headerlink" href="#module-structure-example" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="c1"># modules/web_server/main.tf</span>
+<a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">"aws_instance"</span><span class="w"> </span><span class="nv">"web"</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-20-3" id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="w">  </span><span class="na">ami</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="nv">var.ami_id</span>
+<a href="#__codelineno-20-4" id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="w">  </span><span class="na">instance_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.instance_type</span>
+<a href="#__codelineno-20-5" id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="w">  </span><span class="na">subnet_id</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="nv">var.subnet_id</span>
+<a href="#__codelineno-20-6" id="__codelineno-20-6" name="__codelineno-20-6"></a>
+<a href="#__codelineno-20-7" id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="w">  </span><span class="nb">tags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-20-8" id="__codelineno-20-8" name="__codelineno-20-8"></a><span class="w">    </span><span class="na">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.name</span>
+<a href="#__codelineno-20-9" id="__codelineno-20-9" name="__codelineno-20-9"></a><span class="w">  </span><span class="p">}</span>
+<a href="#__codelineno-20-10" id="__codelineno-20-10" name="__codelineno-20-10"></a><span class="p">}</span>
+<a href="#__codelineno-20-11" id="__codelineno-20-11" name="__codelineno-20-11"></a>
+<a href="#__codelineno-20-12" id="__codelineno-20-12" name="__codelineno-20-12"></a><span class="c1"># modules/web_server/variables.tf</span>
+<a href="#__codelineno-20-13" id="__codelineno-20-13" name="__codelineno-20-13"></a><span class="kr">variable</span><span class="w"> </span><span class="nv">"ami_id"</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-20-14" id="__codelineno-20-14" name="__codelineno-20-14"></a><span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"AMI ID for the instance"</span>
+<a href="#__codelineno-20-15" id="__codelineno-20-15" name="__codelineno-20-15"></a><span class="w">  </span><span class="na">type</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="kt">string</span>
+<a href="#__codelineno-20-16" id="__codelineno-20-16" name="__codelineno-20-16"></a><span class="p">}</span>
+<a href="#__codelineno-20-17" id="__codelineno-20-17" name="__codelineno-20-17"></a>
+<a href="#__codelineno-20-18" id="__codelineno-20-18" name="__codelineno-20-18"></a><span class="kr">variable</span><span class="w"> </span><span class="nv">"instance_type"</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-20-19" id="__codelineno-20-19" name="__codelineno-20-19"></a><span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Instance type"</span>
+<a href="#__codelineno-20-20" id="__codelineno-20-20" name="__codelineno-20-20"></a><span class="w">  </span><span class="na">type</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="kt">string</span>
+<a href="#__codelineno-20-21" id="__codelineno-20-21" name="__codelineno-20-21"></a><span class="w">  </span><span class="na">default</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">"t3.micro"</span>
+<a href="#__codelineno-20-22" id="__codelineno-20-22" name="__codelineno-20-22"></a><span class="p">}</span>
+<a href="#__codelineno-20-23" id="__codelineno-20-23" name="__codelineno-20-23"></a>
+<a href="#__codelineno-20-24" id="__codelineno-20-24" name="__codelineno-20-24"></a><span class="kr">variable</span><span class="w"> </span><span class="nv">"name"</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-20-25" id="__codelineno-20-25" name="__codelineno-20-25"></a><span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Instance name"</span>
+<a href="#__codelineno-20-26" id="__codelineno-20-26" name="__codelineno-20-26"></a><span class="w">  </span><span class="na">type</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="kt">string</span>
+<a href="#__codelineno-20-27" id="__codelineno-20-27" name="__codelineno-20-27"></a><span class="p">}</span>
+<a href="#__codelineno-20-28" id="__codelineno-20-28" name="__codelineno-20-28"></a>
+<a href="#__codelineno-20-29" id="__codelineno-20-29" name="__codelineno-20-29"></a><span class="kr">variable</span><span class="w"> </span><span class="nv">"subnet_id"</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-20-30" id="__codelineno-20-30" name="__codelineno-20-30"></a><span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Subnet ID"</span>
+<a href="#__codelineno-20-31" id="__codelineno-20-31" name="__codelineno-20-31"></a><span class="w">  </span><span class="na">type</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="kt">string</span>
+<a href="#__codelineno-20-32" id="__codelineno-20-32" name="__codelineno-20-32"></a><span class="p">}</span>
+<a href="#__codelineno-20-33" id="__codelineno-20-33" name="__codelineno-20-33"></a>
+<a href="#__codelineno-20-34" id="__codelineno-20-34" name="__codelineno-20-34"></a><span class="c1"># modules/web_server/outputs.tf</span>
+<a href="#__codelineno-20-35" id="__codelineno-20-35" name="__codelineno-20-35"></a><span class="kr">output</span><span class="w"> </span><span class="nv">"instance_ip"</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-20-36" id="__codelineno-20-36" name="__codelineno-20-36"></a><span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Private IP address"</span>
+<a href="#__codelineno-20-37" id="__codelineno-20-37" name="__codelineno-20-37"></a><span class="w">  </span><span class="na">value</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nv">aws_instance.web.private_ip</span>
+<a href="#__codelineno-20-38" id="__codelineno-20-38" name="__codelineno-20-38"></a><span class="p">}</span>
+<a href="#__codelineno-20-39" id="__codelineno-20-39" name="__codelineno-20-39"></a>
+<a href="#__codelineno-20-40" id="__codelineno-20-40" name="__codelineno-20-40"></a><span class="kr">output</span><span class="w"> </span><span class="nv">"instance_id"</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-20-41" id="__codelineno-20-41" name="__codelineno-20-41"></a><span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Instance ID"</span>
+<a href="#__codelineno-20-42" id="__codelineno-20-42" name="__codelineno-20-42"></a><span class="w">  </span><span class="na">value</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nv">aws_instance.web.id</span>
+<a href="#__codelineno-20-43" id="__codelineno-20-43" name="__codelineno-20-43"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="main-configuration-using-module">Main Configuration Using Module<a class="headerlink" href="#main-configuration-using-module" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="c1"># main.tf</span>
+<a href="#__codelineno-21-2" id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="kr">module</span><span class="w"> </span><span class="nv">"web_server"</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-21-3" id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="w">  </span><span class="na">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"./modules/web_server"</span>
+<a href="#__codelineno-21-4" id="__codelineno-21-4" name="__codelineno-21-4"></a>
+<a href="#__codelineno-21-5" id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="w">  </span><span class="na">ami_id</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s2">"ami-12345678"</span>
+<a href="#__codelineno-21-6" id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="w">  </span><span class="na">instance_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"t3.small"</span>
+<a href="#__codelineno-21-7" id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="w">  </span><span class="na">name</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s2">"production-web"</span>
+<a href="#__codelineno-21-8" id="__codelineno-21-8" name="__codelineno-21-8"></a><span class="w">  </span><span class="na">subnet_id</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">"subnet-12345678"</span>
+<a href="#__codelineno-21-9" id="__codelineno-21-9" name="__codelineno-21-9"></a><span class="p">}</span>
+<a href="#__codelineno-21-10" id="__codelineno-21-10" name="__codelineno-21-10"></a>
+<a href="#__codelineno-21-11" id="__codelineno-21-11" name="__codelineno-21-11"></a><span class="kr">output</span><span class="w"> </span><span class="nv">"web_server_ip"</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-21-12" id="__codelineno-21-12" name="__codelineno-21-12"></a><span class="w">  </span><span class="na">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">module.web_server.instance_ip</span>
+<a href="#__codelineno-21-13" id="__codelineno-21-13" name="__codelineno-21-13"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="quick-reference-table">Quick Reference Table<a class="headerlink" href="#quick-reference-table" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Purpose</th>
+<th>Common Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>init</code></td>
+<td>Initialize project</td>
+<td>First command in new project</td>
+</tr>
+<tr>
+<td><code>plan</code></td>
+<td>Preview changes</td>
+<td>Before every apply</td>
+</tr>
+<tr>
+<td><code>apply</code></td>
+<td>Apply changes</td>
+<td>Deploy infrastructure</td>
+</tr>
+<tr>
+<td><code>destroy</code></td>
+<td>Clean up</td>
+<td>Remove all resources</td>
+</tr>
+<tr>
+<td><code>validate</code></td>
+<td>Check syntax</td>
+<td>CI/CD pipeline</td>
+</tr>
+<tr>
+<td><code>fmt</code></td>
+<td>Format code</td>
+<td>Pre-commit hook</td>
+</tr>
+<tr>
+<td><code>state list</code></td>
+<td>List resources</td>
+<td>Debugging</td>
+</tr>
+<tr>
+<td><code>import</code></td>
+<td>Import existing</td>
+<td>Migrate to Terraform</td>
+</tr>
+<tr>
+<td><code>workspace</code></td>
+<td>Manage environments</td>
+<td>Multi-env setups</td>
+</tr>
+<tr>
+<td><code>output</code></td>
+<td>Show outputs</td>
+<td>Get resource info</td>
+</tr>
+</tbody>
+</table>
+<h2 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="c1"># Common Terraform environment variables</span>
+<a href="#__codelineno-22-2" id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">TF_VAR_region</span><span class="o">=</span><span class="s2">"us-west-2"</span><span class="w">           </span><span class="c1"># Set variables</span>
+<a href="#__codelineno-22-3" id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">TF_CLI_ARGS</span><span class="o">=</span><span class="s2">"-input=false"</span><span class="w">          </span><span class="c1"># Default CLI args</span>
+<a href="#__codelineno-22-4" id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="nb">export</span><span class="w"> </span><span class="nv">TF_DATA_DIR</span><span class="o">=</span><span class="s2">"./terraform_data"</span><span class="w">      </span><span class="c1"># Change data directory</span>
+<a href="#__codelineno-22-5" id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="nb">export</span><span class="w"> </span><span class="nv">TF_IN_AUTOMATION</span><span class="o">=</span><span class="s2">"true"</span><span class="w">             </span><span class="c1"># Disable color/formatting</span>
+<a href="#__codelineno-22-6" id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="nb">export</span><span class="w"> </span><span class="nv">TF_REGISTRY_DISCOVERY_RETRY</span><span class="o">=</span><span class="m">5</span><span class="w">       </span><span class="c1"># Registry retries</span>
+<a href="#__codelineno-22-7" id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="nb">export</span><span class="w"> </span><span class="nv">TF_REGISTRY_CLIENT_TIMEOUT</span><span class="o">=</span><span class="m">15</span><span class="w">       </span><span class="c1"># Registry timeout</span>
+</code></pre></div>
+<h2 id="resource-lifecycle-diagram">Resource Lifecycle Diagram<a class="headerlink" href="#resource-lifecycle-diagram" title="Permanent link">¶</a></h2>
+<pre class="mermaid"><code>graph LR
+    A[terraform plan] --&gt; B[Create/Update/Delete]
+    B --&gt; C[State File Update]
+    C --&gt; D[Provider API Calls]
+    D --&gt; E[Infrastructure Changes]
+    E --&gt; F[State Verification]
+    F --&gt; G[Complete]
+
+    style A fill:#fff3e0
+    style B fill:#e8f5e8
+    style D fill:#fce4ec
+    style G fill:#e1f5fe</code></pre>
+<p>This cheatsheet covers all essential Terraform commands with practical examples and workflows. Keep it handy for daily Terraform operations!</p>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>

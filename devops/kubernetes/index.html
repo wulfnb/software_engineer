@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#kubernetes">
+<a class="md-skip" href="#kubernetes-commands-cheat-sheet">
           Skip to content
         </a>
 </div>
@@ -458,12 +458,309 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Kubernetes
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Kubernetes
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-basic-cluster-management">
+<span class="md-ellipsis">
+      1. Basic Cluster Management
+    </span>
+</a>
+<nav aria-label="1. Basic Cluster Management" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cluster-information-commands">
+<span class="md-ellipsis">
+      Cluster Information Commands
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cluster-architecture-overview">
+<span class="md-ellipsis">
+      Cluster Architecture Overview
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-pod-operations">
+<span class="md-ellipsis">
+      2. Pod Operations
+    </span>
+</a>
+<nav aria-label="2. Pod Operations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pod-management-commands">
+<span class="md-ellipsis">
+      Pod Management Commands
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pod-lifecycle">
+<span class="md-ellipsis">
+      Pod Lifecycle
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-deployments-replicasets">
+<span class="md-ellipsis">
+      3. Deployments &amp; ReplicaSets
+    </span>
+</a>
+<nav aria-label="3. Deployments &amp; ReplicaSets" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deployment-commands">
+<span class="md-ellipsis">
+      Deployment Commands
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deployment-architecture">
+<span class="md-ellipsis">
+      Deployment Architecture
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-services">
+<span class="md-ellipsis">
+      4. Services
+    </span>
+</a>
+<nav aria-label="4. Services" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#service-management-commands">
+<span class="md-ellipsis">
+      Service Management Commands
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#service-types-and-traffic-flow">
+<span class="md-ellipsis">
+      Service Types and Traffic Flow
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-configmaps-secrets">
+<span class="md-ellipsis">
+      5. ConfigMaps &amp; Secrets
+    </span>
+</a>
+<nav aria-label="5. ConfigMaps &amp; Secrets" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-management-commands">
+<span class="md-ellipsis">
+      Configuration Management Commands
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configmapsecret-usage-in-pods">
+<span class="md-ellipsis">
+      ConfigMap/Secret Usage in Pods
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-namespaces">
+<span class="md-ellipsis">
+      6. Namespaces
+    </span>
+</a>
+<nav aria-label="6. Namespaces" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#namespace-commands">
+<span class="md-ellipsis">
+      Namespace Commands
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#namespace-isolation">
+<span class="md-ellipsis">
+      Namespace Isolation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-debugging-inspection">
+<span class="md-ellipsis">
+      7. Debugging &amp; Inspection
+    </span>
+</a>
+<nav aria-label="7. Debugging &amp; Inspection" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#debugging-commands">
+<span class="md-ellipsis">
+      Debugging Commands
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#debugging-workflow">
+<span class="md-ellipsis">
+      Debugging Workflow
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-yaml-management">
+<span class="md-ellipsis">
+      8. YAML Management
+    </span>
+</a>
+<nav aria-label="8. YAML Management" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#yaml-operations">
+<span class="md-ellipsis">
+      YAML Operations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resource-creation-flow">
+<span class="md-ellipsis">
+      Resource Creation Flow
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9-context-configuration">
+<span class="md-ellipsis">
+      9. Context &amp; Configuration
+    </span>
+</a>
+<nav aria-label="9. Context &amp; Configuration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#context-management">
+<span class="md-ellipsis">
+      Context Management
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multi-context-architecture">
+<span class="md-ellipsis">
+      Multi-Context Architecture
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10-cleanup-operations">
+<span class="md-ellipsis">
+      10. Cleanup Operations
+    </span>
+</a>
+<nav aria-label="10. Cleanup Operations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cleanup-commands">
+<span class="md-ellipsis">
+      Cleanup Commands
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resource-hierarchy-for-cleanup">
+<span class="md-ellipsis">
+      Resource Hierarchy for Cleanup
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-reference-tips">
+<span class="md-ellipsis">
+      Quick Reference Tips
+    </span>
+</a>
+<nav aria-label="Quick Reference Tips" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-flags">
+<span class="md-ellipsis">
+      Common Flags
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resource-types-shortcuts">
+<span class="md-ellipsis">
+      Resource Types Shortcuts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#helpful-tips">
+<span class="md-ellipsis">
+      Helpful Tips
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../terraform/">
@@ -815,7 +1112,336 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="kubernetes">Kubernetes<a class="headerlink" href="#kubernetes" title="Permanent link">¶</a></h1>
+<h1 id="kubernetes-commands-cheat-sheet">Kubernetes Commands Cheat Sheet<a class="headerlink" href="#kubernetes-commands-cheat-sheet" title="Permanent link">¶</a></h1>
+<h2 id="1-basic-cluster-management">1. Basic Cluster Management<a class="headerlink" href="#1-basic-cluster-management" title="Permanent link">¶</a></h2>
+<h3 id="cluster-information-commands">Cluster Information Commands<a class="headerlink" href="#cluster-information-commands" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># Check cluster info</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>kubectl<span class="w"> </span>cluster-info
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># View nodes in the cluster</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>kubectl<span class="w"> </span>get<span class="w"> </span>nodes
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1"># Check k8s version</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>kubectl<span class="w"> </span>version<span class="w"> </span>--short
+</code></pre></div>
+<h3 id="cluster-architecture-overview">Cluster Architecture Overview<a class="headerlink" href="#cluster-architecture-overview" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    A[Control Plane] --&gt; B[API Server]
+    A --&gt; C[etcd]
+    A --&gt; D[Scheduler]
+    A --&gt; E[Controller Manager]
+
+    B --&gt; F[Worker Nodes]
+    F --&gt; G[Kubelet]
+    F --&gt; H[Kube Proxy]
+    F --&gt; I[Pods]
+    I --&gt; J[Containers]</code></pre>
+<hr/>
+<h2 id="2-pod-operations">2. Pod Operations<a class="headerlink" href="#2-pod-operations" title="Permanent link">¶</a></h2>
+<h3 id="pod-management-commands">Pod Management Commands<a class="headerlink" href="#pod-management-commands" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># List all pods</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>kubectl<span class="w"> </span>get<span class="w"> </span>pods
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1"># List pods with details</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-o<span class="w"> </span>wide
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="c1"># Get pod details including events</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>kubectl<span class="w"> </span>describe<span class="w"> </span>pod<span class="w"> </span>&lt;pod-name&gt;
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="c1"># Delete a pod</span>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a>kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>&lt;pod-name&gt;
+<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a>
+<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="c1"># Stream pod logs</span>
+<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a>kubectl<span class="w"> </span>logs<span class="w"> </span>&lt;pod-name&gt;
+<a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a>
+<a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="c1"># Stream logs from multiple pods</span>
+<a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a>kubectl<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>deployment/&lt;deployment-name&gt;
+</code></pre></div>
+<h3 id="pod-lifecycle">Pod Lifecycle<a class="headerlink" href="#pod-lifecycle" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; Pending
+    Pending --&gt; Running
+    Running --&gt; Succeeded
+    Running --&gt; Failed
+    Running --&gt; Unknown
+    Failed --&gt; [*]
+    Succeeded --&gt; [*]
+    Unknown --&gt; [*]</code></pre>
+<hr/>
+<h2 id="3-deployments-replicasets">3. Deployments &amp; ReplicaSets<a class="headerlink" href="#3-deployments-replicasets" title="Permanent link">¶</a></h2>
+<h3 id="deployment-commands">Deployment Commands<a class="headerlink" href="#deployment-commands" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># List deployments</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>kubectl<span class="w"> </span>get<span class="w"> </span>deployments
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c1"># Create a deployment</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>kubectl<span class="w"> </span>create<span class="w"> </span>deployment<span class="w"> </span>&lt;name&gt;<span class="w"> </span>--image<span class="o">=</span>&lt;image&gt;
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="c1"># Scale a deployment</span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>kubectl<span class="w"> </span>scale<span class="w"> </span>deployment/&lt;name&gt;<span class="w"> </span>--replicas<span class="o">=</span><span class="m">3</span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="c1"># Update deployment image</span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>kubectl<span class="w"> </span><span class="nb">set</span><span class="w"> </span>image<span class="w"> </span>deployment/&lt;name&gt;<span class="w"> </span>&lt;container&gt;<span class="o">=</span>&lt;new-image&gt;
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="c1"># Check rollout status</span>
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>kubectl<span class="w"> </span>rollout<span class="w"> </span>status<span class="w"> </span>deployment/&lt;name&gt;
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="c1"># Rollback a deployment</span>
+<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a>kubectl<span class="w"> </span>rollout<span class="w"> </span>undo<span class="w"> </span>deployment/&lt;name&gt;
+</code></pre></div>
+<h3 id="deployment-architecture">Deployment Architecture<a class="headerlink" href="#deployment-architecture" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    A[Deployment] --&gt; B[ReplicaSet v1]
+    A --&gt; C[ReplicaSet v2]
+    B --&gt; D[Pod 1]
+    B --&gt; E[Pod 2]
+    C --&gt; F[Pod 3]
+    C --&gt; G[Pod 4]
+
+    style B fill:#e1f5fe
+    style C fill:#f3e5f5</code></pre>
+<hr/>
+<h2 id="4-services">4. Services<a class="headerlink" href="#4-services" title="Permanent link">¶</a></h2>
+<h3 id="service-management-commands">Service Management Commands<a class="headerlink" href="#service-management-commands" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># List services</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>kubectl<span class="w"> </span>get<span class="w"> </span>svc
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1"># Expose a deployment as a service</span>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>kubectl<span class="w"> </span>expose<span class="w"> </span>deployment/&lt;name&gt;<span class="w"> </span>--port<span class="o">=</span><span class="m">80</span><span class="w"> </span>--target-port<span class="o">=</span><span class="m">8080</span><span class="w"> </span>--type<span class="o">=</span>LoadBalancer
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="c1"># Get service details</span>
+<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>kubectl<span class="w"> </span>describe<span class="w"> </span>svc<span class="w"> </span>&lt;service-name&gt;
+</code></pre></div>
+<h3 id="service-types-and-traffic-flow">Service Types and Traffic Flow<a class="headerlink" href="#service-types-and-traffic-flow" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    A[External User] --&gt; B[LoadBalancer]
+    B --&gt; C[ClusterIP]
+    C --&gt; D[Pod]
+    C --&gt; E[Pod]
+    C --&gt; F[Pod]
+
+    G[Internal App] --&gt; C
+
+    subgraph Cluster
+        C
+        D
+        E
+        F
+    end</code></pre>
+<hr/>
+<h2 id="5-configmaps-secrets">5. ConfigMaps &amp; Secrets<a class="headerlink" href="#5-configmaps-secrets" title="Permanent link">¶</a></h2>
+<h3 id="configuration-management-commands">Configuration Management Commands<a class="headerlink" href="#configuration-management-commands" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># Create a ConfigMap from a file</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>kubectl<span class="w"> </span>create<span class="w"> </span>configmap<span class="w"> </span>&lt;name&gt;<span class="w"> </span>--from-file<span class="o">=</span>&lt;path-to-file&gt;
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="c1"># Create a Secret (generic)</span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>&lt;name&gt;<span class="w"> </span>--from-literal<span class="o">=</span><span class="nv">key</span><span class="o">=</span>value
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="c1"># List ConfigMaps/Secrets</span>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>kubectl<span class="w"> </span>get<span class="w"> </span>configmaps
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>kubectl<span class="w"> </span>get<span class="w"> </span>secrets
+</code></pre></div>
+<h3 id="configmapsecret-usage-in-pods">ConfigMap/Secret Usage in Pods<a class="headerlink" href="#configmapsecret-usage-in-pods" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    A[ConfigMap] --&gt; C[Pod]
+    B[Secret] --&gt; C
+    C --&gt; D[Container 1]
+    C --&gt; E[Container 2]
+
+    A --&gt; F[Environment&lt;br/&gt;Variables]
+    B --&gt; G[Volume Mount]</code></pre>
+<hr/>
+<h2 id="6-namespaces">6. Namespaces<a class="headerlink" href="#6-namespaces" title="Permanent link">¶</a></h2>
+<h3 id="namespace-commands">Namespace Commands<a class="headerlink" href="#namespace-commands" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># Switch namespaces</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>kubectl<span class="w"> </span>config<span class="w"> </span>set-context<span class="w"> </span>--current<span class="w"> </span>--namespace<span class="o">=</span>&lt;namespace&gt;
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="c1"># List all namespaces</span>
+<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a>kubectl<span class="w"> </span>get<span class="w"> </span>namespaces
+<a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a>
+<a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="c1"># Create a namespace</span>
+<a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a>kubectl<span class="w"> </span>create<span class="w"> </span>namespace<span class="w"> </span>&lt;name&gt;
+</code></pre></div>
+<h3 id="namespace-isolation">Namespace Isolation<a class="headerlink" href="#namespace-isolation" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TD
+    A[Kubernetes Cluster] --&gt; B[default]
+    A --&gt; C[kube-system]
+    A --&gt; D[production]
+    A --&gt; E[development]
+    A --&gt; F[monitoring]
+
+    B --&gt; B1[App Pods]
+    C --&gt; C1[System Pods]
+    D --&gt; D1[Prod App]
+    E --&gt; E1[Dev App]
+    F --&gt; F1[Monitoring Tools]</code></pre>
+<hr/>
+<h2 id="7-debugging-inspection">7. Debugging &amp; Inspection<a class="headerlink" href="#7-debugging-inspection" title="Permanent link">¶</a></h2>
+<h3 id="debugging-commands">Debugging Commands<a class="headerlink" href="#debugging-commands" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1"># Execute a command in a pod</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>&lt;pod-name&gt;<span class="w"> </span>--<span class="w"> </span>/bin/bash
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a>
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="c1"># Port-forward to a pod</span>
+<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a>kubectl<span class="w"> </span>port-forward<span class="w"> </span>&lt;pod-name&gt;<span class="w"> </span>&lt;local-port&gt;:&lt;pod-port&gt;
+<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a>
+<a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="c1"># Check resource usage</span>
+<a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a>kubectl<span class="w"> </span>top<span class="w"> </span>pods
+<a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a>kubectl<span class="w"> </span>top<span class="w"> </span>nodes
+</code></pre></div>
+<h3 id="debugging-workflow">Debugging Workflow<a class="headerlink" href="#debugging-workflow" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    A[Issue Detected] --&gt; B[Get Pod Status]
+    B --&gt; C[kubectl get pods]
+    C --&gt; D{All Pods Running?}
+    D --&gt;|No| E[Check Events]
+    D --&gt;|Yes| F[Check Logs]
+
+    E --&gt; E1[kubectl describe pod]
+    F --&gt; F1[kubectl logs]
+
+    E1 --&gt; G[Identify Issue]
+    F1 --&gt; G
+
+    G --&gt; H[Execute Debug Commands]
+    H --&gt; I[kubectl exec]</code></pre>
+<hr/>
+<h2 id="8-yaml-management">8. YAML Management<a class="headerlink" href="#8-yaml-management" title="Permanent link">¶</a></h2>
+<h3 id="yaml-operations">YAML Operations<a class="headerlink" href="#yaml-operations" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1"># Create resources from YAML</span>
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>&lt;file.yaml&gt;
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a>
+<a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="c1"># Delete resources from YAML</span>
+<a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a>kubectl<span class="w"> </span>delete<span class="w"> </span>-f<span class="w"> </span>&lt;file.yaml&gt;
+<a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a>
+<a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="c1"># Generate YAML for a resource</span>
+<a href="#__codelineno-7-8" id="__codelineno-7-8" name="__codelineno-7-8"></a>kubectl<span class="w"> </span>create<span class="w"> </span>deployment<span class="w"> </span>&lt;name&gt;<span class="w"> </span>--image<span class="o">=</span>&lt;image&gt;<span class="w"> </span>--dry-run<span class="o">=</span>client<span class="w"> </span>-o<span class="w"> </span>yaml
+</code></pre></div>
+<h3 id="resource-creation-flow">Resource Creation Flow<a class="headerlink" href="#resource-creation-flow" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>sequenceDiagram
+    participant U as User
+    participant K as kubectl
+    participant A as API Server
+    participant E as etcd
+
+    U-&gt;&gt;K: kubectl apply -f config.yaml
+    K-&gt;&gt;A: POST /apis/apps/v1/namespaces/default/deployments
+    A-&gt;&gt;E: Store deployment spec
+    A-&gt;&gt;K: Return success
+    K-&gt;&gt;U: deployment.apps/my-app created</code></pre>
+<hr/>
+<h2 id="9-context-configuration">9. Context &amp; Configuration<a class="headerlink" href="#9-context-configuration" title="Permanent link">¶</a></h2>
+<h3 id="context-management">Context Management<a class="headerlink" href="#context-management" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># View current context</span>
+<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>kubectl<span class="w"> </span>config<span class="w"> </span>current-context
+<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a>
+<a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="c1"># List all contexts</span>
+<a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a>kubectl<span class="w"> </span>config<span class="w"> </span>get-contexts
+<a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a>
+<a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="c1"># Switch context</span>
+<a href="#__codelineno-8-8" id="__codelineno-8-8" name="__codelineno-8-8"></a>kubectl<span class="w"> </span>config<span class="w"> </span>use-context<span class="w"> </span>&lt;context-name&gt;
+</code></pre></div>
+<h3 id="multi-context-architecture">Multi-Context Architecture<a class="headerlink" href="#multi-context-architecture" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    A[Local Machine] --&gt; B[Context: dev-cluster]
+    A --&gt; C[Context: prod-cluster]
+    A --&gt; D[Context: staging-cluster]
+
+    B --&gt; E[Development&lt;br/&gt;K8s Cluster]
+    C --&gt; F[Production&lt;br/&gt;K8s Cluster]
+    D --&gt; G[Staging&lt;br/&gt;K8s Cluster]</code></pre>
+<hr/>
+<h2 id="10-cleanup-operations">10. Cleanup Operations<a class="headerlink" href="#10-cleanup-operations" title="Permanent link">¶</a></h2>
+<h3 id="cleanup-commands">Cleanup Commands<a class="headerlink" href="#cleanup-commands" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="c1"># Delete all pods in a namespace</span>
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>kubectl<span class="w"> </span>delete<span class="w"> </span>pods<span class="w"> </span>--all
+<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a>
+<a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="c1"># Delete all resources in a namespace</span>
+<a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a>kubectl<span class="w"> </span>delete<span class="w"> </span>all<span class="w"> </span>--all
+</code></pre></div>
+<h3 id="resource-hierarchy-for-cleanup">Resource Hierarchy for Cleanup<a class="headerlink" href="#resource-hierarchy-for-cleanup" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TD
+    A[Namespace] --&gt; B[Deployments]
+    A --&gt; C[Services]
+    A --&gt; D[ConfigMaps]
+    A --&gt; E[Secrets]
+
+    B --&gt; F[ReplicaSets]
+    F --&gt; G[Pods]
+
+    C --&gt; H[Endpoints]
+
+    style A fill:#ffebee</code></pre>
+<hr/>
+<h2 id="quick-reference-tips">Quick Reference Tips<a class="headerlink" href="#quick-reference-tips" title="Permanent link">¶</a></h2>
+<h3 id="common-flags">Common Flags<a class="headerlink" href="#common-flags" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-n</code></td>
+<td>Namespace</td>
+<td><code>kubectl get pods -n kube-system</code></td>
+</tr>
+<tr>
+<td><code>-o wide</code></td>
+<td>Detailed output</td>
+<td><code>kubectl get nodes -o wide</code></td>
+</tr>
+<tr>
+<td><code>--watch</code></td>
+<td>Real-time monitoring</td>
+<td><code>kubectl get pods --watch</code></td>
+</tr>
+<tr>
+<td><code>--dry-run</code></td>
+<td>Simulation mode</td>
+<td><code>kubectl create --dry-run=client</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="resource-types-shortcuts">Resource Types Shortcuts<a class="headerlink" href="#resource-types-shortcuts" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Full Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>po</code></td>
+<td>pods</td>
+</tr>
+<tr>
+<td><code>deploy</code></td>
+<td>deployments</td>
+</tr>
+<tr>
+<td><code>svc</code></td>
+<td>services</td>
+</tr>
+<tr>
+<td><code>cm</code></td>
+<td>configmaps</td>
+</tr>
+<tr>
+<td><code>ns</code></td>
+<td>namespaces</td>
+</tr>
+</tbody>
+</table>
+<h3 id="helpful-tips">Helpful Tips<a class="headerlink" href="#helpful-tips" title="Permanent link">¶</a></h3>
+<ul>
+<li>Use <code>kubectl explain &lt;resource&gt;</code> for documentation</li>
+<li>Use <code>kubectl api-resources</code> to see all available resources</li>
+<li>Add <code>--v=6</code> for debug-level logging</li>
+<li>Use <code>kubectl get events --sort-by=.metadata.creationTimestamp</code> to see recent events</li>
+</ul>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>

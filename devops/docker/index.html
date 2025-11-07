@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#docker">
+<a class="md-skip" href="#docker-command-cheatsheet">
           Skip to content
         </a>
 </div>
@@ -450,12 +450,287 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Docker
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Docker
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#table-of-contents">
+<span class="md-ellipsis">
+      📋 Table of Contents
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#container-management">
+<span class="md-ellipsis">
+      🐳 Container Management
+    </span>
+</a>
+<nav aria-label="🐳 Container Management" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-container-operations">
+<span class="md-ellipsis">
+      Basic Container Operations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#container-information">
+<span class="md-ellipsis">
+      Container Information
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#container-operations">
+<span class="md-ellipsis">
+      Container Operations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#image-management">
+<span class="md-ellipsis">
+      📦 Image Management
+    </span>
+</a>
+<nav aria-label="📦 Image Management" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#image-operations">
+<span class="md-ellipsis">
+      Image Operations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#network-management">
+<span class="md-ellipsis">
+      🌐 Network Management
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#volume-management">
+<span class="md-ellipsis">
+      💾 Volume Management
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#docker-compose">
+<span class="md-ellipsis">
+      🚀 Docker Compose
+    </span>
+</a>
+<nav aria-label="🚀 Docker Compose" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-commands">
+<span class="md-ellipsis">
+      Basic Commands
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#service-management">
+<span class="md-ellipsis">
+      Service Management
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#development">
+<span class="md-ellipsis">
+      Development
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dockerfile-reference">
+<span class="md-ellipsis">
+      📝 Dockerfile Reference
+    </span>
+</a>
+<nav aria-label="📝 Dockerfile Reference" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-dockerfile">
+<span class="md-ellipsis">
+      Example Dockerfile
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-instructions">
+<span class="md-ellipsis">
+      Common Instructions
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-cleanup">
+<span class="md-ellipsis">
+      🧹 System &amp; Cleanup
+    </span>
+</a>
+<nav aria-label="🧹 System &amp; Cleanup" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-information">
+<span class="md-ellipsis">
+      System Information
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cleanup-commands">
+<span class="md-ellipsis">
+      Cleanup Commands
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitoring-debugging">
+<span class="md-ellipsis">
+      🔍 Monitoring &amp; Debugging
+    </span>
+</a>
+<nav aria-label="🔍 Monitoring &amp; Debugging" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitoring">
+<span class="md-ellipsis">
+      Monitoring
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#debugging">
+<span class="md-ellipsis">
+      Debugging
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#advanced-examples">
+<span class="md-ellipsis">
+      🏗️ Advanced Examples
+    </span>
+</a>
+<nav aria-label="🏗️ Advanced Examples" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multi-container-application">
+<span class="md-ellipsis">
+      Multi-container Application
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#docker-compose-example">
+<span class="md-ellipsis">
+      Docker Compose Example
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#health-check-example">
+<span class="md-ellipsis">
+      Health Check Example
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-reference">
+<span class="md-ellipsis">
+      🎯 Quick Reference
+    </span>
+</a>
+<nav aria-label="🎯 Quick Reference" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-port-mappings">
+<span class="md-ellipsis">
+      Common Port Mappings
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#useful-aliases">
+<span class="md-ellipsis">
+      Useful Aliases
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resource-limits">
+<span class="md-ellipsis">
+      Resource Limits
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#troubleshooting">
+<span class="md-ellipsis">
+      🔧 Troubleshooting
+    </span>
+</a>
+<nav aria-label="🔧 Troubleshooting" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-issues">
+<span class="md-ellipsis">
+      Common Issues
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../kubernetes/">
@@ -815,7 +1090,292 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">¶</a></h1>
+<h1 id="docker-command-cheatsheet">Docker Command Cheatsheet<a class="headerlink" href="#docker-command-cheatsheet" title="Permanent link">¶</a></h1>
+<h2 id="table-of-contents">📋 Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="#container-management">Container Management</a></li>
+<li><a href="#image-management">Image Management</a></li>
+<li><a href="#network-management">Network Management</a></li>
+<li><a href="#volume-management">Volume Management</a></li>
+<li><a href="#docker-compose">Docker Compose</a></li>
+<li><a href="#dockerfile">Dockerfile</a></li>
+<li><a href="#system--cleanup">System &amp; Cleanup</a></li>
+<li><a href="#monitoring--debugging">Monitoring &amp; Debugging</a></li>
+</ul>
+<h2 id="container-management">🐳 Container Management<a class="headerlink" href="#container-management" title="Permanent link">¶</a></h2>
+<h3 id="basic-container-operations">Basic Container Operations<a class="headerlink" href="#basic-container-operations" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># Run a container</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>docker<span class="w"> </span>run<span class="w"> </span>&lt;image&gt;
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>&lt;image&gt;<span class="w">                    </span><span class="c1"># Detached mode</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>&lt;image&gt;<span class="w"> </span>/bin/bash<span class="w">        </span><span class="c1"># Interactive with terminal</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="c1"># Run with common options</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span>&lt;image&gt;<span class="w">           </span><span class="c1"># Port mapping</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span>/host:/container<span class="w"> </span>&lt;image&gt;<span class="w">  </span><span class="c1"># Volume mount</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>docker<span class="w"> </span>run<span class="w"> </span>-e<span class="w"> </span><span class="s2">"ENV=value"</span><span class="w"> </span>&lt;image&gt;<span class="w">       </span><span class="c1"># Environment variable</span>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>mycontainer<span class="w"> </span>&lt;image&gt;<span class="w">   </span><span class="c1"># Custom name</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="c1"># Container lifecycle</span>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>docker<span class="w"> </span>start<span class="w"> </span>&lt;container&gt;<span class="w">                </span><span class="c1"># Start stopped container</span>
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>docker<span class="w"> </span>stop<span class="w"> </span>&lt;container&gt;<span class="w">                 </span><span class="c1"># Stop gracefully</span>
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>docker<span class="w"> </span>restart<span class="w"> </span>&lt;container&gt;<span class="w">              </span><span class="c1"># Restart container</span>
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>docker<span class="w"> </span>pause<span class="w"> </span>&lt;container&gt;<span class="w">                </span><span class="c1"># Pause container</span>
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>docker<span class="w"> </span>unpause<span class="w"> </span>&lt;container&gt;<span class="w">              </span><span class="c1"># Unpause container</span>
+</code></pre></div>
+<h3 id="container-information">Container Information<a class="headerlink" href="#container-information" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># List containers</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>docker<span class="w"> </span>ps<span class="w">                              </span><span class="c1"># Running containers</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w">                          </span><span class="c1"># All containers</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>docker<span class="w"> </span>ps<span class="w"> </span>-q<span class="w">                          </span><span class="c1"># Only container IDs</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>docker<span class="w"> </span>ps<span class="w"> </span>--filter<span class="w"> </span><span class="s2">"status=running"</span><span class="w">   </span><span class="c1"># Filtered list</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="c1"># Container details</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>docker<span class="w"> </span>inspect<span class="w"> </span>&lt;container&gt;<span class="w">            </span><span class="c1"># Detailed info</span>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>docker<span class="w"> </span>logs<span class="w"> </span>&lt;container&gt;<span class="w">               </span><span class="c1"># View logs</span>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>&lt;container&gt;<span class="w">            </span><span class="c1"># Follow logs</span>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a>docker<span class="w"> </span>top<span class="w"> </span>&lt;container&gt;<span class="w">                </span><span class="c1"># Running processes</span>
+<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a>docker<span class="w"> </span>stats<span class="w"> </span>&lt;container&gt;<span class="w">              </span><span class="c1"># Resource usage</span>
+</code></pre></div>
+<h3 id="container-operations">Container Operations<a class="headerlink" href="#container-operations" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># Execute commands</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>&lt;container&gt;<span class="w"> </span>/bin/bash<span class="w">    </span><span class="c1"># Interactive shell</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>&lt;container&gt;<span class="w"> </span>&lt;command&gt;<span class="w">        </span><span class="c1"># Run command</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="c1"># File operations</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>docker<span class="w"> </span>cp<span class="w"> </span>&lt;container&gt;:/path<span class="w"> </span>/host/path<span class="w">   </span><span class="c1"># Copy from container</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>docker<span class="w"> </span>cp<span class="w"> </span>/host/path<span class="w"> </span>&lt;container&gt;:/path<span class="w">   </span><span class="c1"># Copy to container</span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="c1"># Remove containers</span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>docker<span class="w"> </span>rm<span class="w"> </span>&lt;container&gt;<span class="w">                    </span><span class="c1"># Remove stopped container</span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>docker<span class="w"> </span>rm<span class="w"> </span>-f<span class="w"> </span>&lt;container&gt;<span class="w">                 </span><span class="c1"># Force remove running container</span>
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>docker<span class="w"> </span>container<span class="w"> </span>prune<span class="w">                   </span><span class="c1"># Remove all stopped containers</span>
+</code></pre></div>
+<h2 id="image-management">📦 Image Management<a class="headerlink" href="#image-management" title="Permanent link">¶</a></h2>
+<h3 id="image-operations">Image Operations<a class="headerlink" href="#image-operations" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># Build images</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>myimage:tag<span class="w"> </span>.<span class="w">           </span><span class="c1"># Build from Dockerfile</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>docker<span class="w"> </span>build<span class="w"> </span>-f<span class="w"> </span>Dockerfile.dev<span class="w"> </span>.<span class="w">        </span><span class="c1"># Specify Dockerfile</span>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="c1"># Image registry operations</span>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>docker<span class="w"> </span>pull<span class="w"> </span>&lt;image&gt;<span class="w">                     </span><span class="c1"># Pull from registry</span>
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a>docker<span class="w"> </span>push<span class="w"> </span>&lt;image&gt;<span class="w">                     </span><span class="c1"># Push to registry</span>
+<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>docker<span class="w"> </span>tag<span class="w"> </span>&lt;image&gt;<span class="w"> </span>newname:tag<span class="w">          </span><span class="c1"># Tag an image</span>
+<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a>
+<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="c1"># List and inspect</span>
+<a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a>docker<span class="w"> </span>images<span class="w">                           </span><span class="c1"># List images</span>
+<a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a>docker<span class="w"> </span>image<span class="w"> </span>ls<span class="w">                         </span><span class="c1"># List images</span>
+<a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a>docker<span class="w"> </span>inspect<span class="w"> </span>&lt;image&gt;<span class="w">                  </span><span class="c1"># Image details</span>
+<a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a>docker<span class="w"> </span><span class="nb">history</span><span class="w"> </span>&lt;image&gt;<span class="w">                  </span><span class="c1"># Image layers</span>
+<a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a>
+<a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="c1"># Remove images</span>
+<a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a>docker<span class="w"> </span>rmi<span class="w"> </span>&lt;image&gt;<span class="w">                      </span><span class="c1"># Remove image</span>
+<a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a>docker<span class="w"> </span>image<span class="w"> </span>prune<span class="w">                      </span><span class="c1"># Remove unused images</span>
+<a href="#__codelineno-3-19" id="__codelineno-3-19" name="__codelineno-3-19"></a>docker<span class="w"> </span>image<span class="w"> </span>prune<span class="w"> </span>-a<span class="w">                   </span><span class="c1"># Remove all unused images</span>
+</code></pre></div>
+<h2 id="network-management">🌐 Network Management<a class="headerlink" href="#network-management" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># Network operations</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>docker<span class="w"> </span>network<span class="w"> </span>ls<span class="w">                       </span><span class="c1"># List networks</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>&lt;network&gt;<span class="w">         </span><span class="c1"># Create network</span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>docker<span class="w"> </span>network<span class="w"> </span>inspect<span class="w"> </span>&lt;network&gt;<span class="w">        </span><span class="c1"># Network details</span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>docker<span class="w"> </span>network<span class="w"> </span>connect<span class="w"> </span>&lt;net&gt;<span class="w"> </span>&lt;container&gt;<span class="w"> </span><span class="c1"># Connect container</span>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>docker<span class="w"> </span>network<span class="w"> </span>disconnect<span class="w"> </span>&lt;net&gt;<span class="w"> </span>&lt;container&gt;<span class="w"> </span><span class="c1"># Disconnect</span>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="c1"># Network types</span>
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>--driver<span class="w"> </span>bridge<span class="w"> </span>&lt;net&gt;
+<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>--driver<span class="w"> </span>overlay<span class="w"> </span>&lt;net&gt;
+<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>--driver<span class="w"> </span>macvlan<span class="w"> </span>&lt;net&gt;
+</code></pre></div>
+<h2 id="volume-management">💾 Volume Management<a class="headerlink" href="#volume-management" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># Volume operations</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>docker<span class="w"> </span>volume<span class="w"> </span>ls<span class="w">                        </span><span class="c1"># List volumes</span>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>&lt;volume&gt;<span class="w">           </span><span class="c1"># Create volume</span>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>docker<span class="w"> </span>volume<span class="w"> </span>inspect<span class="w"> </span>&lt;volume&gt;<span class="w">          </span><span class="c1"># Volume details</span>
+<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a>docker<span class="w"> </span>volume<span class="w"> </span>rm<span class="w"> </span>&lt;volume&gt;<span class="w">               </span><span class="c1"># Remove volume</span>
+<a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a>docker<span class="w"> </span>volume<span class="w"> </span>prune<span class="w">                     </span><span class="c1"># Remove unused volumes</span>
+<a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a>
+<a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="c1"># Volume usage</span>
+<a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span>myvol:/path<span class="w"> </span>&lt;image&gt;<span class="w">      </span><span class="c1"># Named volume</span>
+<a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span>/host/path:/path<span class="w"> </span>&lt;image&gt;<span class="w"> </span><span class="c1"># Host path mount</span>
+</code></pre></div>
+<h2 id="docker-compose">🚀 Docker Compose<a class="headerlink" href="#docker-compose" title="Permanent link">¶</a></h2>
+<h3 id="basic-commands">Basic Commands<a class="headerlink" href="#basic-commands" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>docker-compose<span class="w"> </span>up<span class="w">                      </span><span class="c1"># Start services</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w">                   </span><span class="c1"># Start in background</span>
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a>docker-compose<span class="w"> </span>down<span class="w">                    </span><span class="c1"># Stop and remove</span>
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>docker-compose<span class="w"> </span>ps<span class="w">                      </span><span class="c1"># List services</span>
+<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a>docker-compose<span class="w"> </span>logs<span class="w">                    </span><span class="c1"># View logs</span>
+<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w">                 </span><span class="c1"># Follow logs</span>
+</code></pre></div>
+<h3 id="service-management">Service Management<a class="headerlink" href="#service-management" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>docker-compose<span class="w"> </span>start<span class="w">                   </span><span class="c1"># Start services</span>
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>docker-compose<span class="w"> </span>stop<span class="w">                    </span><span class="c1"># Stop services</span>
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a>docker-compose<span class="w"> </span>restart<span class="w">                 </span><span class="c1"># Restart services</span>
+<a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a>docker-compose<span class="w"> </span>pause<span class="w">                   </span><span class="c1"># Pause services</span>
+<a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a>docker-compose<span class="w"> </span>unpause<span class="w">                 </span><span class="c1"># Unpause services</span>
+</code></pre></div>
+<h3 id="development">Development<a class="headerlink" href="#development" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>docker-compose<span class="w"> </span>build<span class="w">                   </span><span class="c1"># Build images</span>
+<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>docker-compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>&lt;service&gt;<span class="w"> </span>bash<span class="w">     </span><span class="c1"># Execute in service</span>
+<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a>docker-compose<span class="w"> </span>run<span class="w"> </span>&lt;service&gt;<span class="w"> </span>&lt;cmd&gt;<span class="w">     </span><span class="c1"># Run one-off command</span>
+<a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a>docker-compose<span class="w"> </span>config<span class="w">                  </span><span class="c1"># Validate config</span>
+</code></pre></div>
+<h2 id="dockerfile-reference">📝 Dockerfile Reference<a class="headerlink" href="#dockerfile-reference" title="Permanent link">¶</a></h2>
+<h3 id="example-dockerfile">Example Dockerfile<a class="headerlink" href="#example-dockerfile" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="c"># Multi-stage build example</span>
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="k">FROM</span><span class="w"> </span><span class="s">node:16-alpine</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">builder</span>
+<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="k">COPY</span><span class="w"> </span>package*.json<span class="w"> </span>./
+<a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="k">RUN</span><span class="w"> </span>npm<span class="w"> </span>ci<span class="w"> </span>--only<span class="o">=</span>production
+<a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a>
+<a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="k">FROM</span><span class="w"> </span><span class="s">node:16-alpine</span>
+<a href="#__codelineno-9-8" id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<a href="#__codelineno-9-9" id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>builder<span class="w"> </span>/app/node_modules<span class="w"> </span>./node_modules
+<a href="#__codelineno-9-10" id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
+<a href="#__codelineno-9-11" id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">3000</span>
+<a href="#__codelineno-9-12" id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="k">USER</span><span class="w"> </span><span class="s">node</span>
+<a href="#__codelineno-9-13" id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">"node"</span><span class="p">,</span><span class="w"> </span><span class="s2">"server.js"</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="common-instructions">Common Instructions<a class="headerlink" href="#common-instructions" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">ubuntu:20.04</span><span class="w">           </span><span class="c"># Base image</span>
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>package
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>/app<span class="w">                 </span>#<span class="w"> </span>Copy<span class="w"> </span>files
+<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="k">ADD</span><span class="w"> </span>.<span class="w"> </span>/app<span class="w">                  </span>#<span class="w"> </span>Copy<span class="w"> </span>with<span class="w"> </span>extraction
+<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app                # Set working directory</span>
+<a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">80                   # Expose port</span>
+<a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="k">ENV</span><span class="w"> </span><span class="nv">NODE_ENV</span><span class="o">=</span>production<span class="w">     </span><span class="c"># Environment variable</span>
+<a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">"npm"</span><span class="p">,</span><span class="w"> </span><span class="s2">"start"</span><span class="p">]</span><span class="w">        </span>#<span class="w"> </span>Default<span class="w"> </span>command
+<a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="k">ENTRYPOINT</span><span class="w"> </span><span class="p">[</span><span class="s2">"/app/start.sh"</span><span class="p">]</span><span class="w"> </span>#<span class="w"> </span>Entry<span class="w"> </span>point
+</code></pre></div>
+<h2 id="system-cleanup">🧹 System &amp; Cleanup<a class="headerlink" href="#system-cleanup" title="Permanent link">¶</a></h2>
+<h3 id="system-information">System Information<a class="headerlink" href="#system-information" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>docker<span class="w"> </span>version<span class="w">              </span><span class="c1"># Docker version</span>
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>docker<span class="w"> </span>info<span class="w">                 </span><span class="c1"># System information</span>
+<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a>docker<span class="w"> </span>system<span class="w"> </span>df<span class="w">            </span><span class="c1"># Disk usage</span>
+</code></pre></div>
+<h3 id="cleanup-commands">Cleanup Commands<a class="headerlink" href="#cleanup-commands" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="c1"># Container cleanup</span>
+<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>docker<span class="w"> </span>container<span class="w"> </span>prune<span class="w">      </span><span class="c1"># Remove stopped containers</span>
+<a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a>
+<a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="c1"># Image cleanup</span>
+<a href="#__codelineno-12-5" id="__codelineno-12-5" name="__codelineno-12-5"></a>docker<span class="w"> </span>image<span class="w"> </span>prune<span class="w">          </span><span class="c1"># Remove unused images</span>
+<a href="#__codelineno-12-6" id="__codelineno-12-6" name="__codelineno-12-6"></a>docker<span class="w"> </span>image<span class="w"> </span>prune<span class="w"> </span>-a<span class="w">       </span><span class="c1"># Remove all unused images</span>
+<a href="#__codelineno-12-7" id="__codelineno-12-7" name="__codelineno-12-7"></a>
+<a href="#__codelineno-12-8" id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="c1"># Volume cleanup</span>
+<a href="#__codelineno-12-9" id="__codelineno-12-9" name="__codelineno-12-9"></a>docker<span class="w"> </span>volume<span class="w"> </span>prune<span class="w">         </span><span class="c1"># Remove unused volumes</span>
+<a href="#__codelineno-12-10" id="__codelineno-12-10" name="__codelineno-12-10"></a>
+<a href="#__codelineno-12-11" id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="c1"># Network cleanup</span>
+<a href="#__codelineno-12-12" id="__codelineno-12-12" name="__codelineno-12-12"></a>docker<span class="w"> </span>network<span class="w"> </span>prune<span class="w">        </span><span class="c1"># Remove unused networks</span>
+<a href="#__codelineno-12-13" id="__codelineno-12-13" name="__codelineno-12-13"></a>
+<a href="#__codelineno-12-14" id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="c1"># Full system cleanup</span>
+<a href="#__codelineno-12-15" id="__codelineno-12-15" name="__codelineno-12-15"></a>docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w">         </span><span class="c1"># Remove all unused data</span>
+<a href="#__codelineno-12-16" id="__codelineno-12-16" name="__codelineno-12-16"></a>docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>-a<span class="w">      </span><span class="c1"># Remove all unused images too</span>
+</code></pre></div>
+<h2 id="monitoring-debugging">🔍 Monitoring &amp; Debugging<a class="headerlink" href="#monitoring-debugging" title="Permanent link">¶</a></h2>
+<h3 id="monitoring">Monitoring<a class="headerlink" href="#monitoring" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>docker<span class="w"> </span>stats<span class="w">                           </span><span class="c1"># Live container stats</span>
+<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>docker<span class="w"> </span>stats<span class="w"> </span>--format<span class="w"> </span><span class="s2">"table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}"</span>
+<a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a>docker<span class="w"> </span>events<span class="w">                         </span><span class="c1"># Real-time events</span>
+<a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a>docker<span class="w"> </span>top<span class="w"> </span>&lt;container&gt;<span class="w">                </span><span class="c1"># Container processes</span>
+</code></pre></div>
+<h3 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>&lt;container&gt;<span class="w">               </span><span class="c1"># Container logs</span>
+<a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>docker<span class="w"> </span>logs<span class="w"> </span>--tail<span class="w"> </span><span class="m">100</span><span class="w"> </span>&lt;container&gt;<span class="w">    </span><span class="c1"># Last 100 lines</span>
+<a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>&lt;container&gt;<span class="w">            </span><span class="c1"># Follow logs</span>
+<a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>&lt;container&gt;<span class="w"> </span>sh<span class="w">        </span><span class="c1"># Shell access</span>
+<a href="#__codelineno-14-5" id="__codelineno-14-5" name="__codelineno-14-5"></a>docker<span class="w"> </span>diff<span class="w"> </span>&lt;container&gt;<span class="w">               </span><span class="c1"># Filesystem changes</span>
+</code></pre></div>
+<h2 id="advanced-examples">🏗️ Advanced Examples<a class="headerlink" href="#advanced-examples" title="Permanent link">¶</a></h2>
+<h3 id="multi-container-application">Multi-container Application<a class="headerlink" href="#multi-container-application" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    A[Client] --&gt; B[NGINX Proxy]
+    B --&gt; C[Web App]
+    B --&gt; D[API Service]
+    D --&gt; E[Database]
+    C --&gt; F[Redis Cache]
+
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style C fill:#e8f5e8
+    style D fill:#fff3e0
+    style E fill:#ffebee
+    style F fill:#fce4ec</code></pre>
+<h3 id="docker-compose-example">Docker Compose Example<a class="headerlink" href="#docker-compose-example" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">'3.8'</span>
+<a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="nt">services</span><span class="p">:</span>
+<a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">  </span><span class="nt">web</span><span class="p">:</span>
+<a href="#__codelineno-15-4" id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span>
+<a href="#__codelineno-15-5" id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a href="#__codelineno-15-6" id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"80:80"</span>
+<a href="#__codelineno-15-7" id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a href="#__codelineno-15-8" id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DB_HOST=database</span>
+<a href="#__codelineno-15-9" id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a href="#__codelineno-15-10" id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">database</span>
+<a href="#__codelineno-15-11" id="__codelineno-15-11" name="__codelineno-15-11"></a>
+<a href="#__codelineno-15-12" id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="w">  </span><span class="nt">database</span><span class="p">:</span>
+<a href="#__codelineno-15-13" id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:13</span>
+<a href="#__codelineno-15-14" id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a href="#__codelineno-15-15" id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_DB=mydb</span>
+<a href="#__codelineno-15-16" id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_USER=user</span>
+<a href="#__codelineno-15-17" id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_PASSWORD=pass</span>
+<a href="#__codelineno-15-18" id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a href="#__codelineno-15-19" id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db_data:/var/lib/postgresql/data</span>
+<a href="#__codelineno-15-20" id="__codelineno-15-20" name="__codelineno-15-20"></a>
+<a href="#__codelineno-15-21" id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="nt">volumes</span><span class="p">:</span>
+<a href="#__codelineno-15-22" id="__codelineno-15-22" name="__codelineno-15-22"></a><span class="w">  </span><span class="nt">db_data</span><span class="p">:</span>
+</code></pre></div>
+<h3 id="health-check-example">Health Check Example<a class="headerlink" href="#health-check-example" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">nginx:alpine</span>
+<a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>/usr/share/nginx/html
+<a href="#__codelineno-16-3" id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="k">HEALTHCHECK</span><span class="w"> </span>--interval<span class="o">=</span>30s<span class="w"> </span>--timeout<span class="o">=</span>3s<span class="w"> </span>--start-period<span class="o">=</span>5s<span class="w"> </span>--retries<span class="o">=</span><span class="m">3</span><span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-16-4" id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">  </span>CMD<span class="w"> </span>curl<span class="w"> </span>-f<span class="w"> </span>http://localhost/<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<a href="#__codelineno-16-5" id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">80</span>
+</code></pre></div>
+<h2 id="quick-reference">🎯 Quick Reference<a class="headerlink" href="#quick-reference" title="Permanent link">¶</a></h2>
+<h3 id="common-port-mappings">Common Port Mappings<a class="headerlink" href="#common-port-mappings" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="c1"># Web servers</span>
+<a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">80</span>:80<span class="w"> </span>nginx
+<a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span>httpd
+<a href="#__codelineno-17-4" id="__codelineno-17-4" name="__codelineno-17-4"></a>
+<a href="#__codelineno-17-5" id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="c1"># Databases</span>
+<a href="#__codelineno-17-6" id="__codelineno-17-6" name="__codelineno-17-6"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">5432</span>:5432<span class="w"> </span>postgres<span class="w">    </span><span class="c1"># PostgreSQL</span>
+<a href="#__codelineno-17-7" id="__codelineno-17-7" name="__codelineno-17-7"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">3306</span>:3306<span class="w"> </span>mysql<span class="w">       </span><span class="c1"># MySQL</span>
+<a href="#__codelineno-17-8" id="__codelineno-17-8" name="__codelineno-17-8"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">27017</span>:27017<span class="w"> </span>mongo<span class="w">     </span><span class="c1"># MongoDB</span>
+<a href="#__codelineno-17-9" id="__codelineno-17-9" name="__codelineno-17-9"></a>
+<a href="#__codelineno-17-10" id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="c1"># Development</span>
+<a href="#__codelineno-17-11" id="__codelineno-17-11" name="__codelineno-17-11"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">3000</span>:3000<span class="w"> </span>node<span class="w">        </span><span class="c1"># Node.js</span>
+<a href="#__codelineno-17-12" id="__codelineno-17-12" name="__codelineno-17-12"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8000</span>:8000<span class="w"> </span>python<span class="w">      </span><span class="c1"># Python</span>
+</code></pre></div>
+<h3 id="useful-aliases">Useful Aliases<a class="headerlink" href="#useful-aliases" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="c1"># Add to ~/.bashrc or ~/.zshrc</span>
+<a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">dps</span><span class="o">=</span><span class="s1">'docker ps'</span>
+<a href="#__codelineno-18-3" id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">dpsa</span><span class="o">=</span><span class="s1">'docker ps -a'</span>
+<a href="#__codelineno-18-4" id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">di</span><span class="o">=</span><span class="s1">'docker images'</span>
+<a href="#__codelineno-18-5" id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">drm</span><span class="o">=</span><span class="s1">'docker rm'</span>
+<a href="#__codelineno-18-6" id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">drmi</span><span class="o">=</span><span class="s1">'docker rmi'</span>
+<a href="#__codelineno-18-7" id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">dstop</span><span class="o">=</span><span class="s1">'docker stop $(docker ps -aq)'</span>
+<a href="#__codelineno-18-8" id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">dclean</span><span class="o">=</span><span class="s1">'docker system prune -a'</span>
+</code></pre></div>
+<h3 id="resource-limits">Resource Limits<a class="headerlink" href="#resource-limits" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="c1"># Run with resource constraints</span>
+<a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a>docker<span class="w"> </span>run<span class="w"> </span>--memory<span class="o">=</span>512m<span class="w"> </span>&lt;image&gt;<span class="w">        </span><span class="c1"># Memory limit</span>
+<a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a>docker<span class="w"> </span>run<span class="w"> </span>--cpus<span class="o">=</span><span class="m">1</span>.5<span class="w"> </span>&lt;image&gt;<span class="w">           </span><span class="c1"># CPU limit</span>
+<a href="#__codelineno-19-4" id="__codelineno-19-4" name="__codelineno-19-4"></a>docker<span class="w"> </span>run<span class="w"> </span>--memory<span class="o">=</span>1g<span class="w"> </span>--cpus<span class="o">=</span><span class="m">2</span><span class="w"> </span>&lt;image&gt;<span class="w"> </span><span class="c1"># Combined limits</span>
+</code></pre></div>
+<h2 id="troubleshooting">🔧 Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
+<h3 id="common-issues">Common Issues<a class="headerlink" href="#common-issues" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="c1"># Permission issues</span>
+<a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a>docker<span class="w"> </span>run<span class="w"> </span>-u<span class="w"> </span><span class="k">$(</span>id<span class="w"> </span>-u<span class="k">)</span>:<span class="k">$(</span>id<span class="w"> </span>-g<span class="k">)</span><span class="w"> </span>&lt;image&gt;
+<a href="#__codelineno-20-3" id="__codelineno-20-3" name="__codelineno-20-3"></a>
+<a href="#__codelineno-20-4" id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="c1"># Port already in use</span>
+<a href="#__codelineno-20-5" id="__codelineno-20-5" name="__codelineno-20-5"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span>&lt;image&gt;<span class="w">          </span><span class="c1"># Use different host port</span>
+<a href="#__codelineno-20-6" id="__codelineno-20-6" name="__codelineno-20-6"></a>
+<a href="#__codelineno-20-7" id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="c1"># Container name conflict</span>
+<a href="#__codelineno-20-8" id="__codelineno-20-8" name="__codelineno-20-8"></a>docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>new_name<span class="w"> </span>&lt;image&gt;<span class="w">     </span><span class="c1"># Use unique name</span>
+<a href="#__codelineno-20-9" id="__codelineno-20-9" name="__codelineno-20-9"></a>
+<a href="#__codelineno-20-10" id="__codelineno-20-10" name="__codelineno-20-10"></a><span class="c1"># Clean up orphaned containers</span>
+<a href="#__codelineno-20-11" id="__codelineno-20-11" name="__codelineno-20-11"></a>docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>-f
+</code></pre></div>
+<p>This cheatsheet covers the most essential Docker commands and concepts. Save it for quick reference! 🐳</p>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>

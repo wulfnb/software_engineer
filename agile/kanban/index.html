@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#kanban">
+<a class="md-skip" href="#kanban-methodology-comprehensive-guide">
           Skip to content
         </a>
 </div>
@@ -606,12 +606,327 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Kanban
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Kanban
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#table-of-contents">
+<span class="md-ellipsis">
+      Table of Contents
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction-to-kanban">
+<span class="md-ellipsis">
+      Introduction to Kanban
+    </span>
+</a>
+<nav aria-label="Introduction to Kanban" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-characteristics">
+<span class="md-ellipsis">
+      Key Characteristics:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kanban-principles">
+<span class="md-ellipsis">
+      Kanban Principles
+    </span>
+</a>
+<nav aria-label="Kanban Principles" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-four-fundamental-principles">
+<span class="md-ellipsis">
+      The Four Fundamental Principles:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-six-core-practices">
+<span class="md-ellipsis">
+      The Six Core Practices:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-practices">
+<span class="md-ellipsis">
+      Core Practices
+    </span>
+</a>
+<nav aria-label="Core Practices" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#visualizing-work-with-kanban-board">
+<span class="md-ellipsis">
+      Visualizing Work with Kanban Board
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wip-limits-implementation">
+<span class="md-ellipsis">
+      WIP Limits Implementation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kanban-vs-scrum">
+<span class="md-ellipsis">
+      Kanban vs Scrum
+    </span>
+</a>
+<nav aria-label="Kanban vs Scrum" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#framework-comparison">
+<span class="md-ellipsis">
+      Framework Comparison
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#when-to-use-each-approach">
+<span class="md-ellipsis">
+      When to Use Each Approach
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kanban-board-structure">
+<span class="md-ellipsis">
+      Kanban Board Structure
+    </span>
+</a>
+<nav aria-label="Kanban Board Structure" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-board-components">
+<span class="md-ellipsis">
+      Basic Board Components
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#advanced-board-with-swimlanes">
+<span class="md-ellipsis">
+      Advanced Board with Swimlanes
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workflow-states">
+<span class="md-ellipsis">
+      Workflow States
+    </span>
+</a>
+<nav aria-label="Workflow States" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typical-workflow-progression">
+<span class="md-ellipsis">
+      Typical Workflow Progression
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#work-item-types-and-classes-of-service">
+<span class="md-ellipsis">
+      Work Item Types and Classes of Service
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#metrics-and-analytics">
+<span class="md-ellipsis">
+      Metrics and Analytics
+    </span>
+</a>
+<nav aria-label="Metrics and Analytics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-kanban-metrics">
+<span class="md-ellipsis">
+      Key Kanban Metrics
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cumulative-flow-diagram">
+<span class="md-ellipsis">
+      Cumulative Flow Diagram
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lead-time-and-cycle-time-analysis">
+<span class="md-ellipsis">
+      Lead Time and Cycle Time Analysis
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#roles-and-responsibilities">
+<span class="md-ellipsis">
+      Roles and Responsibilities
+    </span>
+</a>
+<nav aria-label="Roles and Responsibilities" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kanban-roles-evolution">
+<span class="md-ellipsis">
+      Kanban Roles Evolution
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#team-structure">
+<span class="md-ellipsis">
+      Team Structure
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-guide">
+<span class="md-ellipsis">
+      Implementation Guide
+    </span>
+</a>
+<nav aria-label="Implementation Guide" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kanban-implementation-steps">
+<span class="md-ellipsis">
+      Kanban Implementation Steps
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-by-step-implementation-timeline">
+<span class="md-ellipsis">
+      Step-by-Step Implementation Timeline
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#advanced-concepts">
+<span class="md-ellipsis">
+      Advanced Concepts
+    </span>
+</a>
+<nav aria-label="Advanced Concepts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statik-systems-thinking-approach-to-implementing-kanban">
+<span class="md-ellipsis">
+      STATIK - Systems Thinking Approach to Implementing Kanban
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#service-delivery-principles">
+<span class="md-ellipsis">
+      Service Delivery Principles
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-pitfalls-and-solutions">
+<span class="md-ellipsis">
+      Common Pitfalls and Solutions
+    </span>
+</a>
+<nav aria-label="Common Pitfalls and Solutions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-challenges">
+<span class="md-ellipsis">
+      Implementation Challenges
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tools-and-technologies">
+<span class="md-ellipsis">
+      Tools and Technologies
+    </span>
+</a>
+<nav aria-label="Tools and Technologies" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kanban-software-solutions">
+<span class="md-ellipsis">
+      Kanban Software Solutions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tool-selection-criteria">
+<span class="md-ellipsis">
+      Tool Selection Criteria
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../planning/">
@@ -815,7 +1130,412 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="kanban">Kanban<a class="headerlink" href="#kanban" title="Permanent link">¶</a></h1>
+<h1 id="kanban-methodology-comprehensive-guide">Kanban Methodology Comprehensive Guide<a class="headerlink" href="#kanban-methodology-comprehensive-guide" title="Permanent link">¶</a></h1>
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">¶</a></h2>
+<ol>
+<li><a href="#introduction-to-kanban">Introduction to Kanban</a></li>
+<li><a href="#kanban-principles">Kanban Principles</a></li>
+<li><a href="#core-practices">Core Practices</a></li>
+<li><a href="#kanban-vs-scrum">Kanban vs Scrum</a></li>
+<li><a href="#kanban-board-structure">Kanban Board Structure</a></li>
+<li><a href="#workflow-states">Workflow States</a></li>
+<li><a href="#metrics-and-analytics">Metrics and Analytics</a></li>
+<li><a href="#roles-and-responsibilities">Roles and Responsibilities</a></li>
+<li><a href="#implementation-guide">Implementation Guide</a></li>
+<li><a href="#advanced-concepts">Advanced Concepts</a></li>
+</ol>
+<h2 id="introduction-to-kanban">Introduction to Kanban<a class="headerlink" href="#introduction-to-kanban" title="Permanent link">¶</a></h2>
+<p>Kanban is a visual workflow management method that helps organizations visualize work, maximize efficiency, and improve continuously. Originating from the Toyota Production System, Kanban focuses on delivering work just-in-time while minimizing waste.</p>
+<h3 id="key-characteristics">Key Characteristics:<a class="headerlink" href="#key-characteristics" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Visual Work Management</strong>: Work is represented on Kanban boards</li>
+<li><strong>Work-in-Progress Limits</strong>: Constraints on simultaneous work items</li>
+<li><strong>Flow Optimization</strong>: Focus on smooth work movement</li>
+<li><strong>Continuous Improvement</strong>: Evolutionary change based on metrics</li>
+</ul>
+<h2 id="kanban-principles">Kanban Principles<a class="headerlink" href="#kanban-principles" title="Permanent link">¶</a></h2>
+<h3 id="the-four-fundamental-principles">The Four Fundamental Principles:<a class="headerlink" href="#the-four-fundamental-principles" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TD
+    A[Kanban Principles] --&gt; B[Start with Current State]
+    A --&gt; C[Agree to Evolutionary Change]
+    A --&gt; D[Respect Current Roles]
+    A --&gt; E[Encourage Leadership at All Levels]
+
+    B --&gt; B1[No radical changes]
+    B --&gt; B2[Understand existing process]
+
+    C --&gt; C1[Incremental improvements]
+    C --&gt; C2[No big-bang transformations]
+
+    D --&gt; D1[Work with existing structure]
+    D --&gt; D2[No prescribed roles]
+
+    E --&gt; E1[Everyone contributes to improvement]
+    E --&gt; E2[Continuous learning culture]</code></pre>
+<h3 id="the-six-core-practices">The Six Core Practices:<a class="headerlink" href="#the-six-core-practices" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>mindmap
+  root((Kanban Practices))
+    Visualize Workflow
+      Kanban Board
+      Card Types
+      Swimlanes
+    Limit Work in Progress
+      WIP Limits per Column
+      WIP Limits per Person
+      Managing Constraints
+    Manage Flow
+      Monitor Work Movement
+      Identify Blockers
+      Optimize Throughput
+    Make Policies Explicit
+      Definition of Done
+      Entry/Exit Criteria
+      Work Policies
+    Implement Feedback Loops
+      Daily Stand-ups
+      Service Delivery Reviews
+      Risk Reviews
+    Improve Collaboratively
+      Metrics Analysis
+      Experimentation
+      Evolutionary Change</code></pre>
+<h2 id="core-practices">Core Practices<a class="headerlink" href="#core-practices" title="Permanent link">¶</a></h2>
+<h3 id="visualizing-work-with-kanban-board">Visualizing Work with Kanban Board<a class="headerlink" href="#visualizing-work-with-kanban-board" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    subgraph Backlog [Backlog Area]
+        A[Product Backlog&lt;br/&gt;Prioritized Ideas]
+    end
+
+    subgraph ActiveWork [Active Workflow]
+        B[Ready&lt;br/&gt;WIP: 5] --&gt; C[In Progress&lt;br/&gt;WIP: 3]
+        C --&gt; D[Code Review&lt;br/&gt;WIP: 2]
+        D --&gt; E[Testing&lt;br/&gt;WIP: 2]
+        E --&gt; F[Done&lt;br/&gt;No WIP Limit]
+    end
+
+    A --&gt; B
+    F --&gt; G[Deployed to Production]</code></pre>
+<h3 id="wip-limits-implementation">WIP Limits Implementation<a class="headerlink" href="#wip-limits-implementation" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph LR
+    A[Backlog] --&gt;|Pull| B[Analysis WIP: 3]
+    B --&gt;|Pull| C[Development WIP: 4]
+    C --&gt;|Pull| D[Testing WIP: 2]
+    D --&gt;|Pull| E[Done]
+
+    style B stroke:#f00,stroke-width:2px
+    style C stroke:#f00,stroke-width:2px
+    style D stroke:#f00,stroke-width:2px</code></pre>
+<h2 id="kanban-vs-scrum">Kanban vs Scrum<a class="headerlink" href="#kanban-vs-scrum" title="Permanent link">¶</a></h2>
+<h3 id="framework-comparison">Framework Comparison<a class="headerlink" href="#framework-comparison" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TD
+    subgraph Scrum
+        A1[Time-boxed Sprints]
+        A2[Prescribed Roles]
+        A3[Fixed Scope per Sprint]
+        A4[Velocity Metric]
+        A5[Ceremonies Required]
+    end
+
+    subgraph Kanban
+        B1[Continuous Flow]
+        B2[No Prescribed Roles]
+        B3[Flexible Priorities]
+        B4[Lead Time Metric]
+        B5[Optional Ceremonies]
+    end
+
+    subgraph Common [Shared Elements]
+        C1[Visual Management]
+        C2[Work Breakdown]
+        C3[Continuous Improvement]
+        C4[Empirical Process]
+        C5[Customer Focus]
+    end
+
+    A1 --&gt; C1
+    B1 --&gt; C1</code></pre>
+<h3 id="when-to-use-each-approach">When to Use Each Approach<a class="headerlink" href="#when-to-use-each-approach" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>xychart-beta
+    title "Framework Suitability Matrix"
+    x-axis ["Predictable Work", "Mixed Work", "Unpredictable Work"]
+    y-axis "Suitability Score" 0 --&gt; 10
+    line [9, 6, 3]
+    bar [4, 7, 9]</code></pre>
+<p><em>Note: Blue line = Scrum, Green bars = Kanban</em></p>
+<h2 id="kanban-board-structure">Kanban Board Structure<a class="headerlink" href="#kanban-board-structure" title="Permanent link">¶</a></h2>
+<h3 id="basic-board-components">Basic Board Components<a class="headerlink" href="#basic-board-components" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    subgraph KanbanBoard [Kanban Board Structure]
+        A[Board] --&gt; B[Columns]
+        A --&gt; C[Swimlanes]
+        A --&gt; D[Cards]
+        A --&gt; E[WIP Limits]
+
+        B --&gt; B1[Workflow Stages]
+        B --&gt; B2[Entry/Exit Criteria]
+
+        C --&gt; C1[Expedite Lane]
+        C --&gt; C2[Different Work Types]
+        C --&gt; C3[Classes of Service]
+
+        D --&gt; D1[Task Details]
+        D --&gt; D2[Assignees]
+        D --&gt; D3[Due Dates]
+
+        E --&gt; E1[Per Column Limits]
+        E --&gt; E2[Per Person Limits]
+    end</code></pre>
+<h3 id="advanced-board-with-swimlanes">Advanced Board with Swimlanes<a class="headerlink" href="#advanced-board-with-swimlanes" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    subgraph Board [Kanban Board with Swimlanes]
+        subgraph Header [Board Header]
+            H1[To Do] --&gt; H2[Analysis] --&gt; H3[Development] --&gt; H4[Testing] --&gt; H5[Done]
+        end
+
+        subgraph Expedite [Expedite Lane]
+            A[Urgent Bug&lt;br/&gt;WIP: 1] --&gt; B[Immediate Fix] --&gt; C[Quick Test] --&gt; D[Deployed]
+        end
+
+        subgraph Standard [Standard Work]
+            E[New Feature] --&gt; F[Requirements&lt;br/&gt;WIP: 3] --&gt; G[Development&lt;br/&gt;WIP: 4] --&gt; H[Testing&lt;br/&gt;WIP: 2] --&gt; I[Completed]
+        end
+
+        subgraph Improvement [Improvement Items]
+            J[Tech Debt] --&gt; K[Analysis] --&gt; L[Implementation] --&gt; M[Validation] --&gt; N[Done]
+        end
+    end</code></pre>
+<h2 id="workflow-states">Workflow States<a class="headerlink" href="#workflow-states" title="Permanent link">¶</a></h2>
+<h3 id="typical-workflow-progression">Typical Workflow Progression<a class="headerlink" href="#typical-workflow-progression" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; Backlog : New Idea
+    Backlog --&gt; Ready : Prioritized
+    Ready --&gt; InProgress : Team Capacity
+    InProgress --&gt; Review : Development Done
+    Review --&gt; Testing : Code Reviewed
+    Testing --&gt; Done : All Tests Pass
+    Done --&gt; [*] : Delivered
+
+    note right of InProgress : WIP Limit: 3
+    note right of Review : WIP Limit: 2
+    note right of Testing : WIP Limit: 2</code></pre>
+<h3 id="work-item-types-and-classes-of-service">Work Item Types and Classes of Service<a class="headerlink" href="#work-item-types-and-classes-of-service" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TD
+    A[Work Item Types] --&gt; B[Features]
+    A --&gt; C[Bugs]
+    A --&gt; D[Technical Debt]
+    A --&gt; E[Improvements]
+
+    F[Classes of Service] --&gt; G[Expedite&lt;br/&gt;Urgent - Bypass WIP]
+    F --&gt; H[Fixed Date&lt;br/&gt;Time-sensitive]
+    F --&gt; I[Standard&lt;br/&gt;Normal Priority]
+    F --&gt; J[Intangible&lt;br/&gt;Low Priority]
+
+    style G fill:#ffcccc
+    style H fill:#fff2cc
+    style I fill:#d5e8d4
+    style J fill:#e1d5e7</code></pre>
+<h2 id="metrics-and-analytics">Metrics and Analytics<a class="headerlink" href="#metrics-and-analytics" title="Permanent link">¶</a></h2>
+<h3 id="key-kanban-metrics">Key Kanban Metrics<a class="headerlink" href="#key-kanban-metrics" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>mindmap
+  root((Kanban Metrics))
+    Lead Time
+      Start to Completion
+      Customer Satisfaction
+      Process Efficiency
+    Cycle Time
+      Work Start to Completion
+      Team Performance
+      Process Optimization
+    Throughput
+      Work Completed/Time Unit
+      Capacity Planning
+      Predictability
+    Cumulative Flow Diagram
+      Work Distribution
+      Bottleneck Identification
+      Flow Stability
+    Work Item Age
+      Aging Work Items
+      Blockers Identification
+      Process Issues</code></pre>
+<h3 id="cumulative-flow-diagram">Cumulative Flow Diagram<a class="headerlink" href="#cumulative-flow-diagram" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>xychart-beta
+    title "Cumulative Flow Diagram - Typical Pattern"
+    x-axis [Mon, Tue, Wed, Thu, Fri, Mon, Tue]
+    y-axis "Number of Items" 0 --&gt; 25
+    area [5, 6, 7, 8, 9, 8, 7] --&gt; "Done"
+    area [8, 9, 10, 9, 10, 11, 10] --&gt; "Testing"
+    area [6, 7, 6, 7, 6, 7, 8] --&gt; "Development"
+    area [4, 5, 6, 5, 6, 5, 6] --&gt; "Backlog"</code></pre>
+<h3 id="lead-time-and-cycle-time-analysis">Lead Time and Cycle Time Analysis<a class="headerlink" href="#lead-time-and-cycle-time-analysis" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph LR
+    A[Request Received] --&gt; B[Work Started]
+    B --&gt; C[Work Completed]
+
+    subgraph LeadTime [Lead Time]
+        A --&gt; C
+    end
+
+    subgraph CycleTime [Cycle Time]
+        B --&gt; C
+    end
+
+    style LeadTime fill:#e1f5fe
+    style CycleTime fill:#f3e5f5</code></pre>
+<h2 id="roles-and-responsibilities">Roles and Responsibilities<a class="headerlink" href="#roles-and-responsibilities" title="Permanent link">¶</a></h2>
+<h3 id="kanban-roles-evolution">Kanban Roles Evolution<a class="headerlink" href="#kanban-roles-evolution" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    A[Kanban Roles] --&gt; B[Service Request Manager]
+    A --&gt; C[Service Delivery Manager]
+    A --&gt; D[Kanban Coach]
+
+    B --&gt; B1[Manages customer demands]
+    B --&gt; B2[Prioritizes work items]
+    B --&gt; B3[Communicates with stakeholders]
+
+    C --&gt; C1[Oversees workflow]
+    C --&gt; C2[Manages WIP limits]
+    C --&gt; C3[Optimizes flow efficiency]
+
+    D --&gt; D1[Facilitates improvement]
+    D --&gt; D2[Coaches team members]
+    D --&gt; D3[Ensures Kanban principles]</code></pre>
+<h3 id="team-structure">Team Structure<a class="headerlink" href="#team-structure" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    A[Product Manager] --&gt; B[Development Team]
+    C[Kanban Coach] --&gt; B
+    D[Stakeholders] --&gt; A
+    B --&gt; E[Continuous Delivery]
+
+    subgraph B [Cross-functional Team]
+        B1[Developers]
+        B2[Testers]
+        B3[Designers]
+        B4[Operations]
+    end
+
+    style A fill:#e1f5fe
+    style C fill:#f3e5f5
+    style B fill:#e8f5e8</code></pre>
+<h2 id="implementation-guide">Implementation Guide<a class="headerlink" href="#implementation-guide" title="Permanent link">¶</a></h2>
+<h3 id="kanban-implementation-steps">Kanban Implementation Steps<a class="headerlink" href="#kanban-implementation-steps" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    A[Step 1: Visualize Current Workflow] --&gt; B[Step 2: Apply WIP Limits]
+    B --&gt; C[Step 3: Manage Flow]
+    C --&gt; D[Step 4: Make Policies Explicit]
+    D --&gt; E[Step 5: Implement Feedback Loops]
+    E --&gt; F[Step 6: Improve Collaboratively]
+
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style C fill:#e8f5e8
+    style D fill:#fff3e0
+    style E fill:#ffebee
+    style F fill:#f3e5f5</code></pre>
+<h3 id="step-by-step-implementation-timeline">Step-by-Step Implementation Timeline<a class="headerlink" href="#step-by-step-implementation-timeline" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>gantt
+    title Kanban Implementation Timeline
+    dateFormat YYYY-MM-DD
+    axisFormat %b %d
+
+    section Phase 1: Foundation
+    Assess Current Process :crit, 2024-01-01, 7d
+    Design Kanban Board :2024-01-08, 5d
+    Initial Team Training :2024-01-15, 3d
+
+    section Phase 2: Implementation
+    Launch Kanban Board :crit, 2024-01-22, 1d
+    Establish WIP Limits :2024-01-23, 7d
+    Set Up Metrics :2024-01-30, 5d
+
+    section Phase 3: Optimization
+    Review Initial Results :crit, 2024-02-10, 3d
+    Adjust Processes :2024-02-13, 7d
+    Scale Implementation :2024-02-20, 10d</code></pre>
+<h2 id="advanced-concepts">Advanced Concepts<a class="headerlink" href="#advanced-concepts" title="Permanent link">¶</a></h2>
+<h3 id="statik-systems-thinking-approach-to-implementing-kanban">STATIK - Systems Thinking Approach to Implementing Kanban<a class="headerlink" href="#statik-systems-thinking-approach-to-implementing-kanban" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    A[Understand Sources of Dissatisfaction] --&gt; B[Analyze Demand]
+    B --&gt; C[Analyze Capability]
+    C --&gt; D[Model Workflow]
+    D --&gt; E[Identify Classes of Service]
+    E --&gt; F[Design Kanban System]
+    F --&gt; G[Implement Feedback Loops]
+
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style C fill:#e8f5e8
+    style D fill:#fff3e0
+    style E fill:#ffebee
+    style F fill:#f3e5f5
+    style G fill:#e1f5fe</code></pre>
+<h3 id="service-delivery-principles">Service Delivery Principles<a class="headerlink" href="#service-delivery-principles" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    A[Service Delivery] --&gt; B[Focus on Quality]
+    A --&gt; C[Reduce Lead Time]
+    A --&gt; D[Increase Predictability]
+    A --&gt; E[Improve Customer Satisfaction]
+
+    B --&gt; B1[Build Quality In]
+    B --&gt; B2[Automated Testing]
+    B --&gt; B3[Continuous Integration]
+
+    C --&gt; C1[Remove Bottlenecks]
+    C --&gt; C2[Optimize Flow]
+    C --&gt; C3[Limit WIP]
+
+    D --&gt; D1[Metrics Tracking]
+    D --&gt; D2[Process Consistency]
+    D --&gt; D3[Reliable Forecasting]
+
+    E --&gt; E1[Regular Delivery]
+    E --&gt; E2[Transparent Process]
+    E --&gt; E3[Continuous Feedback]</code></pre>
+<h2 id="common-pitfalls-and-solutions">Common Pitfalls and Solutions<a class="headerlink" href="#common-pitfalls-and-solutions" title="Permanent link">¶</a></h2>
+<h3 id="implementation-challenges">Implementation Challenges<a class="headerlink" href="#implementation-challenges" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph LR
+    A[Common Pitfalls] --&gt; B[No WIP Limits]
+    A --&gt; C[Ignoring Metrics]
+    A --&gt; D[Resistance to Change]
+    A --&gt; E[Over-complicating Board]
+    A --&gt; F[Not Evolving Process]
+
+    B --&gt; B1[Solution: Start with Conservative Limits]
+    C --&gt; C1[Solution: Regular Metric Reviews]
+    D --&gt; D1[Solution: Gradual Implementation]
+    E --&gt; E1[Solution: Keep it Simple Initially]
+    F --&gt; F1[Solution: Regular Retrospectives]</code></pre>
+<h2 id="tools-and-technologies">Tools and Technologies<a class="headerlink" href="#tools-and-technologies" title="Permanent link">¶</a></h2>
+<h3 id="kanban-software-solutions">Kanban Software Solutions<a class="headerlink" href="#kanban-software-solutions" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Visual Management</strong>: Trello, Jira, Azure Boards</li>
+<li><strong>Enterprise Scale</strong>: LeanKit, Kanbanize</li>
+<li><strong>Metrics &amp; Analytics</strong>: SwiftKanban, Kanban Tool</li>
+<li><strong>Physical Boards</strong>: Whiteboards, sticky notes</li>
+<li><strong>Integration Tools</strong>: Slack integrations, API connections</li>
+</ul>
+<h3 id="tool-selection-criteria">Tool Selection Criteria<a class="headerlink" href="#tool-selection-criteria" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TD
+    A[Tool Selection] --&gt; B[Team Size]
+    A --&gt; C[Organization Scale]
+    A --&gt; D[Integration Needs]
+    A --&gt; E[Reporting Requirements]
+    A --&gt; F[Budget Constraints]
+
+    B --&gt; B1[Small: Trello]
+    B --&gt; B2[Medium: Jira]
+    B --&gt; B3[Large: Enterprise Tools]
+
+    C --&gt; C1[Single Team vs Portfolio]
+
+    D --&gt; D1[CI/CD Integration]
+    D --&gt; D2[Communication Tools]
+
+    E --&gt; E1[Basic vs Advanced Analytics]
+
+    F --&gt; F1[Open Source vs Commercial]</code></pre>
+<hr/>
+<p><em>Kanban is a powerful methodology for visualizing work, limiting work-in-progress, and maximizing efficiency. Its flexibility makes it suitable for various contexts from software development to marketing and operations. Remember that Kanban is about evolutionary change - start with your current process and improve incrementally based on data and feedback.</em></p>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
