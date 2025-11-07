@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="A quick guide for software engineer" name="description"/>
 <link href="https://wulfnb.github.io/software_engineer/architecture/clean-architecture/" rel="canonical"/>
-<link href="../software-architecture/" rel="prev"/>
+<link href="../system-architecture-interview-tasks/" rel="prev"/>
 <link href="../microservices/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.23" name="generator"/>
@@ -522,14 +522,203 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../system-architecture-interview-tasks/">
+<span class="md-ellipsis">
+    System Architecture Interview
+    
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Clean Architecture
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Clean Architecture
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-principles">
+<span class="md-ellipsis">
+      🎯 Core Principles
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#architecture-layers">
+<span class="md-ellipsis">
+      🏗️ Architecture Layers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dependency-rule">
+<span class="md-ellipsis">
+      📊 Dependency Rule
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-flow">
+<span class="md-ellipsis">
+      🔄 Data Flow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#detailed-layer-structure">
+<span class="md-ellipsis">
+      🏛️ Detailed Layer Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-structure">
+<span class="md-ellipsis">
+      📁 Project Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-example">
+<span class="md-ellipsis">
+      🛠️ Implementation Example
+    </span>
+</a>
+<nav aria-label="🛠️ Implementation Example" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#domain-layer-entities">
+<span class="md-ellipsis">
+      Domain Layer (Entities)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#application-layer-use-cases">
+<span class="md-ellipsis">
+      Application Layer (Use Cases)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#interface-adapters-controllers">
+<span class="md-ellipsis">
+      Interface Adapters (Controllers)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#infrastructure-layer-repository-implementation">
+<span class="md-ellipsis">
+      Infrastructure Layer (Repository Implementation)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#benefits">
+<span class="md-ellipsis">
+      ✅ Benefits
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#testing-strategy">
+<span class="md-ellipsis">
+      🧪 Testing Strategy
+    </span>
+</a>
+<nav aria-label="🧪 Testing Strategy" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#testing-examples">
+<span class="md-ellipsis">
+      Testing Examples
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-adapters">
+<span class="md-ellipsis">
+      🔧 Common Adapters
+    </span>
+</a>
+<nav aria-label="🔧 Common Adapters" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#input-adapters">
+<span class="md-ellipsis">
+      Input Adapters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#output-adapters">
+<span class="md-ellipsis">
+      Output Adapters
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#evolution-scaling">
+<span class="md-ellipsis">
+      📈 Evolution &amp; Scaling
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#best-practices">
+<span class="md-ellipsis">
+      🚀 Best Practices
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-pitfalls">
+<span class="md-ellipsis">
+      ⚠️ Common Pitfalls
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#related-patterns">
+<span class="md-ellipsis">
+      📚 Related Patterns
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#useful-resources">
+<span class="md-ellipsis">
+      🔗 Useful Resources
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../microservices/">
@@ -807,7 +996,292 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="clean-architecture">Clean-architecture<a class="headerlink" href="#clean-architecture" title="Permanent link">¶</a></h1>
+<h1 id="clean-architecture">Clean Architecture<a class="headerlink" href="#clean-architecture" title="Permanent link">¶</a></h1>
+<p>Clean Architecture is a software design philosophy that emphasizes separation of concerns and independence from frameworks, UI, databases, and external agencies. It was introduced by Robert C. Martin (Uncle Bob) and promotes a highly maintainable and testable codebase.</p>
+<h2 id="core-principles">🎯 Core Principles<a class="headerlink" href="#core-principles" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Independence from Frameworks</strong>: The architecture doesn't depend on the existence of some library or framework</li>
+<li><strong>Testable</strong>: Business rules can be tested without the UI, Database, Web Server, or any external element</li>
+<li><strong>Independent of UI</strong>: The UI can change easily, without changing the rest of the system</li>
+<li><strong>Independent of Database</strong>: You can swap out Oracle or SQL Server for MongoDB, BigTable, or anything else</li>
+<li><strong>Independent of any External Agency</strong>: Your business rules simply don't know anything about the outside world</li>
+</ul>
+<h2 id="architecture-layers">🏗️ Architecture Layers<a class="headerlink" href="#architecture-layers" title="Permanent link">¶</a></h2>
+<pre class="mermaid"><code>graph TB
+    subgraph "External Layers"
+        F[Frameworks &amp; Drivers]
+        I[Interface Adapters]
+    end
+
+    subgraph "Internal Layers"
+        U[Use Cases]
+        E[Entities]
+    end
+
+    F --&gt; I
+    I --&gt; U
+    U --&gt; E
+
+    style E fill:#e1f5fe
+    style U fill:#f3e5f5
+    style I fill:#e8f5e8
+    style F fill:#fff3e0</code></pre>
+<h2 id="dependency-rule">📊 Dependency Rule<a class="headerlink" href="#dependency-rule" title="Permanent link">¶</a></h2>
+<pre class="mermaid"><code>flowchart TD
+    A[Entities&lt;br/&gt;Enterprise Business Rules] --&gt; B[Use Cases&lt;br/&gt;Application Business Rules]
+    B --&gt; C[Interface Adapters&lt;br/&gt;Controllers, Gateways, Presenters]
+    C --&gt; D[Frameworks &amp; Drivers&lt;br/&gt;Web, UI, Database, External Interfaces]
+
+    style A fill:#bbdefb
+    style B fill:#c8e6c9
+    style C fill:#fff9c4
+    style D fill:#ffccbc</code></pre>
+<p><em>Dependencies point inward</em> - Nothing in an inner circle can know anything at all about something in an outer circle.</p>
+<h2 id="data-flow">🔄 Data Flow<a class="headerlink" href="#data-flow" title="Permanent link">¶</a></h2>
+<pre class="mermaid"><code>sequenceDiagram
+    participant U as User/External System
+    participant C as Controller
+    participant UC as Use Case
+    participant E as Entity
+    participant G as Gateway/Repository
+
+    U-&gt;&gt;C: Request
+    C-&gt;&gt;UC: Input Data
+    UC-&gt;&gt;E: Business Logic
+    E-&gt;&gt;UC: Processed Data
+    UC-&gt;&gt;G: Data Request
+    G-&gt;&gt;UC: Response Data
+    UC-&gt;&gt;C: Output Data
+    C-&gt;&gt;U: Response</code></pre>
+<h2 id="detailed-layer-structure">🏛️ Detailed Layer Structure<a class="headerlink" href="#detailed-layer-structure" title="Permanent link">¶</a></h2>
+<pre class="mermaid"><code>graph TD
+    subgraph "Enterprise Business Rules"
+        E[Entities&lt;br/&gt;- Business Objects&lt;br/&gt;- Domain Models&lt;br/&gt;- Enterprise-wide]
+    end
+
+    subgraph "Application Business Rules"
+        UC[Use Cases&lt;br/&gt;- Application Logic&lt;br/&gt;- Orchestrates Entities&lt;br/&gt;- Application-specific]
+    end
+
+    subgraph "Interface Adapters"
+        C[Controllers&lt;br/&gt;- Convert HTTP to Use Cases]
+        P[Presenters&lt;br/&gt;- Convert Use Cases to HTTP]
+        G[Gateways&lt;br/&gt;- Convert Data to/from External]
+    end
+
+    subgraph "Frameworks &amp; Drivers"
+        WEB[Web Framework&lt;br/&gt;Spring, Express, etc.]
+        DB[Database&lt;br/&gt;MySQL, MongoDB, etc.]
+        UI[UI Framework&lt;br/&gt;React, Angular, etc.]
+        EXT[External APIs&lt;br/&gt;Payment, Email, etc.]
+    end
+
+    E --&gt; UC
+    UC --&gt; C
+    UC --&gt; P
+    UC --&gt; G
+    C --&gt; WEB
+    P --&gt; WEB
+    G --&gt; DB
+    G --&gt; EXT
+    WEB --&gt; UI</code></pre>
+<h2 id="project-structure">📁 Project Structure<a class="headerlink" href="#project-structure" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>src/
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>├── domain/                 # Enterprise Business Rules
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>│   ├── entities/          # Business objects
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>│   ├── repositories/      # Interface definitions
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>│   └── value-objects/     # Immutable objects
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>├── application/           # Application Business Rules
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>│   ├── use-cases/        # Application logic
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>│   ├── dto/              # Data Transfer Objects
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>│   └── ports/            # Input/Output ports
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>├── infrastructure/        # Frameworks &amp; Drivers
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>│   ├── persistence/      # Database implementations
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>│   ├── web/              # Controllers, Middleware
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>│   └── external/         # External service clients
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>└── presentation/         # Interface Adapters
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>    ├── controllers/      # Route handlers
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>    ├── presenters/       # Response formatters
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>    └── middleware/       # Cross-cutting concerns
+</code></pre></div>
+<h2 id="implementation-example">🛠️ Implementation Example<a class="headerlink" href="#implementation-example" title="Permanent link">¶</a></h2>
+<h3 id="domain-layer-entities">Domain Layer (Entities)<a class="headerlink" href="#domain-layer-entities" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">// domain/entities/user.ts</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">User</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="kr">constructor</span><span class="p">(</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">  </span><span class="nx">isValid</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">email</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s1">'@'</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">  </span><span class="p">}</span>
+<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="application-layer-use-cases">Application Layer (Use Cases)<a class="headerlink" href="#application-layer-use-cases" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// application/use-cases/create-user.ts</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">CreateUserUseCase</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="k">private</span><span class="w"> </span><span class="nx">userRepository</span><span class="o">:</span><span class="w"> </span><span class="kt">UserRepository</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">  </span><span class="k">async</span><span class="w"> </span><span class="nx">execute</span><span class="p">(</span><span class="nx">input</span><span class="o">:</span><span class="w"> </span><span class="kt">CreateUserInput</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">User</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">User</span><span class="p">(</span><span class="nx">uuid</span><span class="p">(),</span><span class="w"> </span><span class="nx">input</span><span class="p">.</span><span class="nx">email</span><span class="p">,</span><span class="w"> </span><span class="nx">input</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">user</span><span class="p">.</span><span class="nx">isValid</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">      </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s1">'Invalid user data'</span><span class="p">);</span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">userRepository</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="nx">user</span><span class="p">);</span>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">  </span><span class="p">}</span>
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="interface-adapters-controllers">Interface Adapters (Controllers)<a class="headerlink" href="#interface-adapters-controllers" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">// presentation/controllers/user-controller.ts</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">UserController</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="k">private</span><span class="w"> </span><span class="nx">createUserUseCase</span><span class="o">:</span><span class="w"> </span><span class="kt">CreateUserUseCase</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">  </span><span class="k">async</span><span class="w"> </span><span class="nx">createUser</span><span class="p">(</span><span class="nx">req</span><span class="o">:</span><span class="w"> </span><span class="kt">Request</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="o">:</span><span class="w"> </span><span class="kt">Response</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">createUserUseCase</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">      </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">201</span><span class="p">).</span><span class="nx">json</span><span class="p">(</span><span class="nx">UserPresenter</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">(</span><span class="nx">user</span><span class="p">));</span>
+<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">      </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">400</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="w"> </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="kt">error.message</span><span class="w"> </span><span class="p">});</span>
+<a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">  </span><span class="p">}</span>
+<a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="infrastructure-layer-repository-implementation">Infrastructure Layer (Repository Implementation)<a class="headerlink" href="#infrastructure-layer-repository-implementation" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1">// infrastructure/persistence/user-repository-impl.ts</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">UserRepositoryImpl</span><span class="w"> </span><span class="k">implements</span><span class="w"> </span><span class="nx">UserRepository</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="k">private</span><span class="w"> </span><span class="nx">dataSource</span><span class="o">:</span><span class="w"> </span><span class="kt">DataSource</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">  </span><span class="k">async</span><span class="w"> </span><span class="nx">save</span><span class="p">(</span><span class="nx">user</span><span class="o">:</span><span class="w"> </span><span class="kt">User</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">User</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">userEntity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">toEntity</span><span class="p">(</span><span class="nx">user</span><span class="p">);</span>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">savedEntity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">dataSource</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="nx">userEntity</span><span class="p">);</span>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">toDomain</span><span class="p">(</span><span class="nx">savedEntity</span><span class="p">);</span>
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">  </span><span class="p">}</span>
+<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>
+<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">  </span><span class="k">private</span><span class="w"> </span><span class="nx">toEntity</span><span class="p">(</span><span class="nx">user</span><span class="o">:</span><span class="w"> </span><span class="kt">User</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">UserEntity</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">    </span><span class="c1">// Convert domain model to database entity</span>
+<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">  </span><span class="p">}</span>
+<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a>
+<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">  </span><span class="k">private</span><span class="w"> </span><span class="nx">toDomain</span><span class="p">(</span><span class="nx">entity</span><span class="o">:</span><span class="w"> </span><span class="kt">UserEntity</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">User</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">    </span><span class="c1">// Convert database entity to domain model</span>
+<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">  </span><span class="p">}</span>
+<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="benefits">✅ Benefits<a class="headerlink" href="#benefits" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Framework Independence</strong>: Easy to migrate to new technologies</li>
+<li><strong>Highly Testable</strong>: Each layer can be tested in isolation</li>
+<li><strong>Clear Separation</strong>: Business logic separated from implementation details</li>
+<li><strong>Team Scalability</strong>: Different teams can work on different layers</li>
+<li><strong>Long-term Maintainability</strong>: Changes in one layer don't affect others</li>
+</ul>
+<h2 id="testing-strategy">🧪 Testing Strategy<a class="headerlink" href="#testing-strategy" title="Permanent link">¶</a></h2>
+<pre class="mermaid"><code>graph TD
+    subgraph "Testing Pyramid"
+        A[Unit Tests&lt;br/&gt;Entities &amp; Use Cases]
+        B[Integration Tests&lt;br/&gt;Adapters &amp; Gateways]
+        C[E2E Tests&lt;br/&gt;Full System Flow]
+    end
+
+    A --&gt; B
+    B --&gt; C
+
+    style A fill:#c8e6c9
+    style B fill:#fff9c4
+    style C fill:#ffccbc</code></pre>
+<h3 id="testing-examples">Testing Examples<a class="headerlink" href="#testing-examples" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1">// Unit Test - Use Case</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="nx">describe</span><span class="p">(</span><span class="s1">'CreateUserUseCase'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">  </span><span class="nx">it</span><span class="p">(</span><span class="s1">'should create valid user'</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">mockRepo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">save</span><span class="o">:</span><span class="w"> </span><span class="kt">jest.fn</span><span class="p">()</span><span class="w"> </span><span class="p">};</span>
+<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">useCase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CreateUserUseCase</span><span class="p">(</span><span class="nx">mockRepo</span><span class="p">);</span>
+<a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a>
+<a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">useCase</span><span class="p">.</span><span class="nx">execute</span><span class="p">({</span>
+<a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">      </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s1">'test@example.com'</span><span class="p">,</span>
+<a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">      </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">'John Doe'</span>
+<a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="p">});</span>
+<a href="#__codelineno-5-11" id="__codelineno-5-11" name="__codelineno-5-11"></a>
+<a href="#__codelineno-5-12" id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">user</span><span class="p">.</span><span class="nx">isValid</span><span class="p">()).</span><span class="nx">toBe</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<a href="#__codelineno-5-13" id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">mockRepo</span><span class="p">.</span><span class="nx">save</span><span class="p">).</span><span class="nx">toHaveBeenCalled</span><span class="p">();</span>
+<a href="#__codelineno-5-14" id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">  </span><span class="p">});</span>
+<a href="#__codelineno-5-15" id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="p">});</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1">// Integration Test - Controller</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="nx">describe</span><span class="p">(</span><span class="s1">'UserController'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">  </span><span class="nx">it</span><span class="p">(</span><span class="s1">'should return 201 on user creation'</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">controller</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">UserController</span><span class="p">(</span><span class="nx">useCase</span><span class="p">);</span>
+<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">req</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s1">'test@example.com'</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">'John'</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">};</span>
+<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="kt">jest.fn</span><span class="p">(),</span><span class="w"> </span><span class="nx">json</span><span class="o">:</span><span class="w"> </span><span class="kt">jest.fn</span><span class="p">()</span><span class="w"> </span><span class="p">};</span>
+<a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a>
+<a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">controller</span><span class="p">.</span><span class="nx">createUser</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">);</span>
+<a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a>
+<a href="#__codelineno-6-10" id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">).</span><span class="nx">toHaveBeenCalledWith</span><span class="p">(</span><span class="mf">201</span><span class="p">);</span>
+<a href="#__codelineno-6-11" id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">  </span><span class="p">});</span>
+<a href="#__codelineno-6-12" id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="p">});</span>
+</code></pre></div>
+<h2 id="common-adapters">🔧 Common Adapters<a class="headerlink" href="#common-adapters" title="Permanent link">¶</a></h2>
+<h3 id="input-adapters">Input Adapters<a class="headerlink" href="#input-adapters" title="Permanent link">¶</a></h3>
+<ul>
+<li>REST Controllers</li>
+<li>GraphQL Resolvers</li>
+<li>CLI Commands</li>
+<li>Message Queue Consumers</li>
+</ul>
+<h3 id="output-adapters">Output Adapters<a class="headerlink" href="#output-adapters" title="Permanent link">¶</a></h3>
+<ul>
+<li>Database Repositories</li>
+<li>External API Clients</li>
+<li>File System Operations</li>
+<li>Email Services</li>
+</ul>
+<h2 id="evolution-scaling">📈 Evolution &amp; Scaling<a class="headerlink" href="#evolution-scaling" title="Permanent link">¶</a></h2>
+<pre class="mermaid"><code>timeline
+    title: Architecture Evolution
+    section Phase 1 : Monolithic
+        Clean Layers&lt;br/&gt;within single app
+    section Phase 2 : Modular
+        Feature-based&lt;br/&gt;module separation
+    section Phase 3 : Microservices
+        Distributed&lt;br/&gt;bounded contexts</code></pre>
+<h2 id="best-practices">🚀 Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Dependency Inversion</strong>: Depend on abstractions, not concretions</li>
+<li><strong>Single Responsibility</strong>: Each layer has one reason to change</li>
+<li><strong>Explicit Boundaries</strong>: Clear contracts between layers</li>
+<li><strong>Test-Driven Development</strong>: Write tests first for better design</li>
+<li><strong>Continuous Refactoring</strong>: Keep the architecture clean over time</li>
+</ol>
+<h2 id="common-pitfalls">⚠️ Common Pitfalls<a class="headerlink" href="#common-pitfalls" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Over-engineering</strong>: Don't apply Clean Architecture to simple CRUD apps</li>
+<li><strong>Tight coupling between layers</strong>: Violating dependency rule</li>
+<li><strong>Ignoring performance</strong>: Too many layers can impact performance</li>
+<li><strong>Complex mapping</strong>: Excessive data transformation between layers</li>
+</ul>
+<h2 id="related-patterns">📚 Related Patterns<a class="headerlink" href="#related-patterns" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Hexagonal Architecture</strong> (Ports &amp; Adapters)</li>
+<li><strong>Onion Architecture</strong></li>
+<li><strong>Domain-Driven Design</strong> (DDD)</li>
+<li><strong>Command Query Responsibility Segregation</strong> (CQRS)</li>
+<li><strong>Event Sourcing</strong></li>
+</ul>
+<h2 id="useful-resources">🔗 Useful Resources<a class="headerlink" href="#useful-resources" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164">Clean Architecture Book by Robert C. Martin</a></li>
+<li><a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">The Clean Architecture Blog Post</a></li>
+<li><a href="https://domainlanguage.com/ddd/">Domain-Driven Design Reference</a></li>
+</ul>
+<hr/>
+<p><em>Based on Robert C. Martin's Clean Architecture principles</em></p>
+<div align="center">
+
+**⭐ Star this repository if you found it helpful!**
+
+</div>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>

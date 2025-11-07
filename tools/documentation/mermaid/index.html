@@ -523,6 +523,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../../architecture/system-architecture-interview-tasks/">
+<span class="md-ellipsis">
+    System Architecture Interview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../../architecture/clean-architecture/">
 <span class="md-ellipsis">
     Clean Architecture
@@ -1322,6 +1330,22 @@
 <a href="#__codelineno-9-17" id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="s">    }</span>
 <a href="#__codelineno-9-18" id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="sb">```</span>
 </code></pre></div>
+<pre class="mermaid"><code>erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ ORDER_ITEM : contains
+    PRODUCT ||--o{ ORDER_ITEM : includes
+
+    CUSTOMER {
+        string name
+        string email
+        int customer_id PK
+    }
+
+    ORDER {
+        int order_id PK
+        date order_date
+        string status
+    }</code></pre>
 <p>Cardinality
 - <code>||--o{</code> One to Many</p>
 <ul>
@@ -1351,6 +1375,17 @@
 <a href="#__codelineno-10-12" id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="s">      Relax: 5: Me</span>
 <a href="#__codelineno-10-13" id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="sb">```</span>
 </code></pre></div>
+<pre class="mermaid"><code>journey
+    title My Day
+    section Morning
+      Breakfast: 5: Me
+      Work: 4: Me
+    section Afternoon
+      Lunch: 3: Me
+      Work: 4: Me
+    section Evening
+      Dinner: 4: Me
+      Relax: 5: Me</code></pre>
 <h2 id="gantt-charts">Gantt Charts<a class="headerlink" href="#gantt-charts" title="Permanent link">¶</a></h2>
 <h3 id="basic-structure_3">Basic Structure<a class="headerlink" href="#basic-structure_3" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="sb">```mermaid</span>
@@ -1365,6 +1400,15 @@
 <a href="#__codelineno-11-10" id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="s">    Testing :test1, after dev1, 14d</span>
 <a href="#__codelineno-11-11" id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="sb">```</span>
 </code></pre></div>
+<pre class="mermaid"><code>gantt
+    title Project Timeline
+    dateFormat YYYY-MM-DD
+    section Planning
+    Requirements :done, req1, 2024-01-01, 14d
+    Design :active, des1, after req1, 14d
+    section Development
+    Implementation :dev1, after des1, 21d
+    Testing :test1, after dev1, 14d</code></pre>
 <h3 id="task-states">Task States<a class="headerlink" href="#task-states" title="Permanent link">¶</a></h3>
 <ul>
 <li>
@@ -1531,6 +1575,14 @@
 <a href="#__codelineno-17-9" id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="s">            : User Feedback</span>
 <a href="#__codelineno-17-10" id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="sb">```</span>
 </code></pre></div>
+<pre class="mermaid"><code>timeline
+    title Project History
+    2023 : Project Start
+            : Requirements
+    2024 Q1 : Development
+            : Testing
+    2024 Q2 : Launch
+            : User Feedback</code></pre>
 <h2 id="styling-and-themes">Styling and Themes<a class="headerlink" href="#styling-and-themes" title="Permanent link">¶</a></h2>
 <h3 id="node-styling">Node Styling<a class="headerlink" href="#node-styling" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="sb">```mermaid</span>

@@ -6,12 +6,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="A quick guide for software engineer" name="description"/>
-<link href="https://wulfnb.github.io/software_engineer/architecture/software-architecture/" rel="canonical"/>
-<link href="../../devops/cicd/" rel="prev"/>
-<link href="../system-architecture-interview-tasks/" rel="next"/>
+<link href="https://wulfnb.github.io/software_engineer/architecture/system-architecture-interview-tasks/" rel="canonical"/>
+<link href="../software-architecture/" rel="prev"/>
+<link href="../clean-architecture/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.23" name="generator"/>
-<title>Software Architecture - A Software Engineer's Field Guide</title>
+<title>System Architecture Interview - A Software Engineer's Field Guide</title>
 <link href="../../assets/stylesheets/main.84d31ad4.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#software-architecture">
+<a class="md-skip" href="#system-architecture-interview-tasks-solutions">
           Skip to content
         </a>
 </div>
@@ -48,7 +48,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Software Architecture
+              System Architecture Interview
             
           </span>
 </div>
@@ -168,7 +168,7 @@
         </a>
 </li>
 <li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="./">
+<a class="md-tabs__link" href="../software-architecture/">
           
   
   
@@ -514,18 +514,26 @@
             Architecture &amp; Design
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../software-architecture/">
+<span class="md-ellipsis">
+    Software Architecture
+    
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Software Architecture
+    System Architecture Interview
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Software Architecture
+    System Architecture Interview
     
   </span>
 </a>
@@ -536,59 +544,38 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#system-overview">
+<a class="md-nav__link" href="#task-1-url-shortening-service-like-tinyurl">
 <span class="md-ellipsis">
-      System Overview
+      Task 1: URL Shortening Service (like TinyURL)
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#architecture-diagrams">
-<span class="md-ellipsis">
-      Architecture Diagrams
-    </span>
-</a>
-<nav aria-label="Architecture Diagrams" class="md-nav">
+<nav aria-label="Task 1: URL Shortening Service (like TinyURL)" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#system-context-diagram">
+<a class="md-nav__link" href="#requirements">
 <span class="md-ellipsis">
-      System Context Diagram
+      Requirements
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#microservices-architecture">
+<a class="md-nav__link" href="#architecture-diagram">
 <span class="md-ellipsis">
-      Microservices Architecture
+      Architecture Diagram
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#data-flow-diagram">
+<a class="md-nav__link" href="#key-components">
 <span class="md-ellipsis">
-      Data Flow Diagram
+      Key Components
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#deployment-architecture">
+<a class="md-nav__link" href="#data-flow">
 <span class="md-ellipsis">
-      Deployment Architecture
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#database-schema-relationship">
-<span class="md-ellipsis">
-      Database Schema Relationship
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cicd-pipeline">
-<span class="md-ellipsis">
-      CI/CD Pipeline
+      Data Flow
     </span>
 </a>
 </li>
@@ -596,31 +583,31 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#technology-stack">
+<a class="md-nav__link" href="#task-2-real-time-chat-application">
 <span class="md-ellipsis">
-      Technology Stack
+      Task 2: Real-time Chat Application
     </span>
 </a>
-<nav aria-label="Technology Stack" class="md-nav">
+<nav aria-label="Task 2: Real-time Chat Application" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#backend-services">
+<a class="md-nav__link" href="#requirements_1">
 <span class="md-ellipsis">
-      Backend Services
+      Requirements
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#frontend">
+<a class="md-nav__link" href="#architecture-diagram_1">
 <span class="md-ellipsis">
-      Frontend
+      Architecture Diagram
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#infrastructure">
+<a class="md-nav__link" href="#real-time-message-flow">
 <span class="md-ellipsis">
-      Infrastructure
+      Real-time Message Flow
     </span>
 </a>
 </li>
@@ -628,24 +615,31 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#design-patterns">
+<a class="md-nav__link" href="#task-3-e-commerce-inventory-system">
 <span class="md-ellipsis">
-      Design Patterns
+      Task 3: E-commerce Inventory System
     </span>
 </a>
-<nav aria-label="Design Patterns" class="md-nav">
+<nav aria-label="Task 3: E-commerce Inventory System" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#architectural-patterns">
+<a class="md-nav__link" href="#requirements_2">
 <span class="md-ellipsis">
-      Architectural Patterns
+      Requirements
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#implementation-patterns">
+<a class="md-nav__link" href="#architecture-diagram_2">
 <span class="md-ellipsis">
-      Implementation Patterns
+      Architecture Diagram
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-features">
+<span class="md-ellipsis">
+      Key Features
     </span>
 </a>
 </li>
@@ -653,24 +647,31 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#security-considerations">
+<a class="md-nav__link" href="#task-4-distributed-file-storage-system">
 <span class="md-ellipsis">
-      Security Considerations
+      Task 4: Distributed File Storage System
     </span>
 </a>
-<nav aria-label="Security Considerations" class="md-nav">
+<nav aria-label="Task 4: Distributed File Storage System" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#authentication-authorization">
+<a class="md-nav__link" href="#requirements_3">
 <span class="md-ellipsis">
-      Authentication &amp; Authorization
+      Requirements
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#data-protection">
+<a class="md-nav__link" href="#architecture-diagram_3">
 <span class="md-ellipsis">
-      Data Protection
+      Architecture Diagram
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#file-upload-flow">
+<span class="md-ellipsis">
+      File Upload Flow
     </span>
 </a>
 </li>
@@ -678,24 +679,31 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#performance-optimization">
+<a class="md-nav__link" href="#task-5-food-delivery-system-like-ubereats">
 <span class="md-ellipsis">
-      Performance Optimization
+      Task 5: Food Delivery System (like UberEats)
     </span>
 </a>
-<nav aria-label="Performance Optimization" class="md-nav">
+<nav aria-label="Task 5: Food Delivery System (like UberEats)" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#caching-strategy">
+<a class="md-nav__link" href="#requirements_4">
 <span class="md-ellipsis">
-      Caching Strategy
+      Requirements
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#scalability">
+<a class="md-nav__link" href="#architecture-diagram_4">
 <span class="md-ellipsis">
-      Scalability
+      Architecture Diagram
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-workflows">
+<span class="md-ellipsis">
+      Key Workflows
     </span>
 </a>
 </li>
@@ -703,24 +711,31 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#monitoring-observability">
+<a class="md-nav__link" href="#task-6-video-streaming-service-like-youtubenetflix">
 <span class="md-ellipsis">
-      Monitoring &amp; Observability
+      Task 6: Video Streaming Service (like YouTube/Netflix)
     </span>
 </a>
-<nav aria-label="Monitoring &amp; Observability" class="md-nav">
+<nav aria-label="Task 6: Video Streaming Service (like YouTube/Netflix)" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#metrics-collection">
+<a class="md-nav__link" href="#requirements_5">
 <span class="md-ellipsis">
-      Metrics Collection
+      Requirements
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#logging-strategy">
+<a class="md-nav__link" href="#architecture-diagram_5">
 <span class="md-ellipsis">
-      Logging Strategy
+      Architecture Diagram
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#video-delivery-flow">
+<span class="md-ellipsis">
+      Video Delivery Flow
     </span>
 </a>
 </li>
@@ -728,24 +743,31 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#deployment-strategy">
+<a class="md-nav__link" href="#task-7-bankingpayment-system">
 <span class="md-ellipsis">
-      Deployment Strategy
+      Task 7: Banking/Payment System
     </span>
 </a>
-<nav aria-label="Deployment Strategy" class="md-nav">
+<nav aria-label="Task 7: Banking/Payment System" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#environment-setup">
+<a class="md-nav__link" href="#requirements_6">
 <span class="md-ellipsis">
-      Environment Setup
+      Requirements
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#release-process">
+<a class="md-nav__link" href="#architecture-diagram_6">
 <span class="md-ellipsis">
-      Release Process
+      Architecture Diagram
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-features_1">
+<span class="md-ellipsis">
+      Key Features
     </span>
 </a>
 </li>
@@ -753,40 +775,138 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#development-guidelines">
+<a class="md-nav__link" href="#task-8-iot-platform-smart-homeindustrial-iot">
 <span class="md-ellipsis">
-      Development Guidelines
+      Task 8: IoT Platform (Smart Home/Industrial IoT)
     </span>
 </a>
-<nav aria-label="Development Guidelines" class="md-nav">
+<nav aria-label="Task 8: IoT Platform (Smart Home/Industrial IoT)" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#code-standards">
+<a class="md-nav__link" href="#requirements_7">
 <span class="md-ellipsis">
-      Code Standards
+      Requirements
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#api-design">
+<a class="md-nav__link" href="#architecture-diagram_7">
 <span class="md-ellipsis">
-      API Design
+      Architecture Diagram
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-flow_1">
+<span class="md-ellipsis">
+      Data Flow
     </span>
 </a>
 </li>
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-9-multi-player-gaming-platform">
+<span class="md-ellipsis">
+      Task 9: Multi-player Gaming Platform
+    </span>
+</a>
+<nav aria-label="Task 9: Multi-player Gaming Platform" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#requirements_8">
+<span class="md-ellipsis">
+      Requirements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#architecture-diagram_8">
+<span class="md-ellipsis">
+      Architecture Diagram
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-features_2">
+<span class="md-ellipsis">
+      Key Features
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../system-architecture-interview-tasks/">
+<a class="md-nav__link" href="#evaluation-criteria-for-system-design-interviews">
 <span class="md-ellipsis">
-    System Architecture Interview
-    
-  </span>
+      Evaluation Criteria for System Design Interviews
+    </span>
 </a>
+<nav aria-label="Evaluation Criteria for System Design Interviews" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-system-scalability">
+<span class="md-ellipsis">
+      1. System Scalability
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-data-consistency">
+<span class="md-ellipsis">
+      2. Data Consistency
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-fault-tolerance">
+<span class="md-ellipsis">
+      3. Fault Tolerance
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-performance-optimization">
+<span class="md-ellipsis">
+      4. Performance Optimization
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-technology-choices">
+<span class="md-ellipsis">
+      5. Technology Choices
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-security-considerations">
+<span class="md-ellipsis">
+      6. Security Considerations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-cost-optimization">
+<span class="md-ellipsis">
+      7. Cost Optimization
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-use-these-examples">
+<span class="md-ellipsis">
+      How to Use These Examples
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../clean-architecture/">
@@ -1072,302 +1192,676 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="software-architecture">Software Architecture<a class="headerlink" href="#software-architecture" title="Permanent link">¶</a></h1>
-<h2 id="system-overview">System Overview<a class="headerlink" href="#system-overview" title="Permanent link">¶</a></h2>
-<p>This document describes the software architecture of our application, including system components, data flow, and deployment strategies.</p>
-<h2 id="architecture-diagrams">Architecture Diagrams<a class="headerlink" href="#architecture-diagrams" title="Permanent link">¶</a></h2>
-<h3 id="system-context-diagram">System Context Diagram<a class="headerlink" href="#system-context-diagram" title="Permanent link">¶</a></h3>
-<pre class="mermaid"><code>flowchart TD
-    A[User] --&gt; B[Web Application]
-    C[Admin] --&gt; B
-    D[Mobile App] --&gt; E[API Gateway]
-    B --&gt; E
-    E --&gt; F[Authentication Service]
-    E --&gt; G[User Service]
-    E --&gt; H[Order Service]
-    E --&gt; I[Payment Service]
-
-    F --&gt; J[(User Database)]
-    G --&gt; J
-    H --&gt; K[(Order Database)]
-    I --&gt; L[(Payment Database)]</code></pre>
-<h3 id="microservices-architecture">Microservices Architecture<a class="headerlink" href="#microservices-architecture" title="Permanent link">¶</a></h3>
+<h1 id="system-architecture-interview-tasks-solutions">System Architecture Interview Tasks &amp; Solutions<a class="headerlink" href="#system-architecture-interview-tasks-solutions" title="Permanent link">¶</a></h1>
+<p>This repository contains comprehensive system architecture tasks and solutions for technical interviews. Each solution includes detailed Mermaid.js diagrams and architectural explanations.</p>
+<h2 id="task-1-url-shortening-service-like-tinyurl">Task 1: URL Shortening Service (like TinyURL)<a class="headerlink" href="#task-1-url-shortening-service-like-tinyurl" title="Permanent link">¶</a></h2>
+<h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">¶</a></h3>
+<ul>
+<li>Shorten long URLs to short codes</li>
+<li>Redirect short URLs to original URLs</li>
+<li>Handle 100M+ URLs</li>
+<li>High availability and low latency</li>
+</ul>
+<h3 id="architecture-diagram">Architecture Diagram<a class="headerlink" href="#architecture-diagram" title="Permanent link">¶</a></h3>
 <pre class="mermaid"><code>graph TB
-    A[API Gateway] --&gt; B[Service Discovery]
+    subgraph Clients
+        A[Web/Mobile App]
+        B[Browser]
+    end
+
+    subgraph Application Layer
+        C[Load Balancer]
+        D[API Gateway]
+        E[URL Service]
+    end
+
+    subgraph Cache Layer
+        F[Redis Cluster]
+    end
+
+    subgraph Data Storage
+        G[MySQL Sharded]
+        H[Snowflake ID Generator]
+        I[Analytics DB]
+    end
+
+    A --&gt; C
+    B --&gt; C
+    C --&gt; D
+    D --&gt; E
+    E --&gt; F
+    E --&gt; G
+    E --&gt; H
+    F --&gt; E
+    G --&gt; E
+    H --&gt; E
+
+    style A fill:#e1f5fe
+    style B fill:#e1f5fe
+    style F fill:#fff3e0
+    style G fill:#f3e5f5</code></pre>
+<h3 id="key-components">Key Components<a class="headerlink" href="#key-components" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Base62 Encoding</strong>: For short, readable URLs</li>
+<li><strong>Distributed ID Generation</strong>: Snowflake for unique IDs across servers</li>
+<li><strong>Caching Strategy</strong>: Redis for hot data, reducing database load</li>
+<li><strong>Database Sharding</strong>: Scale horizontally by sharding on short code</li>
+</ol>
+<h3 id="data-flow">Data Flow<a class="headerlink" href="#data-flow" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Shorten URL</strong>: Client → Load Balancer → API Server → ID Generator → DB + Cache</li>
+<li><strong>Redirect</strong>: Client → Load Balancer → API Server → Cache → DB (if cache miss)</li>
+</ol>
+<hr/>
+<h2 id="task-2-real-time-chat-application">Task 2: Real-time Chat Application<a class="headerlink" href="#task-2-real-time-chat-application" title="Permanent link">¶</a></h2>
+<h3 id="requirements_1">Requirements<a class="headerlink" href="#requirements_1" title="Permanent link">¶</a></h3>
+<ul>
+<li>Support 1M+ concurrent users</li>
+<li>Deliver messages in &lt;100ms</li>
+<li>Store chat history</li>
+<li>Support multiple chat rooms</li>
+</ul>
+<h3 id="architecture-diagram_1">Architecture Diagram<a class="headerlink" href="#architecture-diagram_1" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    subgraph Clients
+        A[Web Client]
+        B[Mobile App]
+    end
+
+    subgraph Backend Services
+        C[Load Balancer]
+        D[API Gateway]
+        E[WebSocket Servers]
+        F[Message Queue]
+        G[Chat Service]
+    end
+
+    subgraph Data Layer
+        H[Redis Cache]
+        I[Cassandra/MongoDB]
+        J[Presence Service]
+    end
+
+    A --&gt; C
+    B --&gt; C
+    C --&gt; D
+    D --&gt; E
+    E --&gt; F
+    F --&gt; G
+    G --&gt; H
+    G --&gt; I
+    G --&gt; J
+    H --&gt; G
+    I --&gt; G
+    J --&gt; G
+
+    style E fill:#fff3e0
+    style F fill:#e8f5e8
+    style H fill:#fff3e0</code></pre>
+<h3 id="real-time-message-flow">Real-time Message Flow<a class="headerlink" href="#real-time-message-flow" title="Permanent link">¶</a></h3>
+<ol>
+<li>User A sends message → WebSocket Server → Message Queue → Chat Service</li>
+<li>Chat Service → Database (store) + Presence Service (get online users)</li>
+<li>Chat Service → WebSocket Servers → User B, User C, etc.</li>
+</ol>
+<hr/>
+<h2 id="task-3-e-commerce-inventory-system">Task 3: E-commerce Inventory System<a class="headerlink" href="#task-3-e-commerce-inventory-system" title="Permanent link">¶</a></h2>
+<h3 id="requirements_2">Requirements<a class="headerlink" href="#requirements_2" title="Permanent link">¶</a></h3>
+<ul>
+<li>Handle high concurrent orders</li>
+<li>Prevent overselling</li>
+<li>Real-time inventory updates</li>
+<li>Support flash sales</li>
+</ul>
+<h3 id="architecture-diagram_2">Architecture Diagram<a class="headerlink" href="#architecture-diagram_2" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    subgraph Clients
+        A[Web App]
+        B[Mobile App]
+    end
+
+    subgraph Application Layer
+        C[Load Balancer]
+        D[API Gateway]
+        E[Inventory Service]
+        F[Order Service]
+    end
+
+    subgraph Message Layer
+        G[RabbitMQ/Kafka]
+    end
+
+    subgraph Data Layer
+        H[Redis Cache]
+        I[PostgreSQL]
+        J[Cassandra]
+    end
+
+    A --&gt; C
+    B --&gt; C
+    C --&gt; D
+    D --&gt; E
+    D --&gt; F
+    E --&gt; G
+    E --&gt; H
+    E --&gt; I
+    F --&gt; G
+    F --&gt; I
+    G --&gt; E
+    G --&gt; F
+    H --&gt; E
+    I --&gt; E
+    I --&gt; F
+
+    style H fill:#fff3e0
+    style G fill:#e8f5e8</code></pre>
+<h3 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Redis for Atomic Operations</strong>: Prevents race conditions using Lua scripts</li>
+<li><strong>Circuit Breaker Pattern</strong>: Prevents system overload during flash sales</li>
+<li><strong>Event Sourcing</strong>: Track all inventory changes</li>
+<li><strong>Read/Write Separation</strong>: Separate databases for reads and writes</li>
+</ol>
+<hr/>
+<h2 id="task-4-distributed-file-storage-system">Task 4: Distributed File Storage System<a class="headerlink" href="#task-4-distributed-file-storage-system" title="Permanent link">¶</a></h2>
+<h3 id="requirements_3">Requirements<a class="headerlink" href="#requirements_3" title="Permanent link">¶</a></h3>
+<ul>
+<li>Store 1PB+ of files</li>
+<li>High durability (99.999999999%)</li>
+<li>Fast upload/download</li>
+<li>Cost-effective storage</li>
+</ul>
+<h3 id="architecture-diagram_3">Architecture Diagram<a class="headerlink" href="#architecture-diagram_3" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    subgraph Clients
+        A[Web App]
+        B[Mobile App]
+        C[TV/OTT Devices]
+    end
+
+    subgraph Application Layer
+        D[Load Balancer]
+        E[API Gateway]
+        F[File Service]
+    end
+
+    subgraph Metadata Layer
+        G[Redis Cache]
+        H[Cassandra Metadata DB]
+    end
+
+    subgraph Storage Layer
+        I[Storage Node 1]
+        J[Storage Node 2]
+        K[Storage Node N]
+    end
+
+    A --&gt; D
+    B --&gt; D
+    C --&gt; D
+    D --&gt; E
+    E --&gt; F
+    F --&gt; G
+    F --&gt; H
+    F --&gt; I
+    F --&gt; J
+    F --&gt; K
+    G --&gt; F
+    H --&gt; F
+
+    style I fill:#f3e5f5
+    style J fill:#f3e5f5
+    style K fill:#f3e5f5</code></pre>
+<h3 id="file-upload-flow">File Upload Flow<a class="headerlink" href="#file-upload-flow" title="Permanent link">¶</a></h3>
+<ol>
+<li>Client → API Gateway → File Service</li>
+<li>File Service splits file into chunks</li>
+<li>Each chunk replicated to 3 storage nodes (consistent hashing)</li>
+<li>Metadata stored in Cassandra + Cache</li>
+</ol>
+<hr/>
+<h2 id="task-5-food-delivery-system-like-ubereats">Task 5: Food Delivery System (like UberEats)<a class="headerlink" href="#task-5-food-delivery-system-like-ubereats" title="Permanent link">¶</a></h2>
+<h3 id="requirements_4">Requirements<a class="headerlink" href="#requirements_4" title="Permanent link">¶</a></h3>
+<ul>
+<li>Real-time order tracking</li>
+<li>Restaurant and delivery partner management</li>
+<li>Payment processing</li>
+<li>Location-based services</li>
+</ul>
+<h3 id="architecture-diagram_4">Architecture Diagram<a class="headerlink" href="#architecture-diagram_4" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    subgraph Clients
+        A[Customer App]
+        B[Restaurant App]
+        C[Delivery Partner App]
+    end
+
+    subgraph Application Layer
+        D[Load Balancer]
+        E[API Gateway]
+    end
 
     subgraph Microservices
-        C[User Service]
-        D[Product Service]
-        E[Order Service]
-        F[Payment Service]
-        G[Notification Service]
+        F[Order Service]
+        G[Restaurant Service]
+        H[Delivery Service]
+        I[Payment Service]
+        J[Location Service]
+        K[Notification Service]
     end
 
-    B --&gt; C
-    B --&gt; D
-    B --&gt; E
-    B --&gt; F
-    B --&gt; G
-
-    C --&gt; H[(User DB)]
-    D --&gt; I[(Product DB)]
-    E --&gt; J[(Order DB)]
-    F --&gt; K[(Payment DB)]
-    G --&gt; L[Message Queue]
-
-    L --&gt; M[Email Service]
-    L --&gt; N[SMS Service]
-    L --&gt; O[Push Service]</code></pre>
-<h3 id="data-flow-diagram">Data Flow Diagram<a class="headerlink" href="#data-flow-diagram" title="Permanent link">¶</a></h3>
-<pre class="mermaid"><code>sequenceDiagram
-    participant U as User
-    participant WG as Web Gateway
-    participant AUTH as Auth Service
-    participant US as User Service
-    participant OS as Order Service
-    participant PS as Payment Service
-
-    U-&gt;&gt;WG: Login Request
-    WG-&gt;&gt;AUTH: Authenticate
-    AUTH--&gt;&gt;WG: JWT Token
-    WG--&gt;&gt;U: Authentication Success
-
-    U-&gt;&gt;WG: Place Order
-    WG-&gt;&gt;OS: Create Order
-    OS-&gt;&gt;US: Validate User
-    US--&gt;&gt;OS: User Valid
-    OS-&gt;&gt;PS: Process Payment
-    PS--&gt;&gt;OS: Payment Success
-    OS--&gt;&gt;WG: Order Confirmed
-    WG--&gt;&gt;U: Order Complete</code></pre>
-<h3 id="deployment-architecture">Deployment Architecture<a class="headerlink" href="#deployment-architecture" title="Permanent link">¶</a></h3>
-<pre class="mermaid"><code>graph TB
-    subgraph Cloud Provider [AWS/Azure/GCP]
-        subgraph Load Balancer Layer
-            A[Load Balancer]
-        end
-
-        subgraph Application Layer
-            B[API Gateway]
-            C[Service 1]
-            D[Service 2]
-            E[Service 3]
-        end
-
-        subgraph Data Layer
-            F[(Redis Cache)]
-            G[(Main Database)]
-            H[(Backup DB)]
-        end
-
-        subgraph Monitoring
-            I[Log Aggregator]
-            J[Metrics Collector]
-            K[Alert Manager]
-        end
+    subgraph Data Layer
+        L[Redis Cache]
+        M[PostgreSQL]
+        N[Elasticsearch]
     end
 
-    A --&gt; B
-    B --&gt; C
-    B --&gt; D
-    B --&gt; E
+    subgraph External Integrations
+        O[Maps API]
+        P[Payment Gateway]
+        Q[SMS/Push Notifications]
+        R[Analytics Platform]
+    end
 
-    C --&gt; F
-    C --&gt; G
-    D --&gt; G
+    A --&gt; D
+    B --&gt; D
+    C --&gt; D
+    D --&gt; E
+    E --&gt; F
     E --&gt; G
+    E --&gt; H
+    E --&gt; I
+    E --&gt; J
+    E --&gt; K
+
+    F --&gt; L
+    F --&gt; M
+    G --&gt; L
+    G --&gt; M
+    H --&gt; L
+    H --&gt; M
+    I --&gt; M
+    J --&gt; L
+    K --&gt; Q
+
+    F --&gt; O
+    I --&gt; P
+    M --&gt; R
+    N --&gt; R
+
+    style F fill:#e1f5fe
+    style H fill:#e8f5e8
+    style I fill:#fff3e0</code></pre>
+<h3 id="key-workflows">Key Workflows<a class="headerlink" href="#key-workflows" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Order Placement</strong>: Customer → Order Service → Restaurant Service → Payment Service</li>
+<li><strong>Delivery Matching</strong>: Order Service → Delivery Service → Location-based matching</li>
+<li><strong>Real-time Tracking</strong>: Tracking Service → WebSocket → Customer/Delivery Partner Apps</li>
+</ol>
+<hr/>
+<h2 id="task-6-video-streaming-service-like-youtubenetflix">Task 6: Video Streaming Service (like YouTube/Netflix)<a class="headerlink" href="#task-6-video-streaming-service-like-youtubenetflix" title="Permanent link">¶</a></h2>
+<h3 id="requirements_5">Requirements<a class="headerlink" href="#requirements_5" title="Permanent link">¶</a></h3>
+<ul>
+<li>Support millions of concurrent viewers</li>
+<li>Adaptive bitrate streaming</li>
+<li>Global content delivery</li>
+<li>Video processing pipeline</li>
+</ul>
+<h3 id="architecture-diagram_5">Architecture Diagram<a class="headerlink" href="#architecture-diagram_5" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    subgraph Clients
+        A[Web Browser]
+        B[Mobile App]
+        C[TV/OTT Devices]
+    end
+
+    subgraph CDN Layer
+        D[CDN Edge NA]
+        E[CDN Edge EU]
+        F[CDN Edge Asia]
+        G[CDN Edge SA]
+    end
+
+    subgraph Origin Servers
+        H[Video Processing Pipeline]
+        I[API Gateway]
+        J[Metadata Service]
+        K[User Service]
+        L[Recommendation Service]
+    end
+
+    subgraph Storage Layer
+        M[Hot Storage SSD]
+        N[Cold Storage S3/Glacier]
+        O[Database Cluster]
+    end
+
+    A --&gt; D
+    B --&gt; E
+    C --&gt; F
+    D --&gt; H
+    E --&gt; H
+    F --&gt; H
     G --&gt; H
 
-    C --&gt; I
-    D --&gt; I
-    E --&gt; I
+    H --&gt; M
+    H --&gt; N
+    I --&gt; O
+    J --&gt; O
+    K --&gt; O
+    L --&gt; O
+
+    style D fill:#e8f5e8
+    style E fill:#e8f5e8
+    style F fill:#e8f5e8
+    style G fill:#e8f5e8
+    style M fill:#fff3e0
+    style N fill:#f3e5f5</code></pre>
+<h3 id="video-delivery-flow">Video Delivery Flow<a class="headerlink" href="#video-delivery-flow" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Upload</strong>: Client → Ingest Service → Transcoding Pipeline → Multiple Quality Versions</li>
+<li><strong>Storage</strong>: Processed videos → Hot Storage (popular) + Cold Storage (archived)</li>
+<li><strong>Delivery</strong>: CDN Edge Nodes cache videos based on regional popularity</li>
+<li><strong>Adaptive Streaming</strong>: Client automatically switches quality based on bandwidth</li>
+</ol>
+<hr/>
+<h2 id="task-7-bankingpayment-system">Task 7: Banking/Payment System<a class="headerlink" href="#task-7-bankingpayment-system" title="Permanent link">¶</a></h2>
+<h3 id="requirements_6">Requirements<a class="headerlink" href="#requirements_6" title="Permanent link">¶</a></h3>
+<ul>
+<li>ACID compliance for transactions</li>
+<li>High security and fraud detection</li>
+<li>Regulatory compliance</li>
+<li>99.99%+ availability</li>
+</ul>
+<h3 id="architecture-diagram_6">Architecture Diagram<a class="headerlink" href="#architecture-diagram_6" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    subgraph Channels
+        A[Mobile Banking]
+        B[Internet Banking]
+        C[ATM/Branch Systems]
+    end
+
+    subgraph Security Layer
+        D[WAF &amp; Rate Limiter]
+        E[API Gateway]
+        F[Load Balancer]
+    end
+
+    subgraph Core Banking Services
+        G[Account Service]
+        H[Transaction Service]
+        I[Payment Service]
+        J[Fraud Detection]
+        K[Loan Service]
+        L[Reporting Service]
+    end
+
+    subgraph Data Layer
+        M[Oracle/DB2 Database]
+        N[Redis Cache]
+        O[Message Queue]
+        P[Audit &amp; Logging]
+    end
+
+    subgraph External Systems
+        Q[SWIFT/Fedwire]
+        R[Card Networks]
+        S[Credit Bureaus]
+        T[Regulatory Reporting]
+    end
+
+    A --&gt; D
+    B --&gt; D
+    C --&gt; D
+    D --&gt; E
+    E --&gt; F
+    F --&gt; G
+    F --&gt; H
+    F --&gt; I
+    F --&gt; J
+    F --&gt; K
+    F --&gt; L
+
+    G --&gt; M
+    G --&gt; N
+    G --&gt; O
+    H --&gt; M
+    H --&gt; O
+    I --&gt; M
+    I --&gt; O
+    I --&gt; Q
+    I --&gt; R
+    J --&gt; S
+    L --&gt; T
+    M --&gt; P
+    O --&gt; P
+
+    style M fill:#ffebee
+    style J fill:#fff3e0
+    style P fill:#e8f5e8</code></pre>
+<h3 id="key-features_1">Key Features<a class="headerlink" href="#key-features_1" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>ACID Compliance</strong>: Strong consistency for financial transactions</li>
+<li><strong>Fraud Detection</strong>: Real-time pattern analysis and machine learning</li>
+<li><strong>Audit Trail</strong>: Complete transaction logging for compliance</li>
+<li><strong>High Availability</strong>: 99.99%+ uptime requirements</li>
+</ol>
+<hr/>
+<h2 id="task-8-iot-platform-smart-homeindustrial-iot">Task 8: IoT Platform (Smart Home/Industrial IoT)<a class="headerlink" href="#task-8-iot-platform-smart-homeindustrial-iot" title="Permanent link">¶</a></h2>
+<h3 id="requirements_7">Requirements<a class="headerlink" href="#requirements_7" title="Permanent link">¶</a></h3>
+<ul>
+<li>Handle millions of connected devices</li>
+<li>Real-time data processing</li>
+<li>Edge computing capabilities</li>
+<li>Predictive maintenance</li>
+</ul>
+<h3 id="architecture-diagram_7">Architecture Diagram<a class="headerlink" href="#architecture-diagram_7" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    subgraph IoT Devices
+        A[Sensors &amp; Actuators]
+        B[Cameras &amp; Smart Devices]
+        C[Industrial Equipment]
+    end
+
+    subgraph Edge Layer
+        D[Protocol Adapters]
+        E[Edge Processing]
+        F[Local Analytics]
+    end
+
+    subgraph Cloud Platform
+        G[IoT Core Service]
+        H[Stream Processing]
+        I[Device Management]
+        J[Message Broker]
+    end
+
+    subgraph Data &amp; Analytics
+        K[Time Series Database]
+        L[Data Warehouse]
+        M[ML/AI Services]
+        N[Dashboard &amp; Reporting]
+    end
+
+    subgraph External Systems
+        O[Mobile Apps]
+        P[CRM Systems]
+        Q[ERP Systems]
+    end
+
+    A --&gt; D
+    B --&gt; D
+    C --&gt; D
+    D --&gt; E
+    E --&gt; F
+    D --&gt; G
+    E --&gt; G
+
+    G --&gt; H
+    G --&gt; I
+    G --&gt; J
+
+    H --&gt; K
+    H --&gt; L
+    K --&gt; M
+    L --&gt; M
+    M --&gt; N
+
+    G --&gt; O
+    G --&gt; P
+    G --&gt; Q
+
+    style D fill:#e8f5e8
+    style E fill:#e8f5e8
+    style K fill:#fff3e0
+    style M fill:#f3e5f5</code></pre>
+<h3 id="data-flow_1">Data Flow<a class="headerlink" href="#data-flow_1" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Device to Cloud</strong>: Sensors → Protocol Adapters → IoT Core → Stream Processing</li>
+<li><strong>Real-time Processing</strong>: Kafka/Kinesis → Spark Streaming → Real-time Alerts</li>
+<li><strong>Batch Analytics</strong>: Data Warehouse → ML Services → Predictive Maintenance</li>
+<li><strong>Command &amp; Control</strong>: Dashboard → IoT Core → Actuators/Devices</li>
+</ol>
+<hr/>
+<h2 id="task-9-multi-player-gaming-platform">Task 9: Multi-player Gaming Platform<a class="headerlink" href="#task-9-multi-player-gaming-platform" title="Permanent link">¶</a></h2>
+<h3 id="requirements_8">Requirements<a class="headerlink" href="#requirements_8" title="Permanent link">¶</a></h3>
+<ul>
+<li>Low latency real-time gameplay</li>
+<li>Matchmaking services</li>
+<li>Virtual economy system</li>
+<li>Anti-cheat mechanisms</li>
+</ul>
+<h3 id="architecture-diagram_8">Architecture Diagram<a class="headerlink" href="#architecture-diagram_8" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    subgraph Game Clients
+        A[PC/Console]
+        B[Mobile Devices]
+        C[Web Browser]
+    end
+
+    subgraph Game Servers
+        D[Regional Game Servers]
+        E[Game Logic Server]
+        F[Physics Engine]
+        G[Matchmaking Service]
+        H[Session Management]
+    end
+
+    subgraph Platform Services
+        I[User Service]
+        J[Social Service]
+        K[Economy Service]
+        L[Leaderboard Service]
+    end
+
+    subgraph Data &amp; Analytics
+        M[Redis Cluster]
+        N[Cassandra]
+        O[Analytics Pipeline]
+        P[Data Lake]
+    end
+
+    subgraph External Integrations
+        Q[Payment Gateways]
+        R[Push Notifications]
+        S[Anti-Cheat Systems]
+        T[Content Delivery Network]
+    end
+
+    A --&gt; D
+    B --&gt; D
+    C --&gt; D
+    D --&gt; E
+    D --&gt; F
+    D --&gt; G
+    D --&gt; H
+
+    G --&gt; I
+    H --&gt; I
     I --&gt; J
-    J --&gt; K</code></pre>
-<h3 id="database-schema-relationship">Database Schema Relationship<a class="headerlink" href="#database-schema-relationship" title="Permanent link">¶</a></h3>
-<pre class="mermaid"><code>erDiagram
-    USERS {
-        string user_id PK
-        string email UK
-        string name
-        string role
-        datetime created_at
-    }
+    I --&gt; K
+    I --&gt; L
 
-    PRODUCTS {
-        string product_id PK
-        string name
-        decimal price
-        integer stock
-        string category
-    }
+    E --&gt; M
+    F --&gt; M
+    I --&gt; M
+    I --&gt; N
+    K --&gt; N
+    L --&gt; N
 
-    ORDERS {
-        string order_id PK
-        string user_id FK
-        string status
-        decimal total_amount
-        datetime order_date
-    }
+    M --&gt; O
+    N --&gt; O
+    O --&gt; P
 
-    ORDER_ITEMS {
-        string order_item_id PK
-        string order_id FK
-        string product_id FK
-        integer quantity
-        decimal unit_price
-    }
+    K --&gt; Q
+    J --&gt; R
+    E --&gt; S
+    D --&gt; T
 
-    PAYMENTS {
-        string payment_id PK
-        string order_id FK
-        decimal amount
-        string status
-        string payment_method
-    }
-
-    USERS ||--o{ ORDERS : places
-    ORDERS ||--o{ ORDER_ITEMS : contains
-    PRODUCTS ||--o{ ORDER_ITEMS : includes
-    ORDERS ||--|| PAYMENTS : processes</code></pre>
-<h3 id="cicd-pipeline">CI/CD Pipeline<a class="headerlink" href="#cicd-pipeline" title="Permanent link">¶</a></h3>
-<pre class="mermaid"><code>graph LR
-    A[Developer Commit] --&gt; B[Source Control]
-    B --&gt; C[CI Server]
-
-    subgraph Continuous Integration
-        C --&gt; D[Run Tests]
-        D --&gt; E[Build Image]
-        E --&gt; F[Security Scan]
-        F --&gt; G[Push to Registry]
-    end
-
-    subgraph Continuous Deployment
-        G --&gt; H[Deploy to Staging]
-        H --&gt; I[Integration Tests]
-        I --&gt; J[Approval]
-        J --&gt; K[Deploy to Production]
-    end
-
-    K --&gt; L[Monitoring]
-    L --&gt; M[Feedback Loop]</code></pre>
-<h2 id="technology-stack">Technology Stack<a class="headerlink" href="#technology-stack" title="Permanent link">¶</a></h2>
-<h3 id="backend-services">Backend Services<a class="headerlink" href="#backend-services" title="Permanent link">¶</a></h3>
+    style D fill:#e1f5fe
+    style G fill:#e8f5e8
+    style M fill:#fff3e0
+    style S fill:#ffebee</code></pre>
+<h3 id="key-features_2">Key Features<a class="headerlink" href="#key-features_2" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Low Latency</strong>: Regional game servers for real-time gameplay</li>
+<li><strong>Session Management</strong>: Handle player connections and disconnections</li>
+<li><strong>Anti-Cheat</strong>: Real-time pattern detection and validation</li>
+<li><strong>Economy System</strong>: Secure virtual currency and item transactions</li>
+</ol>
+<hr/>
+<h2 id="evaluation-criteria-for-system-design-interviews">Evaluation Criteria for System Design Interviews<a class="headerlink" href="#evaluation-criteria-for-system-design-interviews" title="Permanent link">¶</a></h2>
+<h3 id="1-system-scalability">1. System Scalability<a class="headerlink" href="#1-system-scalability" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>API Gateway</strong>: Spring Cloud Gateway / Kong</li>
-<li><strong>Microservices</strong>: Spring Boot / Node.js</li>
-<li><strong>Authentication</strong>: JWT + OAuth2</li>
-<li><strong>Database</strong>: PostgreSQL / MongoDB</li>
-<li><strong>Cache</strong>: Redis</li>
-<li><strong>Message Queue</strong>: RabbitMQ / Apache Kafka</li>
+<li>Horizontal vs vertical scaling strategies</li>
+<li>Database partitioning/sharding approaches</li>
+<li>Load balancing techniques</li>
 </ul>
-<h3 id="frontend">Frontend<a class="headerlink" href="#frontend" title="Permanent link">¶</a></h3>
+<h3 id="2-data-consistency">2. Data Consistency<a class="headerlink" href="#2-data-consistency" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>Web</strong>: React / Angular</li>
-<li><strong>Mobile</strong>: React Native / Flutter</li>
-<li><strong>State Management</strong>: Redux / NgRx</li>
+<li>CAP theorem tradeoffs</li>
+<li>Consistency models chosen (strong, eventual)</li>
+<li>Conflict resolution strategies</li>
 </ul>
-<h3 id="infrastructure">Infrastructure<a class="headerlink" href="#infrastructure" title="Permanent link">¶</a></h3>
+<h3 id="3-fault-tolerance">3. Fault Tolerance<a class="headerlink" href="#3-fault-tolerance" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>Containerization</strong>: Docker</li>
-<li><strong>Orchestration</strong>: Kubernetes</li>
-<li><strong>Cloud</strong>: AWS / Azure / GCP</li>
-<li><strong>Monitoring</strong>: Prometheus + Grafana</li>
-<li><strong>Logging</strong>: ELK Stack</li>
+<li>Failure handling strategies</li>
+<li>Redundancy and backup plans</li>
+<li>Disaster recovery procedures</li>
 </ul>
-<h2 id="design-patterns">Design Patterns<a class="headerlink" href="#design-patterns" title="Permanent link">¶</a></h2>
-<h3 id="architectural-patterns">Architectural Patterns<a class="headerlink" href="#architectural-patterns" title="Permanent link">¶</a></h3>
+<h3 id="4-performance-optimization">4. Performance Optimization<a class="headerlink" href="#4-performance-optimization" title="Permanent link">¶</a></h3>
 <ul>
-<li>Microservices Architecture</li>
-<li>Event-Driven Architecture</li>
-<li>CQRS (Command Query Responsibility Segregation)</li>
-<li>API Gateway Pattern</li>
-<li>Circuit Breaker Pattern</li>
+<li>Caching strategies at different levels</li>
+<li>Database optimization techniques</li>
+<li>Content delivery optimization</li>
 </ul>
-<h3 id="implementation-patterns">Implementation Patterns<a class="headerlink" href="#implementation-patterns" title="Permanent link">¶</a></h3>
+<h3 id="5-technology-choices">5. Technology Choices<a class="headerlink" href="#5-technology-choices" title="Permanent link">¶</a></h3>
 <ul>
-<li>Repository Pattern</li>
-<li>Factory Pattern</li>
-<li>Strategy Pattern</li>
-<li>Observer Pattern</li>
-<li>Dependency Injection</li>
+<li>Appropriate database selections for use cases</li>
+<li>Message queue and caching solutions</li>
+<li>Monitoring and logging infrastructure</li>
 </ul>
-<h2 id="security-considerations">Security Considerations<a class="headerlink" href="#security-considerations" title="Permanent link">¶</a></h2>
-<h3 id="authentication-authorization">Authentication &amp; Authorization<a class="headerlink" href="#authentication-authorization" title="Permanent link">¶</a></h3>
+<h3 id="6-security-considerations">6. Security Considerations<a class="headerlink" href="#6-security-considerations" title="Permanent link">¶</a></h3>
 <ul>
-<li>JWT-based stateless authentication</li>
-<li>Role-based access control (RBAC)</li>
-<li>API key management for external services</li>
-<li>OAuth2 for third-party integrations</li>
+<li>Authentication and authorization</li>
+<li>Data encryption</li>
+<li>API security and rate limiting</li>
 </ul>
-<h3 id="data-protection">Data Protection<a class="headerlink" href="#data-protection" title="Permanent link">¶</a></h3>
+<h3 id="7-cost-optimization">7. Cost Optimization<a class="headerlink" href="#7-cost-optimization" title="Permanent link">¶</a></h3>
 <ul>
-<li>Encryption at rest (AES-256)</li>
-<li>Encryption in transit (TLS 1.3)</li>
-<li>Secure secret management</li>
-<li>Regular security audits</li>
-</ul>
-<h2 id="performance-optimization">Performance Optimization<a class="headerlink" href="#performance-optimization" title="Permanent link">¶</a></h2>
-<h3 id="caching-strategy">Caching Strategy<a class="headerlink" href="#caching-strategy" title="Permanent link">¶</a></h3>
-<ul>
-<li>Multi-level caching (L1/L2/L3)</li>
-<li>CDN for static assets</li>
-<li>Database query optimization</li>
-<li>Connection pooling</li>
-</ul>
-<h3 id="scalability">Scalability<a class="headerlink" href="#scalability" title="Permanent link">¶</a></h3>
-<ul>
-<li>Horizontal scaling with auto-scaling groups</li>
-<li>Database read replicas</li>
-<li>Load balancing with health checks</li>
-<li>Async processing for non-critical tasks</li>
-</ul>
-<h2 id="monitoring-observability">Monitoring &amp; Observability<a class="headerlink" href="#monitoring-observability" title="Permanent link">¶</a></h2>
-<h3 id="metrics-collection">Metrics Collection<a class="headerlink" href="#metrics-collection" title="Permanent link">¶</a></h3>
-<ul>
-<li>Application performance monitoring (APM)</li>
-<li>Business metrics tracking</li>
-<li>Infrastructure monitoring</li>
-<li>Custom metrics for business logic</li>
-</ul>
-<h3 id="logging-strategy">Logging Strategy<a class="headerlink" href="#logging-strategy" title="Permanent link">¶</a></h3>
-<ul>
-<li>Structured logging (JSON format)</li>
-<li>Centralized log aggregation</li>
-<li>Log retention policies</li>
-<li>Real-time log analysis</li>
-</ul>
-<h2 id="deployment-strategy">Deployment Strategy<a class="headerlink" href="#deployment-strategy" title="Permanent link">¶</a></h2>
-<h3 id="environment-setup">Environment Setup<a class="headerlink" href="#environment-setup" title="Permanent link">¶</a></h3>
-<ul>
-<li>Development</li>
-<li>Staging</li>
-<li>Production</li>
-<li>Disaster Recovery</li>
-</ul>
-<h3 id="release-process">Release Process<a class="headerlink" href="#release-process" title="Permanent link">¶</a></h3>
-<ul>
-<li>Blue-green deployments</li>
-<li>Canary releases</li>
-<li>Feature flags</li>
-<li>Rollback procedures</li>
-</ul>
-<h2 id="development-guidelines">Development Guidelines<a class="headerlink" href="#development-guidelines" title="Permanent link">¶</a></h2>
-<h3 id="code-standards">Code Standards<a class="headerlink" href="#code-standards" title="Permanent link">¶</a></h3>
-<ul>
-<li>Follow language-specific style guides</li>
-<li>Comprehensive testing (unit, integration, e2e)</li>
-<li>Code review process</li>
-<li>Documentation requirements</li>
-</ul>
-<h3 id="api-design">API Design<a class="headerlink" href="#api-design" title="Permanent link">¶</a></h3>
-<ul>
-<li>RESTful principles</li>
-<li>OpenAPI/Swagger documentation</li>
-<li>Versioning strategy</li>
-<li>Rate limiting and throttling</li>
+<li>Resource utilization efficiency</li>
+<li>Storage tiering strategies</li>
+<li>Compute optimization</li>
 </ul>
 <hr/>
-<p><em>This architecture document is living and will be updated as the system evolves.</em></p>
+<h2 id="how-to-use-these-examples">How to Use These Examples<a class="headerlink" href="#how-to-use-these-examples" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Study the Patterns</strong>: Understand the common architectural patterns across different domains</li>
+<li><strong>Practice Explaining</strong>: Practice walking through each architecture and explaining design decisions</li>
+<li><strong>Adapt to New Problems</strong>: Learn to apply these patterns to new, unfamiliar problems</li>
+<li><strong>Focus on Trade-offs</strong>: Be prepared to discuss the trade-offs in your design choices</li>
+</ol>
+<p>Each architecture demonstrates real-world scalability challenges and solutions that are commonly discussed in system design interviews at top tech companies.</p>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
