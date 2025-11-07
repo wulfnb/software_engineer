@@ -37,8 +37,8 @@ theme:
 
 plugins:
   - search
-  - mermaid2:  # Add this plugin for Mermaid support
-      version: 10.9.0  # Optional: specify a version
+  - mermaid2:
+      version: 10.9.0
       arguments:
         theme: default
 
@@ -89,6 +89,7 @@ nav:
     - CI/CD Concepts: devops/cicd.md
   - Architecture & Design:
     - Software Architecture: architecture/software-architecture.md
+    - System Architecture Interview: architecture/system-architecture-interview-tasks.md
     - Clean Architecture: architecture/clean-architecture.md
     - Microservices: architecture/microservices.md
     - System Design: architecture/system-design.md
@@ -126,4 +127,4 @@ extra:
       link: https://linkedin.com/in/wulfnb
   generator: false
   copyright:
-    text: "© 2025 Noufal Babu A S — A Software Engineer's Field Guide"
+    text: "© 2025 Noufal Babu A S — A Software Engineer's Field Guide [![License: CC BY-NC-ND 4.0](https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-nd/4.0/)"

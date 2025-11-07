@@ -263,6 +263,25 @@ erDiagram
 ```
 ````
 
+```mermaid
+erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ ORDER_ITEM : contains
+    PRODUCT ||--o{ ORDER_ITEM : includes
+    
+    CUSTOMER {
+        string name
+        string email
+        int customer_id PK
+    }
+    
+    ORDER {
+        int order_id PK
+        date order_date
+        string status
+    }
+```
+
 Cardinality
 - `||--o{` One to Many
 
@@ -292,6 +311,19 @@ journey
 ```
 ````
 
+```mermaid
+journey
+    title My Day
+    section Morning
+      Breakfast: 5: Me
+      Work: 4: Me
+    section Afternoon
+      Lunch: 3: Me
+      Work: 4: Me
+    section Evening
+      Dinner: 4: Me
+      Relax: 5: Me
+```
 
 ## Gantt Charts
 
@@ -309,6 +341,18 @@ gantt
     Testing :test1, after dev1, 14d
 ```
 ````
+
+```mermaid
+gantt
+    title Project Timeline
+    dateFormat YYYY-MM-DD
+    section Planning
+    Requirements :done, req1, 2024-01-01, 14d
+    Design :active, des1, after req1, 14d
+    section Development
+    Implementation :dev1, after des1, 21d
+    Testing :test1, after dev1, 14d
+```
 
 ### Task States
 
@@ -504,7 +548,19 @@ timeline
 ```
 ````
 
+```mermaid
+timeline
+    title Project History
+    2023 : Project Start
+            : Requirements
+    2024 Q1 : Development
+            : Testing
+    2024 Q2 : Launch
+            : User Feedback
+```
+
 ## Styling and Themes
+
 ### Node Styling
 
 ````md
