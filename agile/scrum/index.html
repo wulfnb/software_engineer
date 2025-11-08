@@ -1346,16 +1346,16 @@
 <h2 id="scrum-events">Scrum Events<a class="headerlink" href="#scrum-events" title="Permanent link">¶</a></h2>
 <h3 id="scrum-events-overview">Scrum Events Overview<a class="headerlink" href="#scrum-events-overview" title="Permanent link">¶</a></h3>
 <pre class="mermaid"><code>gantt
-    title Scrum Events in a Sprint Timeline
-    dateFormat D
-    axisFormat Day %d
+    title Scrum Events in a 2-Week Sprint
+    dateFormat  D
+    axisFormat  Day %d
 
-    section Sprint (2-4 Weeks)
-    Sprint Planning :d1, 1d
-    Daily Scrum :d2, 9d
-    Development Work :d2, 9d
-    Sprint Review :d11, 1d
-    Sprint Retrospective :d12, 1d</code></pre>
+    section Sprint (14 Days)
+    Sprint Planning           :done,    d1, 1d
+    Daily Scrum               :active,  d2, 10d
+    Development Work           :        d2, 10d
+    Sprint Review             :crit,    d12, 1d
+    Sprint Retrospective      :         d13, 1d</code></pre>
 <h3 id="sprint-planning">Sprint Planning<a class="headerlink" href="#sprint-planning" title="Permanent link">¶</a></h3>
 <pre class="mermaid"><code>flowchart TD
     A[Sprint Planning] --&gt; B[Topic One: Why?]
