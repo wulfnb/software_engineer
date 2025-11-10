@@ -208,15 +208,16 @@ mindmap
 ```mermaid
 gantt
     title Scrum Events in a 2-Week Sprint
-    dateFormat  D
-    axisFormat  Day %d
-    
+    dateFormat  YYYY-MM-DD
+    axisFormat  %d
+
     section Sprint (14 Days)
-    Sprint Planning           :done,    d1, 1d
-    Daily Scrum               :active,  d2, 10d
-    Development Work           :        d2, 10d
-    Sprint Review             :crit,    d12, 1d
-    Sprint Retrospective      :         d13, 1d
+    Sprint Planning           :done,    2025-11-10, 1d
+    Daily Scrum               :active,  2025-11-11, 10d
+    Development Work          :         2025-11-11, 10d
+    Sprint Review             :crit,    2025-11-21, 1d
+    Sprint Retrospective      :         2025-11-22, 1d
+
 ```
 
 ### Sprint Planning
@@ -428,27 +429,27 @@ flowchart TD
 ```mermaid
 gantt
     title Detailed 2-Week Sprint Timeline
-    dateFormat D
-    axisFormat Day %d
-    
+    dateFormat  YYYY-MM-DD
+    axisFormat  %d
+
     section Planning & Setup
-    Sprint Planning :d1, 1d
-    Environment Setup :d2, 1d
-    Task Clarification :d2, 1d
-    
+    Sprint Planning         : 2025-11-10, 1d
+    Environment Setup        : 2025-11-11, 1d
+    Task Clarification       : 2025-11-11, 1d
+
     section Development
-    Core Development :d2, 6d
-    Daily Stand-ups :d2, 6d
-    Continuous Integration :d3, 5d
-    
+    Core Development         : 2025-11-11, 6d
+    Daily Stand-ups          : 2025-11-11, 6d
+    Continuous Integration   : 2025-11-12, 5d
+
     section Testing & Review
-    System Testing :d8, 3d
-    Bug Fixing :d9, 2d
-    Sprint Review Prep :d10, 1d
-    
+    System Testing           : 2025-11-18, 3d
+    Bug Fixing               : 2025-11-19, 2d
+    Sprint Review Prep       : 2025-11-20, 1d
+
     section Review & Improvement
-    Sprint Review :d11, 1d
-    Sprint Retrospective :d12, 1d
+    Sprint Review            : 2025-11-21, 1d
+    Sprint Retrospective     : 2025-11-22, 1d
 ```
 
 ## Planning and Estimation
@@ -528,10 +529,10 @@ xychart-beta
     title "Cumulative Flow Diagram"
     x-axis [Sprint Start, Week 1, Week 2, Sprint End]
     y-axis "Number of Items" 0 --> 25
-    area [5, 8, 10, 12] --> "Done"
-    area [8, 10, 8, 6] --> "Testing"
-    area [12, 10, 8, 5] --> "Development"
-    area [15, 12, 9, 7] --> "Backlog"
+    line [5, 8, 10, 12]
+    line [8, 10, 8, 6]
+    line [12, 10, 8, 5]
+    line [15, 12, 9, 7]
 ```
 
 ### Sprint Goal Success Metrics
