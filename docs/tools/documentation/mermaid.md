@@ -31,6 +31,13 @@ flowchart TD
     B -->|No| D[End]
 ```
 
+```mermaid
+flowchart TD
+    A[Start] --> B{Decision}
+    B -->|Yes| C[OK]
+    B -->|No| D[End]
+```
+
 ### Syntax
 
 ````md
@@ -101,6 +108,18 @@ sequenceDiagram
 ```
 ````
 
+```mermaid
+sequenceDiagram
+    participant A as User
+    participant B as Frontend
+    participant C as Backend
+    
+    A->>B: Request
+    B->>C: API Call
+    C-->>B: Response
+    B-->>A: Display
+```
+
 ### Arrow Types
 - `->` Solid line without arrow
 
@@ -133,6 +152,17 @@ sequenceDiagram
 ```
 ````
 
+```mermaid
+sequenceDiagram
+    participant User
+    participant System
+    
+    User->>System: Login
+    activate System
+    System-->>User: Success
+    deactivate System
+```
+
 ### Loops and Alt
 
 ````md
@@ -149,6 +179,18 @@ sequenceDiagram
     end
 ```
 ````
+```mermaid
+sequenceDiagram
+    loop Every minute
+        User->>API: Poll updates
+    end
+    
+    alt Success case
+        API-->>User: Data
+    else Error case
+        API-->>User: Error
+    end
+```
 
 ## Class Diagrams
 
@@ -178,6 +220,29 @@ classDiagram
     Animal <|-- Cat
 ```
 ````
+
+```mermaid
+classDiagram
+    class Animal {
+        +String name
+        +int age
+        +eat()
+        +sleep()
+    }
+    
+    class Dog {
+        +String breed
+        +bark()
+    }
+    
+    class Cat {
+        +Boolean indoor
+        +meow()
+    }
+    
+    Animal <|-- Dog
+    Animal <|-- Cat
+```
 
 ### Relationship Types
 
@@ -221,6 +286,17 @@ stateDiagram-v2
 ```
 ````
 
+```mermaid
+stateDiagram-v2
+    [*] --> Idle
+    Idle --> Processing : Start
+    Processing --> Success : Complete
+    Processing --> Error : Fail
+    Error --> Processing : Retry
+    Success --> [*]
+    Error --> [*] : Abort
+```
+
 Concurrent States
 ````md
 ```mermaid
@@ -238,6 +314,21 @@ stateDiagram-v2
     }
 ```
 ````
+
+```mermaid
+stateDiagram-v2
+    [*] --> Active
+    
+    state Active {
+        [*] --> NumLockOff
+        NumLockOff --> NumLockOn : Press NumLock
+        NumLockOn --> NumLockOff : Press NumLock
+        
+        [*] --> CapsLockOff
+        CapsLockOff --> CapsLockOn : Press CapsLock
+        CapsLockOn --> CapsLockOff : Press CapsLock
+    }
+```
 
 ## Entity Relationship Diagrams
 Basic Structure
