@@ -207,16 +207,16 @@ mindmap
 
 ```mermaid
 gantt
-    title Scrum Events in a Sprint Timeline
-    dateFormat D
-    axisFormat Day %d
+    title Scrum Events in a 2-Week Sprint
+    dateFormat  D
+    axisFormat  Day %d
     
-    section Sprint (2-4 Weeks)
-    Sprint Planning :d1, 1d
-    Daily Scrum :d2, 9d
-    Development Work :d2, 9d
-    Sprint Review :d11, 1d
-    Sprint Retrospective :d12, 1d
+    section Sprint (14 Days)
+    Sprint Planning           :done,    d1, 1d
+    Daily Scrum               :active,  d2, 10d
+    Development Work           :        d2, 10d
+    Sprint Review             :crit,    d12, 1d
+    Sprint Retrospective      :         d13, 1d
 ```
 
 ### Sprint Planning
