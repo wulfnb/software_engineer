@@ -1092,6 +1092,10 @@
     A[Start] --&gt; B{Decision}
     B --&gt;|Yes| C[OK]
     B --&gt;|No| D[End]</code></pre>
+<pre class="mermaid"><code>flowchart TD
+    A[Start] --&gt; B{Decision}
+    B --&gt;|Yes| C[OK]
+    B --&gt;|No| D[End]</code></pre>
 <h3 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="sb">```mermaid</span>
 <a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="s">flowchart LR</span>
@@ -1163,6 +1167,15 @@
 <a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="s">    B--&gt;&gt;A: Display</span>
 <a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="sb">```</span>
 </code></pre></div>
+<pre class="mermaid"><code>sequenceDiagram
+    participant A as User
+    participant B as Frontend
+    participant C as Backend
+
+    A-&gt;&gt;B: Request
+    B-&gt;&gt;C: API Call
+    C--&gt;&gt;B: Response
+    B--&gt;&gt;A: Display</code></pre>
 <h3 id="arrow-types">Arrow Types<a class="headerlink" href="#arrow-types" title="Permanent link">¶</a></h3>
 <ul>
 <li>
@@ -1202,8 +1215,16 @@
 <a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="s">    deactivate System</span>
 <a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="sb">```</span>
 </code></pre></div>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User
+    participant System
+
+    User-&gt;&gt;System: Login
+    activate System
+    System--&gt;&gt;User: Success
+    deactivate System</code></pre>
 <h3 id="loops-and-alt">Loops and Alt<a class="headerlink" href="#loops-and-alt" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="sb">```mermaid</span>
+<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="sb">```mermaid</span>
 <a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="s">sequenceDiagram</span>
 <a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="s">    loop Every minute</span>
 <a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="s">        User-&gt;&gt;API: Poll updates</span>
@@ -1216,6 +1237,16 @@
 <a href="#__codelineno-5-11" id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="s">    end</span>
 <a href="#__codelineno-5-12" id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="sb">```</span>
 </code></pre></div>
+<pre class="mermaid"><code>sequenceDiagram
+    loop Every minute
+        User-&gt;&gt;API: Poll updates
+    end
+
+    alt Success case
+        API--&gt;&gt;User: Data
+    else Error case
+        API--&gt;&gt;User: Error
+    end</code></pre></p>
 <h2 id="class-diagrams">Class Diagrams<a class="headerlink" href="#class-diagrams" title="Permanent link">¶</a></h2>
 <h3 id="basic-structure_2">Basic Structure<a class="headerlink" href="#basic-structure_2" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="sb">```mermaid</span>
@@ -1241,6 +1272,26 @@
 <a href="#__codelineno-6-21" id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="s">    Animal &lt;|-- Cat</span>
 <a href="#__codelineno-6-22" id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="sb">```</span>
 </code></pre></div>
+<pre class="mermaid"><code>classDiagram
+    class Animal {
+        +String name
+        +int age
+        +eat()
+        +sleep()
+    }
+
+    class Dog {
+        +String breed
+        +bark()
+    }
+
+    class Cat {
+        +Boolean indoor
+        +meow()
+    }
+
+    Animal &lt;|-- Dog
+    Animal &lt;|-- Cat</code></pre>
 <h3 id="relationship-types">Relationship Types<a class="headerlink" href="#relationship-types" title="Permanent link">¶</a></h3>
 <ul>
 <li>
@@ -1293,6 +1344,14 @@
 <a href="#__codelineno-7-9" id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="s">    Error --&gt; [*] : Abort</span>
 <a href="#__codelineno-7-10" id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="sb">```</span>
 </code></pre></div>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; Idle
+    Idle --&gt; Processing : Start
+    Processing --&gt; Success : Complete
+    Processing --&gt; Error : Fail
+    Error --&gt; Processing : Retry
+    Success --&gt; [*]
+    Error --&gt; [*] : Abort</code></pre>
 <p>Concurrent States
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="sb">```mermaid</span>
 <a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="s">stateDiagram-v2</span>
@@ -1309,6 +1368,18 @@
 <a href="#__codelineno-8-13" id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="s">    }</span>
 <a href="#__codelineno-8-14" id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="sb">```</span>
 </code></pre></div></p>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; Active
+
+    state Active {
+        [*] --&gt; NumLockOff
+        NumLockOff --&gt; NumLockOn : Press NumLock
+        NumLockOn --&gt; NumLockOff : Press NumLock
+
+        [*] --&gt; CapsLockOff
+        CapsLockOff --&gt; CapsLockOn : Press CapsLock
+        CapsLockOn --&gt; CapsLockOff : Press CapsLock
+    }</code></pre>
 <h2 id="entity-relationship-diagrams">Entity Relationship Diagrams<a class="headerlink" href="#entity-relationship-diagrams" title="Permanent link">¶</a></h2>
 <p>Basic Structure</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="sb">```mermaid</span>
