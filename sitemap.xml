@@ -169,19 +169,115 @@
          <lastmod>2025-11-13</lastmod>
     </url>
     <url>
-         <loc>https://wulfnb.github.io/software_engineer/testing/integration-testing/</loc>
+         <loc>https://wulfnb.github.io/software_engineer/testing/</loc>
          <lastmod>2025-11-13</lastmod>
     </url>
     <url>
-         <loc>https://wulfnb.github.io/software_engineer/testing/static-analysis/</loc>
+         <loc>https://wulfnb.github.io/software_engineer/testing/automation/ci-cd-testing/</loc>
          <lastmod>2025-11-13</lastmod>
     </url>
     <url>
-         <loc>https://wulfnb.github.io/software_engineer/testing/tdd/</loc>
+         <loc>https://wulfnb.github.io/software_engineer/testing/automation/test-automation/</loc>
          <lastmod>2025-11-13</lastmod>
     </url>
     <url>
-         <loc>https://wulfnb.github.io/software_engineer/testing/unit-testing/</loc>
+         <loc>https://wulfnb.github.io/software_engineer/testing/automation/test-frameworks/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/best-practices/test-data-management/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/best-practices/test-maintenance/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/best-practices/troubleshooting-guide/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/examples/python-examples/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/fundamentals/test-strategy/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/fundamentals/testing-principles/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/fundamentals/testing-pyramid/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/methodologies/atdd/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/methodologies/bdd/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/methodologies/tdd/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/quality/code-review-guide/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/quality/quality-metrics/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/quality/static-analysis/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/techniques/e2e-testing/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/techniques/integration-testing/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/techniques/performance-testing/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/techniques/security-testing/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/techniques/unit-testing/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/templates/test-case-template/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/templates/test-plan-template/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/tools/cloud-testing/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/tools/testing-tools-overview/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/tools/language-specific-guides/javascript-testing/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://wulfnb.github.io/software_engineer/testing/tools/language-specific-guides/python-testing/</loc>
          <lastmod>2025-11-13</lastmod>
     </url>
     <url>

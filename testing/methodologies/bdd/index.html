@@ -6,30 +6,33 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="A quick guide for software engineer" name="description"/>
-<link href="https://wulfnb.github.io/software_engineer/testing/tdd/" rel="canonical"/>
-<link href="../integration-testing/" rel="prev"/>
-<link href="../static-analysis/" rel="next"/>
-<link href="../../assets/images/favicon.png" rel="icon"/>
+<link href="https://wulfnb.github.io/software_engineer/testing/methodologies/bdd/" rel="canonical"/>
+<link href="../tdd/" rel="prev"/>
+<link href="../atdd/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.0" name="generator"/>
-<title>TDD - A Software Engineer's Field Guide</title>
-<link href="../../assets/stylesheets/main.618322db.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<title>Behavior-Driven Development (BDD) - A Software Engineer's Field Guide</title>
+<link href="../../../assets/stylesheets/main.618322db.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#behavior-driven-development-bdd">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="A Software Engineer's Field Guide" class="md-header__button md-logo" data-md-component="logo" href="../.." title="A Software Engineer's Field Guide">
+<a aria-label="A Software Engineer's Field Guide" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="A Software Engineer's Field Guide">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -45,7 +48,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              TDD
+              Behavior-Driven Development (BDD)
             
           </span>
 </div>
@@ -110,7 +113,7 @@
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../..">
+<a class="md-tabs__link" href="../../..">
         
   
   
@@ -121,7 +124,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../programming/python/">
+<a class="md-tabs__link" href="../../../programming/python/">
           
   
   
@@ -132,7 +135,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../frontend/react/">
+<a class="md-tabs__link" href="../../../frontend/react/">
           
   
   
@@ -143,7 +146,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../backend/springboot/">
+<a class="md-tabs__link" href="../../../backend/springboot/">
           
   
   
@@ -154,7 +157,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../devops/docker/">
+<a class="md-tabs__link" href="../../../devops/docker/">
           
   
   
@@ -165,7 +168,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../architecture/software-architecture/">
+<a class="md-tabs__link" href="../../../architecture/software-architecture/">
           
   
   
@@ -176,7 +179,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../agile/agile/">
+<a class="md-tabs__link" href="../../../agile/agile/">
           
   
   
@@ -187,18 +190,18 @@
         </a>
 </li>
 <li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../unit-testing/">
+<a class="md-tabs__link" href="../../">
           
   
   
     
   
-  Testing &amp; Quality
+  Testing
 
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../tools/git/">
+<a class="md-tabs__link" href="../../../tools/git/">
           
   
   
@@ -209,7 +212,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../resources/books/">
+<a class="md-tabs__link" href="../../../resources/books/">
           
   
   
@@ -220,7 +223,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../about/">
+<a class="md-tabs__link" href="../../../about/">
         
   
   
@@ -240,7 +243,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="A Software Engineer's Field Guide" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="A Software Engineer's Field Guide">
+<a aria-label="A Software Engineer's Field Guide" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="A Software Engineer's Field Guide">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
     A Software Engineer's Field Guide
@@ -257,7 +260,7 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../..">
+<a class="md-nav__link" href="../../..">
 <span class="md-ellipsis">
     
   
@@ -292,7 +295,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../programming/python/">
+<a class="md-nav__link" href="../../../programming/python/">
 <span class="md-ellipsis">
     
   
@@ -304,7 +307,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../programming/java/">
+<a class="md-nav__link" href="../../../programming/java/">
 <span class="md-ellipsis">
     
   
@@ -316,7 +319,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../programming/javascript/">
+<a class="md-nav__link" href="../../../programming/javascript/">
 <span class="md-ellipsis">
     
   
@@ -328,7 +331,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../programming/typescript/">
+<a class="md-nav__link" href="../../../programming/typescript/">
 <span class="md-ellipsis">
     
   
@@ -340,7 +343,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../programming/design-patterns/">
+<a class="md-nav__link" href="../../../programming/design-patterns/">
 <span class="md-ellipsis">
     
   
@@ -352,7 +355,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../programming/data-structures/">
+<a class="md-nav__link" href="../../../programming/data-structures/">
 <span class="md-ellipsis">
     
   
@@ -390,7 +393,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../frontend/react/">
+<a class="md-nav__link" href="../../../frontend/react/">
 <span class="md-ellipsis">
     
   
@@ -402,7 +405,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../frontend/vue/">
+<a class="md-nav__link" href="../../../frontend/vue/">
 <span class="md-ellipsis">
     
   
@@ -414,7 +417,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../frontend/angular/">
+<a class="md-nav__link" href="../../../frontend/angular/">
 <span class="md-ellipsis">
     
   
@@ -426,7 +429,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../frontend/flutter/">
+<a class="md-nav__link" href="../../../frontend/flutter/">
 <span class="md-ellipsis">
     
   
@@ -464,7 +467,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../backend/springboot/">
+<a class="md-nav__link" href="../../../backend/springboot/">
 <span class="md-ellipsis">
     
   
@@ -476,7 +479,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../backend/django/">
+<a class="md-nav__link" href="../../../backend/django/">
 <span class="md-ellipsis">
     
   
@@ -488,7 +491,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../backend/flask/">
+<a class="md-nav__link" href="../../../backend/flask/">
 <span class="md-ellipsis">
     
   
@@ -500,7 +503,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../backend/express/">
+<a class="md-nav__link" href="../../../backend/express/">
 <span class="md-ellipsis">
     
   
@@ -538,7 +541,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../devops/docker/">
+<a class="md-nav__link" href="../../../devops/docker/">
 <span class="md-ellipsis">
     
   
@@ -550,7 +553,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../devops/kubernetes/">
+<a class="md-nav__link" href="../../../devops/kubernetes/">
 <span class="md-ellipsis">
     
   
@@ -562,7 +565,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../devops/terraform/">
+<a class="md-nav__link" href="../../../devops/terraform/">
 <span class="md-ellipsis">
     
   
@@ -574,7 +577,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../devops/github-actions/">
+<a class="md-nav__link" href="../../../devops/github-actions/">
 <span class="md-ellipsis">
     
   
@@ -586,7 +589,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../devops/aws/">
+<a class="md-nav__link" href="../../../devops/aws/">
 <span class="md-ellipsis">
     
   
@@ -598,7 +601,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../devops/cicd/">
+<a class="md-nav__link" href="../../../devops/cicd/">
 <span class="md-ellipsis">
     
   
@@ -636,7 +639,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../architecture/software-architecture/">
+<a class="md-nav__link" href="../../../architecture/software-architecture/">
 <span class="md-ellipsis">
     
   
@@ -648,7 +651,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../architecture/system-architecture-interview-tasks/">
+<a class="md-nav__link" href="../../../architecture/system-architecture-interview-tasks/">
 <span class="md-ellipsis">
     
   
@@ -660,7 +663,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../architecture/clean-architecture/">
+<a class="md-nav__link" href="../../../architecture/clean-architecture/">
 <span class="md-ellipsis">
     
   
@@ -672,7 +675,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../architecture/microservices/">
+<a class="md-nav__link" href="../../../architecture/microservices/">
 <span class="md-ellipsis">
     
   
@@ -684,7 +687,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../architecture/system-design/">
+<a class="md-nav__link" href="../../../architecture/system-design/">
 <span class="md-ellipsis">
     
   
@@ -696,7 +699,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../architecture/api-design/">
+<a class="md-nav__link" href="../../../architecture/api-design/">
 <span class="md-ellipsis">
     
   
@@ -708,7 +711,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../architecture/design-patterns/">
+<a class="md-nav__link" href="../../../architecture/design-patterns/">
 <span class="md-ellipsis">
     
   
@@ -746,7 +749,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../agile/agile/">
+<a class="md-nav__link" href="../../../agile/agile/">
 <span class="md-ellipsis">
     
   
@@ -758,7 +761,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../agile/scrum/">
+<a class="md-nav__link" href="../../../agile/scrum/">
 <span class="md-ellipsis">
     
   
@@ -770,7 +773,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../agile/kanban/">
+<a class="md-nav__link" href="../../../agile/kanban/">
 <span class="md-ellipsis">
     
   
@@ -782,7 +785,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../agile/planning/">
+<a class="md-nav__link" href="../../../agile/planning/">
 <span class="md-ellipsis">
     
   
@@ -798,33 +801,60 @@
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
-<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
     
   
-    Testing &amp; Quality
+    Testing
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Testing
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_8_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Fundamentals
   
 
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_8">
+<nav aria-expanded="false" aria-labelledby="__nav_8_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_2">
 <span class="md-nav__icon md-icon"></span>
             
   
-    Testing &amp; Quality
+    Fundamentals
   
 
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../unit-testing/">
+<a class="md-nav__link" href="../../fundamentals/testing-pyramid/">
 <span class="md-ellipsis">
     
   
-    Unit Testing
+    Testing Pyramid
   
 
     
@@ -832,11 +862,147 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../integration-testing/">
+<a class="md-nav__link" href="../../fundamentals/testing-principles/">
 <span class="md-ellipsis">
     
   
-    Integration Testing
+    Testing Principles
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../fundamentals/test-strategy/">
+<span class="md-ellipsis">
+    
+  
+    Test Strategy
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_8_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Testing Techniques
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Testing Techniques
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../techniques/integration-testing/">
+<span class="md-ellipsis">
+    
+  
+    Integration Testing Comprehensive Guide
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../techniques/unit-testing/">
+<span class="md-ellipsis">
+    
+  
+    Unit Testing Comprehensive Guide
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../techniques/e2e-testing/">
+<span class="md-ellipsis">
+    
+  
+    End-to-End Testing
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../techniques/performance-testing/">
+<span class="md-ellipsis">
+    
+  
+    Performance Testing
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../techniques/security-testing/">
+<span class="md-ellipsis">
+    
+  
+    Security Testing
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_8_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Methodologies
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_8_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Methodologies
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tdd/">
+<span class="md-ellipsis">
+    
+  
+    Test-Driven Development (TDD) Comprehensive Guide
   
 
     
@@ -845,11 +1011,107 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Behavior-Driven Development (BDD)
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     
   
-    TDD
+    Behavior-Driven Development (BDD)
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bdd-overview">
+<span class="md-ellipsis">
+      
+        BDD Overview
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bdd-tools">
+<span class="md-ellipsis">
+      
+        BDD Tools
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#benefits">
+<span class="md-ellipsis">
+      
+        Benefits
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../atdd/">
+<span class="md-ellipsis">
+    
+  
+    Acceptance Test-Driven Development (ATDD)
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_8_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Quality Assurance
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Quality Assurance
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../quality/static-analysis/">
+<span class="md-ellipsis">
+    
+  
+    Static Analysis Comprehensive Guide
   
 
     
@@ -857,16 +1119,306 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../static-analysis/">
+<a class="md-nav__link" href="../../quality/code-review-guide/">
 <span class="md-ellipsis">
     
   
-    Static Analysis
+    Code Review Guide
   
 
     
   </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../quality/quality-metrics/">
+<span class="md-ellipsis">
+    
+  
+    Quality Metrics
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_8_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Automation
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_6">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Automation
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/test-automation/">
+<span class="md-ellipsis">
+    
+  
+    Test Automation
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/ci-cd-testing/">
+<span class="md-ellipsis">
+    
+  
+    CI/CD Testing
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/test-frameworks/">
+<span class="md-ellipsis">
+    
+  
+    Test Frameworks
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_8_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8_7" id="__nav_8_7_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Tools &amp; Platforms
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_7_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_7">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools &amp; Platforms
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tools/testing-tools-overview/">
+<span class="md-ellipsis">
+    
+  
+    Testing Tools Overview
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tools/language-specific-guides/javascript-testing/">
+<span class="md-ellipsis">
+    
+  
+    JavaScript Testing Guide
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tools/language-specific-guides/python-testing/">
+<span class="md-ellipsis">
+    
+  
+    Python Testing Guide
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tools/cloud-testing/">
+<span class="md-ellipsis">
+    
+  
+    Cloud Testing
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_8_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8_8" id="__nav_8_8_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Best Practices
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Best Practices
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../best-practices/test-maintenance/">
+<span class="md-ellipsis">
+    
+  
+    Test Maintenance
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../best-practices/test-data-management/">
+<span class="md-ellipsis">
+    
+  
+    Test Data Management
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../best-practices/troubleshooting-guide/">
+<span class="md-ellipsis">
+    
+  
+    Troubleshooting Guide
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_8_9" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../examples/python-examples/">
+<span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+</a>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_8_9_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_9">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Examples
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_8_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8_10" id="__nav_8_10_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Templates
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_10_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_10">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Templates
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/test-plan-template/">
+<span class="md-ellipsis">
+    
+  
+    Test Plan Template
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/test-case-template/">
+<span class="md-ellipsis">
+    
+  
+    Test Case Template
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -895,7 +1447,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tools/git/">
+<a class="md-nav__link" href="../../../tools/git/">
 <span class="md-ellipsis">
     
   
@@ -907,7 +1459,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tools/build-tools/">
+<a class="md-nav__link" href="../../../tools/build-tools/">
 <span class="md-ellipsis">
     
   
@@ -919,7 +1471,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tools/ide/">
+<a class="md-nav__link" href="../../../tools/ide/">
 <span class="md-ellipsis">
     
   
@@ -954,7 +1506,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tools/documentation/mkdocs/">
+<a class="md-nav__link" href="../../../tools/documentation/mkdocs/">
 <span class="md-ellipsis">
     
   
@@ -966,7 +1518,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tools/documentation/mermaid/">
+<a class="md-nav__link" href="../../../tools/documentation/mermaid/">
 <span class="md-ellipsis">
     
   
@@ -978,7 +1530,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tools/documentation/mermaid_examples/">
+<a class="md-nav__link" href="../../../tools/documentation/mermaid_examples/">
 <span class="md-ellipsis">
     
   
@@ -1019,7 +1571,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../resources/books/">
+<a class="md-nav__link" href="../../../resources/books/">
 <span class="md-ellipsis">
     
   
@@ -1031,7 +1583,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../resources/learning/">
+<a class="md-nav__link" href="../../../resources/learning/">
 <span class="md-ellipsis">
     
   
@@ -1043,7 +1595,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../resources/references/">
+<a class="md-nav__link" href="../../../resources/references/">
 <span class="md-ellipsis">
     
   
@@ -1058,7 +1610,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../about/">
+<a class="md-nav__link" href="../../../about/">
 <span class="md-ellipsis">
     
   
@@ -1076,12 +1628,50 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>TDD</h1>
+<h1 id="behavior-driven-development-bdd">Behavior-Driven Development (BDD)<a class="headerlink" href="#behavior-driven-development-bdd" title="Permanent link">¶</a></h1>
+<h2 id="bdd-overview">BDD Overview<a class="headerlink" href="#bdd-overview" title="Permanent link">¶</a></h2>
+<div class="language-gherkin highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">Feature:</span><span class="nf"> User registration</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nf">  As a new user</span>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nf">  I want to register an account</span>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="nf">  So that I can access the application</span>
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="nf">  </span><span class="k">Scenario:</span><span class="nf"> Successful registration</span>
+</span><span id="__span-0-7"><a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="k">    Given </span><span class="nf">I am on the registration page</span>
+</span><span id="__span-0-8"><a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="nf">    </span><span class="k">When </span><span class="nf">I enter valid registration details</span>
+</span><span id="__span-0-9"><a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="nf">    </span><span class="k">And </span><span class="nf">I submit the registration form</span>
+</span><span id="__span-0-10"><a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="nf">    </span><span class="k">Then </span><span class="nf">I should see a success message</span>
+</span><span id="__span-0-11"><a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="nf">    </span><span class="k">And </span><span class="nf">I should receive a welcome email</span>
+</span><span id="__span-0-12"><a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="nf">  </span><span class="k">Scenario:</span><span class="nf"> Registration with existing email</span>
+</span><span id="__span-0-14"><a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="k">    Given </span><span class="nf">I am on the registration page</span>
+</span><span id="__span-0-15"><a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="nf">    </span><span class="k">When </span><span class="nf">I enter an email that already exists</span>
+</span><span id="__span-0-16"><a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="nf">    </span><span class="k">And </span><span class="nf">I submit the registration form</span>
+</span><span id="__span-0-17"><a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="nf">    </span><span class="k">Then </span><span class="nf">I should see an error message</span>
+</span><span id="__span-0-18"><a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="nf">    </span><span class="k">And </span><span class="nf">I should not be logged in</span>
+</span></code></pre></div>
+<h2 id="bdd-tools">BDD Tools<a class="headerlink" href="#bdd-tools" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Cucumber</strong> - BDD framework for multiple languages</li>
+<li><strong>SpecFlow</strong> - .NET BDD framework</li>
+<li><strong>Behave</strong> - Python BDD framework</li>
+<li><strong>Jest-Cucumber</strong> - JavaScript BDD</li>
+</ul>
+<h2 id="benefits">Benefits<a class="headerlink" href="#benefits" title="Permanent link">¶</a></h2>
+<ul>
+<li>Collaboration between teams</li>
+<li>Living documentation</li>
+<li>Clear acceptance criteria</li>
+<li>Automated validation</li>
+</ul>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
 </div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
 </main>
 <footer class="md-footer">
 <div class="md-footer-meta md-typeset">
@@ -1109,7 +1699,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.code.annotate", "content.code.select", "navigation.tabs", "navigation.sections", "navigation.expand", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "navigation.indexes", "navigation.instant"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-<script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "navigation.instant", "toc.integrate", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.code.select", "content.tabs.link", "content.code.annotation"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
 </body>
 </html>
