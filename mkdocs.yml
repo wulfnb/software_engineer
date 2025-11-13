@@ -7,19 +7,21 @@ repo_name: wulfnb/software_engineer
 theme:
   name: material
   features:
-    - content.code.copy
-    - content.code.annotate
-    - content.code.select
     - navigation.tabs
     - navigation.sections
     - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - navigation.instant
     - toc.integrate
     - search.suggest
     - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.code.select
     - content.tabs.link
     - content.code.annotation
-    - navigation.indexes
-    - navigation.instant
+
 
   palette:
     - scheme: default
@@ -56,8 +58,13 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - toc:
@@ -104,11 +111,44 @@ nav:
     - Scrum: agile/scrum.md
     - Kanban: agile/kanban.md
     - Planning New Features: agile/planning.md
-  - Testing & Quality:
-    - Unit Testing: testing/unit-testing.md
-    - Integration Testing: testing/integration-testing.md
-    - TDD: testing/tdd.md
-    - Static Analysis: testing/static-analysis.md
+  - Testing:
+    - Testing: testing/index.md
+    - Fundamentals:
+      - testing/fundamentals/testing-pyramid.md
+      - testing/fundamentals/testing-principles.md
+      - testing/fundamentals/test-strategy.md
+    - Testing Techniques:
+      - testing/techniques/integration-testing.md
+      - testing/techniques/unit-testing.md
+      - testing/techniques/e2e-testing.md
+      - testing/techniques/performance-testing.md
+      - testing/techniques/security-testing.md
+    - Methodologies:
+      - testing/methodologies/tdd.md
+      - testing/methodologies/bdd.md
+      - testing/methodologies/atdd.md
+    - Quality Assurance:
+      - testing/quality/static-analysis.md
+      - testing/quality/code-review-guide.md
+      - testing/quality/quality-metrics.md
+    - Automation:
+      - testing/automation/test-automation.md
+      - testing/automation/ci-cd-testing.md
+      - testing/automation/test-frameworks.md
+    - Tools & Platforms:
+      - testing/tools/testing-tools-overview.md
+      - testing/tools/language-specific-guides/javascript-testing.md
+      - testing/tools/language-specific-guides/python-testing.md
+      - testing/tools/cloud-testing.md
+    - Best Practices:
+      - testing/best-practices/test-maintenance.md
+      - testing/best-practices/test-data-management.md
+      - testing/best-practices/troubleshooting-guide.md
+    - Examples:
+      - testing/examples/python-examples/README.md
+    - Templates:
+      - testing/templates/test-plan-template.md
+      - testing/templates/test-case-template.md
   - Tools & Productivity:
     - Git & GitHub: tools/git.md
     - Build Tools: tools/build-tools.md
